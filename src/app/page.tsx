@@ -11,6 +11,43 @@ export default function Home() {
         </p>
       </header>
 
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+        <div className="p-8 bg-apple-tile rounded-display border border-gray-100">
+          <h3 className="text-sm font-bold uppercase tracking-widest text-hdkwa-navy mb-4">For Teachers</h3>
+          <ul className="space-y-3 text-sm text-gray-600">
+            <li className="flex gap-3">
+              <span className="font-bold text-hdkwa-gold">1.</span>
+              <span>Identify a growth area from your last observation.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="font-bold text-hdkwa-gold">2.</span>
+              <span>Select a technique and record your **Pre-Implementation** goal.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="font-bold text-hdkwa-gold">3.</span>
+              <span>Trial the technique in class and record your **Reflection**.</span>
+            </li>
+          </ul>
+        </div>
+        <div className="p-8 bg-hdkwa-navy text-white rounded-display shadow-xl">
+          <h3 className="text-sm font-bold uppercase tracking-widest text-hdkwa-gold mb-4">For SLT & Coaches</h3>
+          <ul className="space-y-3 text-sm text-gray-300">
+            <li className="flex gap-3">
+              <span className="font-bold text-hdkwa-gold">1.</span>
+              <span>Direct teachers to specific components for targeted growth.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="font-bold text-hdkwa-gold">2.</span>
+              <span>Use the techniques as a common language for feedback.</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="font-bold text-hdkwa-gold">3.</span>
+              <span>Review the **PD Implementation Report** during check-ins.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section className="grid grid-cols-2 gap-8">
         <Link 
           href="/domains/1" 
