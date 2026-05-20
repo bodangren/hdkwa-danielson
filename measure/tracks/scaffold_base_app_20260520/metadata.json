@@ -1,11 +1,11 @@
 {
   "track_id": "scaffold_base_app_20260520",
   "type": "feature",
-  "status": "new",
+  "status": "completed",
   "created_at": "2026-05-20T10:00:00Z",
-  "updated_at": "2026-05-20T10:00:00Z",
+  "updated_at": "2026-05-20T11:30:00Z",
   "description": "Scaffold the base Next.js application with HDKWA branding and core layout.",
   "estimated_tasks": 6,
-  "actual_tasks": null,
+  "actual_tasks": 6,
   "deviation_notes": ""
 }
