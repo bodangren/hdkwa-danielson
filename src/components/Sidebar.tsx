@@ -14,6 +14,8 @@ import {
 import Image from 'next/image';
 import logo from '../../public/logo.png';
 
+import { techniques } from '@/data/techniques';
+
 const navItems = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Instructional Hub', href: '/domains', icon: LayoutDashboard },
@@ -43,8 +45,8 @@ export default function Sidebar() {
     return () => window.removeEventListener('storage_update', updateProgress);
   }, []);
 
-  const totalTechniques = 11; // Current total in techniques.ts
-  const percentage = Math.round((completedCount / totalTechniques) * 100);
+  const totalTechniques = techniques.length;
+  const percentage = totalTechniques > 0 ? Math.round((completedCount / totalTechniques) * 100) : 0;
 
   return (
     <nav className="w-64 border-r border-gray-200 h-screen sticky top-0 p-8 flex flex-col gap-8 bg-white z-10">
