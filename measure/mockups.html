@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HDKWA Danielson PD Mockups</title>
+    <title>HDKWA Danielson PD Mockups v3</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-static@0.321.0/font/lucide.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-        
         :root {
             --hdkwa-navy: #003366;
             --hdkwa-gold: #C5A059;
@@ -17,310 +16,152 @@
             --apple-tile: #F5F5F7;
             --apple-ink: #1D1D1F;
         }
-
-        body {
-            font-family: 'SF Pro Text', 'Inter', -apple-system, sans-serif;
-            background-color: var(--apple-bg);
-            color: var(--apple-ink);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .heading-display {
-            font-weight: 600;
-            letter-spacing: -0.022em;
-        }
-
-        .hdkwa-navy { color: var(--hdkwa-navy); }
-        .bg-hdkwa-navy { background-color: var(--hdkwa-navy); }
-        .hdkwa-gold { color: var(--hdkwa-gold); }
-        .bg-hdkwa-gold { background-color: var(--hdkwa-gold); }
-        .apple-blue { color: var(--apple-blue); }
-        .bg-apple-tile { background-color: var(--apple-tile); }
-
-        .mockup-container {
-            display: none;
-            animation: fadeIn 0.5s ease-out;
-        }
-
-        .mockup-container.active {
-            display: block;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .nav-link.active {
-            color: var(--hdkwa-navy);
-            border-left: 4px solid var(--hdkwa-navy);
-            background-color: var(--apple-tile);
-        }
-
-        .video-placeholder {
-            aspect-ratio: 16 / 9;
-            background: #000;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
+        body { font-family: 'SF Pro Text', 'Inter', sans-serif; background-color: var(--apple-bg); color: var(--apple-ink); -webkit-font-smoothing: antialiased; }
+        .heading-display { font-weight: 600; letter-spacing: -0.022em; }
+        .mockup-container { display: none; animation: fadeIn 0.4s ease-out; }
+        .mockup-container.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+        .nav-link.active { color: var(--hdkwa-navy); border-left: 4px solid var(--hdkwa-navy); background-color: var(--apple-tile); }
+        .rating-dot { width: 32px; height: 32px; border: 1px solid #E5E7EB; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s; font-size: 12px; font-weight: 600; }
+        .rating-dot.active { background-color: var(--hdkwa-gold); border-color: var(--hdkwa-gold); color: white; }
     </style>
 </head>
 <body class="flex min-h-screen">
 
-    <!-- Sidebar Navigation -->
     <nav class="w-64 border-r border-gray-200 h-screen sticky top-0 p-8 flex flex-col gap-8 bg-white z-10">
-        <div class="mb-4">
+        <div>
             <img src="https://www.hdkwa.com/wp-content/themes/kaiwen/images/logo.png" alt="HDKWA Logo" class="w-full">
             <p class="text-[10px] uppercase tracking-widest text-gray-400 mt-4 font-semibold">Danielson PD Portal</p>
         </div>
-        
         <div class="flex flex-col gap-2">
             <button onclick="showMockup('home')" class="nav-link active text-left px-4 py-2 rounded-r-lg text-sm font-medium text-gray-500 hover:text-gray-900 transition-all">Home</button>
-            <button onclick="showMockup('domain')" class="nav-link text-left px-4 py-2 rounded-r-lg text-sm font-medium text-gray-500 hover:text-gray-900 transition-all">Domain View</button>
-            <button onclick="showMockup('strategy')" class="nav-link text-left px-4 py-2 rounded-r-lg text-sm font-medium text-gray-500 hover:text-gray-900 transition-all">Actionable Module</button>
-            <button onclick="showMockup('references')" class="nav-link text-left px-4 py-2 rounded-r-lg text-sm font-medium text-gray-500 hover:text-gray-900 transition-all">Reference Library</button>
-        </div>
-
-        <div class="mt-auto">
-            <div class="bg-hdkwa-gold/10 p-4 rounded-xl border border-hdkwa-gold/20">
-                <p class="text-[10px] font-bold hdkwa-gold uppercase mb-1">Your Progress</p>
-                <div class="w-full bg-gray-200 h-1 rounded-full overflow-hidden">
-                    <div class="bg-hdkwa-gold w-1/3 h-full"></div>
-                </div>
-                <p class="text-xs mt-2 font-medium">12 / 24 Strategies</p>
-            </div>
+            <button onclick="showMockup('domain')" class="nav-link text-left px-4 py-2 rounded-r-lg text-sm font-medium text-gray-500 hover:text-gray-900 transition-all">Instructional Hub</button>
+            <button onclick="showMockup('strategy')" class="nav-link text-left px-4 py-2 rounded-r-lg text-sm font-medium text-gray-500 hover:text-gray-900 transition-all">Strategy Module</button>
+            <button onclick="showMockup('report')" class="nav-link text-left px-4 py-2 rounded-r-lg text-sm font-medium text-gray-500 hover:text-gray-900 transition-all">My PD Report</button>
         </div>
     </nav>
 
-    <!-- Main Content Area -->
     <main class="flex-1 p-16 max-w-6xl mx-auto">
 
-        <!-- HOME MOCKUP -->
-        <div id="home" class="mockup-container active">
-            <header class="mb-20">
-                <h1 class="heading-display text-6xl mb-6">Elevate Your Practice.</h1>
-                <p class="text-2xl text-gray-500 max-w-2xl leading-relaxed">A specialized professional development portal designed for HDKWA secondary teachers to master the Danielson Framework through actionable techniques.</p>
-            </header>
-
-            <section class="grid grid-cols-2 gap-8">
-                <div class="bg-apple-tile p-12 rounded-[32px] hover:scale-[1.02] transition-transform cursor-pointer group">
-                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Domain 1</span>
-                    <h2 class="text-3xl font-semibold mt-4 mb-2">Planning & Preparation</h2>
-                    <p class="text-gray-500">Mastering content, pedagogy, and student-centered lesson design.</p>
-                    <div class="mt-8 flex items-center gap-2 text-apple-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        Explore Domain <i class="lucide-arrow-right w-4"></i>
-                    </div>
-                </div>
-                <div class="bg-hdkwa-navy text-white p-12 rounded-[32px] hover:scale-[1.02] transition-transform cursor-pointer group">
-                    <span class="text-xs font-bold text-gray-300 uppercase tracking-widest">Domain 2</span>
-                    <h2 class="text-3xl font-semibold mt-4 mb-2">The Classroom Environment</h2>
-                    <p class="text-gray-300">Building a culture of learning and managing student behavior with empathy.</p>
-                    <div class="mt-8 flex items-center gap-2 text-white font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        Explore Domain <i class="lucide-arrow-right w-4"></i>
-                    </div>
-                </div>
-                <div class="bg-apple-tile p-12 rounded-[32px] hover:scale-[1.02] transition-transform cursor-pointer group">
-                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Domain 3</span>
-                    <h2 class="text-3xl font-semibold mt-4 mb-2">Instruction</h2>
-                    <p class="text-gray-500">Engaging students through high-quality questioning and flexible delivery.</p>
-                    <div class="mt-8 flex items-center gap-2 text-apple-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        Explore Domain <i class="lucide-arrow-right w-4"></i>
-                    </div>
-                </div>
-                <div class="bg-apple-tile p-12 rounded-[32px] hover:scale-[1.02] transition-transform cursor-pointer group">
-                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">Domain 4</span>
-                    <h2 class="text-3xl font-semibold mt-4 mb-2">Professional Responsibilities</h2>
-                    <p class="text-gray-500">Reflecting on practice and engaging with families and the community.</p>
-                    <div class="mt-8 flex items-center gap-2 text-apple-blue font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        Explore Domain <i class="lucide-arrow-right w-4"></i>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- DOMAIN VIEW MOCKUP -->
-        <div id="domain" class="mockup-container">
+        <!-- STRATEGY MODULE: BEFORE/AFTER FLOW -->
+        <div id="strategy" class="mockup-container active">
             <nav class="mb-12 flex gap-4 text-sm font-medium text-gray-400">
-                <a href="#" class="hover:text-black">Danielson PD</a>
+                <a href="#" class="hover:text-black">3b: Questioning</a>
                 <span>/</span>
-                <span class="text-black">Domain 3: Instruction</span>
-            </nav>
-
-            <div class="flex justify-between items-end mb-16">
-                <div>
-                    <h1 class="heading-display text-5xl mb-4">Domain 3: Instruction</h1>
-                    <p class="text-xl text-gray-500">The heart of the classroom experience.</p>
-                </div>
-                <div class="text-right">
-                    <p class="text-4xl font-semibold hdkwa-gold mb-1">42%</p>
-                    <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Mastery Level</p>
-                </div>
-            </div>
-
-            <div class="space-y-4">
-                <div class="p-8 border border-gray-100 rounded-2xl hover:bg-apple-tile transition-colors cursor-pointer flex items-center gap-6">
-                    <div class="w-12 h-12 rounded-full bg-hdkwa-gold flex items-center justify-center text-white font-bold">3a</div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-semibold">Communicating with Students</h3>
-                        <p class="text-sm text-gray-500 mt-1">Clarity of expectations and instructional purpose.</p>
-                    </div>
-                    <div class="text-hdkwa-gold"><i class="lucide-check-circle w-6 h-6"></i></div>
-                </div>
-                <div class="p-8 border border-gray-100 rounded-2xl hover:bg-apple-tile transition-colors cursor-pointer flex items-center gap-6">
-                    <div class="w-12 h-12 rounded-full border-2 border-hdkwa-navy text-hdkwa-navy flex items-center justify-center font-bold">3b</div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-semibold">Using Questioning and Discussion Techniques</h3>
-                        <p class="text-sm text-gray-500 mt-1">Quality of questions and student participation.</p>
-                    </div>
-                    <div class="text-gray-200"><i class="lucide-circle w-6 h-6"></i></div>
-                </div>
-                <div class="p-8 border border-gray-100 rounded-2xl hover:bg-apple-tile transition-colors cursor-pointer flex items-center gap-6">
-                    <div class="w-12 h-12 rounded-full border-2 border-hdkwa-navy text-hdkwa-navy flex items-center justify-center font-bold">3c</div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-semibold text-apple-blue underline underline-offset-4">Engaging Students in Learning</h3>
-                        <p class="text-sm text-gray-500 mt-1">Activities, assignments, and instructional grouping.</p>
-                    </div>
-                    <div class="text-gray-200"><i class="lucide-circle w-6 h-6"></i></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ACTIONABLE MODULE MOCKUP -->
-        <div id="strategy" class="mockup-container">
-            <nav class="mb-12 flex gap-4 text-sm font-medium text-gray-400">
-                <a href="#" class="hover:text-black">Domain 3</a>
-                <span>/</span>
-                <span class="text-black">3c: Cold Call (TLAC 3.0)</span>
+                <span class="text-black">Cold Call & Stretch It</span>
             </nav>
 
             <div class="grid grid-cols-12 gap-16">
                 <div class="col-span-7">
-                    <h1 class="heading-display text-5xl mb-6 leading-tight">Engaging All Students: The Cold Call Technique</h1>
-                    
-                    <div class="flex items-center gap-3 mb-8">
-                        <span class="px-3 py-1 bg-gray-100 rounded-full text-[10px] font-bold uppercase tracking-widest text-gray-500">Source: TLAC 3.0</span>
-                        <span class="px-3 py-1 bg-hdkwa-navy text-white rounded-full text-[10px] font-bold uppercase tracking-widest">Alignment: 3c</span>
+                    <h1 class="heading-display text-5xl mb-4">Cold Call & Stretch It</h1>
+                    <div class="flex items-center gap-3 mb-10">
+                        <span class="px-3 py-1 bg-[#003366] text-white rounded-full text-[10px] font-bold tracking-widest uppercase">Alignment: 3b</span>
+                        <span class="text-xs text-gray-400 font-medium italic">Via TLAC 3.0</span>
                     </div>
 
-                    <p class="text-lg text-gray-600 mb-10 leading-relaxed italic border-l-4 border-hdkwa-gold pl-6">"Call on students regardless of whether they have raised their hands to ensure every student is accountable for the learning."</p>
+                    <div class="space-y-8">
+                        <!-- PRE-IMPLEMENTATION -->
+                        <section class="p-8 border border-gray-100 rounded-[32px] bg-apple-tile">
+                            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6 flex items-center gap-2">
+                                <i class="lucide-clipboard-list w-4"></i> Step 1: Pre-Implementation
+                            </h3>
+                            <div class="mb-6">
+                                <p class="text-sm font-semibold mb-3">To what extent do you already use this technique in class?</p>
+                                <div class="flex gap-3">
+                                    <div class="rating-dot">1</div>
+                                    <div class="rating-dot active">2</div>
+                                    <div class="rating-dot">3</div>
+                                    <div class="rating-dot">4</div>
+                                    <div class="rating-dot">5</div>
+                                </div>
+                                <div class="flex justify-between w-[212px] mt-2 text-[10px] text-gray-400 uppercase font-bold tracking-tighter">
+                                    <span>Never</span>
+                                    <span>Expert</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold mb-3">What is your goal for this implementation?</p>
+                                <input type="text" class="w-full bg-white border border-gray-200 rounded-xl p-4 text-sm outline-none" placeholder="e.g. Try this with 10th Grade Period 4 physics...">
+                            </div>
+                        </section>
 
-                    <h3 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6">Action Steps</h3>
-                    <ul class="space-y-6">
-                        <li class="flex gap-4">
-                            <span class="w-6 h-6 rounded-full bg-hdkwa-navy text-white text-[10px] flex items-center justify-center flex-shrink-0 mt-1">1</span>
-                            <p class="text-gray-800">Pose the question to the **entire class** first to maximize think time.</p>
-                        </li>
-                        <li class="flex gap-4">
-                            <span class="w-6 h-6 rounded-full bg-hdkwa-navy text-white text-[10px] flex items-center justify-center flex-shrink-0 mt-1">2</span>
-                            <p class="text-gray-800">Pause for 3-5 seconds (Wait Time 1.0).</p>
-                        </li>
-                        <li class="flex gap-4">
-                            <span class="w-6 h-6 rounded-full bg-hdkwa-navy text-white text-[10px] flex items-center justify-center flex-shrink-0 mt-1">3</span>
-                            <p class="text-gray-800">Call a student by name in a **warm, predictable** tone.</p>
-                        </li>
-                    </ul>
+                        <!-- THE CONTENT -->
+                        <section class="py-4">
+                            <h3 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6">Action Steps</h3>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex gap-4">
+                                    <span class="w-6 h-6 rounded-full bg-[#003366] text-white text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+                                    <p>**Question First:** Pose to the whole class to maximize think time.</p>
+                                </li>
+                                <li class="flex gap-4">
+                                    <span class="w-6 h-6 rounded-full bg-[#003366] text-white text-[10px] flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+                                    <p>**Wait:** Provide 3-5 seconds of silent wait time.</p>
+                                </li>
+                            </ul>
+                        </section>
 
-                    <button class="mt-12 bg-hdkwa-gold text-white px-10 py-4 rounded-full font-semibold hover:shadow-lg transition-all flex items-center gap-3">
-                        <i class="lucide-check w-5"></i> Mark as Applied
-                    </button>
+                        <!-- POST-IMPLEMENTATION -->
+                        <section class="p-8 border border-gray-100 rounded-[32px] bg-white shadow-sm">
+                            <h3 class="text-sm font-bold uppercase tracking-widest text-[#C5A059] mb-6 flex items-center gap-2">
+                                <i class="lucide-award w-4"></i> Step 2: Post-Implementation
+                            </h3>
+                            <div class="mb-6">
+                                <p class="text-sm font-semibold mb-3">Observed Impact on Student Engagement:</p>
+                                <div class="flex gap-3">
+                                    <div class="rating-dot">1</div>
+                                    <div class="rating-dot">2</div>
+                                    <div class="rating-dot">3</div>
+                                    <div class="rating-dot active">4</div>
+                                    <div class="rating-dot">5</div>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold mb-3">Implementation Notes (Visible to HOD/IC):</p>
+                                <textarea class="w-full bg-apple-tile border-transparent rounded-xl p-4 text-sm outline-none h-32" placeholder="Describe what happened..."></textarea>
+                            </div>
+                        </section>
+                    </div>
                 </div>
 
                 <div class="col-span-5">
-                    <div class="sticky top-16">
-                        <div class="video-placeholder group cursor-pointer relative overflow-hidden">
-                            <img src="https://img.youtube.com/vi/placeholder/maxresdefault.jpg" class="absolute inset-0 opacity-40 group-hover:scale-110 transition-transform duration-700">
-                            <div class="z-10 text-center">
-                                <i class="lucide-play-circle w-20 h-20 mb-4 hdkwa-gold"></i>
-                                <p class="font-bold">Watch Demo Video</p>
-                                <p class="text-xs text-gray-400">Technique breakdown by @DangRenBo</p>
+                    <div class="sticky top-16 space-y-6">
+                        <div class="bg-black aspect-video rounded-2xl flex items-center justify-center text-white relative overflow-hidden group">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                                <p class="text-[10px] text-[#C5A059] font-bold uppercase tracking-widest mb-1">Demo Video</p>
+                                <h4 class="font-bold text-lg">35 - Cold Call & Stretch It</h4>
+                            </div>
+                            <i class="lucide-play-circle w-16 h-16 text-[#C5A059] opacity-80"></i>
+                        </div>
+                        
+                        <div class="p-6 bg-apple-tile rounded-2xl">
+                            <h4 class="text-xs font-bold uppercase mb-4 text-gray-400">Literature Deep Dive</h4>
+                            <div class="flex gap-3 items-center">
+                                <div class="w-10 h-14 bg-[#003366] rounded flex-shrink-0"></div>
+                                <div>
+                                    <p class="text-sm font-bold">TLAC 3.0: Strategy 35</p>
+                                    <p class="text-[10px] text-gray-500">Pages 245-252</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="mt-6 p-6 bg-apple-tile rounded-2xl">
-                            <h4 class="text-xs font-bold uppercase mb-3">Coach's Note</h4>
-                            <p class="text-sm text-gray-600 italic">"Notice how the teacher keeps the tone conversational. It's not a 'gotcha,' it's an 'I want to hear your thinking' moment."</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- REFERENCE LIBRARY MOCKUP -->
-        <div id="references" class="mockup-container">
-            <header class="mb-20">
-                <h1 class="heading-display text-6xl mb-6">The Pedagogy Shelf.</h1>
-                <p class="text-2xl text-gray-500 max-w-2xl leading-relaxed">Our curated selection of evidence-based instructional frameworks, fully cross-referenced with Danielson.</p>
-            </header>
-
-            <div class="grid grid-cols-4 gap-12">
-                <div class="group cursor-pointer">
-                    <div class="aspect-[3/4] bg-hdkwa-navy rounded-xl mb-6 flex items-center justify-center p-8 text-center text-white shadow-xl transition-transform group-hover:-translate-y-4">
-                        <div>
-                            <h3 class="font-bold text-xl mb-2">Teach Like A Champion 3.0</h3>
-                            <p class="text-[10px] uppercase text-gray-400">Doug Lemov</p>
-                        </div>
-                    </div>
-                    <h4 class="font-semibold text-lg">TLAC 3.0</h4>
-                    <p class="text-sm text-gray-500">63 techniques for high-performance classrooms.</p>
-                </div>
-                <div class="group cursor-pointer">
-                    <div class="aspect-[3/4] bg-white border border-gray-200 rounded-xl mb-6 flex items-center justify-center p-8 text-center shadow-xl transition-transform group-hover:-translate-y-4">
-                        <div>
-                            <h3 class="font-bold text-xl mb-2 hdkwa-navy">Visible Learning</h3>
-                            <p class="text-[10px] uppercase text-gray-400">John Hattie</p>
-                        </div>
-                    </div>
-                    <h4 class="font-semibold text-lg">Visible Learning</h4>
-                    <p class="text-sm text-gray-500">The sequel: What works best in schools.</p>
-                </div>
-                <div class="group cursor-pointer">
-                    <div class="aspect-[3/4] bg-apple-tile rounded-xl mb-6 flex items-center justify-center p-8 text-center shadow-xl transition-transform group-hover:-translate-y-4 border border-gray-100">
-                        <div>
-                            <h3 class="font-bold text-xl mb-2 text-apple-ink">New Art & Science</h3>
-                            <p class="text-[10px] uppercase text-gray-400">Robert Marzano</p>
-                        </div>
-                    </div>
-                    <h4 class="font-semibold text-lg">New Art & Science</h4>
-                    <p class="text-sm text-gray-500">A framework for effective instruction.</p>
-                </div>
-                <div class="group cursor-pointer">
-                    <div class="aspect-[3/4] bg-hdkwa-gold rounded-xl mb-6 flex items-center justify-center p-8 text-center text-white shadow-xl transition-transform group-hover:-translate-y-4">
-                        <div>
-                            <h3 class="font-bold text-xl mb-2">First Days of School</h3>
-                            <p class="text-[10px] uppercase text-gray-200">Harry Wong</p>
-                        </div>
-                    </div>
-                    <h4 class="font-semibold text-lg">First Days of School</h4>
-                    <p class="text-sm text-gray-500">The foundational guide to classroom management.</p>
-                </div>
-            </div>
-        </div>
+        <!-- OTHERS (HIDDEN) -->
+        <div id="home" class="mockup-container">Home Content</div>
+        <div id="domain" class="mockup-container">Domain Hub</div>
+        <div id="report" class="mockup-container">PD Report Content</div>
 
     </main>
 
     <script>
         function showMockup(id) {
-            // Hide all
-            document.querySelectorAll('.mockup-container').forEach(el => {
-                el.classList.remove('active');
-            });
-            // Show target
+            document.querySelectorAll('.mockup-container').forEach(el => el.classList.remove('active'));
             document.getElementById(id).classList.add('active');
-
-            // Update nav
             document.querySelectorAll('.nav-link').forEach(el => {
                 el.classList.remove('active');
-                if (el.innerText.toLowerCase().includes(id) || (id === 'home' && el.innerText === 'Home')) {
-                    el.classList.add('active');
-                }
-                // Special check for "Module" -> "Strategy"
-                if (id === 'strategy' && el.innerText === 'Actionable Module') {
-                    el.classList.add('active');
-                }
-                // Special check for "Library" -> "References"
-                if (id === 'references' && el.innerText === 'Reference Library') {
+                if (el.innerText.toLowerCase().includes(id.substring(0,3)) || (id === 'home' && el.innerText === 'Home')) {
                     el.classList.add('active');
                 }
             });

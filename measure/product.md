@@ -12,17 +12,24 @@ To provide secondary K-12 teachers with a high-impact, bite-sized, and actionabl
 
 ## Core Features
 - **Danielson-Based Navigation:** Content organized by the four domains of the Danielson Framework for Teaching.
-- **Actionable Modules:** Each strategy includes a brief explanation, clear actionable steps, and a technique-focused video demonstration.
-- **Embedded Expertise:** Integration of technique-focused videos from the YouTube channel @DangRenBo.
-- **Literature Integration:** Contextual integration of strategies from:
-    - *Teach Like A Champion 3.0*
-    - *Visible Learning (The Sequel)*
-    - *The New Art and Science of Teaching*
-    - *The First Days of School* (Wong)
-- **Gamified Progress Tracking:** Local storage-based tracking that allows teachers to mark strategies as completed and earn visual recognition (badges/milestones) for progress within Danielson domains.
-- **Source Tagging:** Clear attribution of strategies to their source books/frameworks.
+- **High-Reward Subdomains:** Four critical subdomains are prioritized as "High Reward" (yielding more badges/points and prominent visual status):
+    - **3b:** Using Questioning and Discussion Techniques
+    - **3c:** Engaging Students in Learning
+    - **2c:** Managing Classroom Procedures
+    - **2d:** Managing Student Behavior
+- **Subdomain Technique Hubs:** Each subdomain serves as a hub for multiple techniques (e.g., Cold Call, Radar, Threshold).
+- **Actionable Modules:** Each technique includes:
+    - **Self-Assessment (Before):** 1-5 rating on current usage + implementation goal.
+    - **Demonstration:** Technique-focused videos (primarily from @DangRenBo).
+    - **Instructional Deep Dive:** In-depth explanation videos and step-by-step guides.
+    - **Implementation Reflection (After):** 1-5 rating on student impact + reflection notes.
+- **Embedded Expertise:** Integration of technique-focused videos from the YouTube channel @DangRenBo and curated legacy content.
+- **Literature Integration:** Contextual integration of strategies from TLAC 3.0, Visible Learning, Marzano, and Wong.
+- **Progress Tracking & Gamification:** Local storage tracking for strategy completion, growth metrics, and domain mastery.
+- **Implementation Reporting (Export):** An aggregate summary page that compiles Before/After data and reflection notes into a professional report for HODs/ICs.
 
 ## Project Goals
 - **Empower Teachers:** Transform abstract evaluation criteria into concrete classroom actions.
-- **Low Friction:** Ensure the site is fast, easy to navigate, and works seamlessly as a static export on GitHub Pages.
-- **Continuous Growth:** Encourage teachers to track their implementation progress over time.
+- **Showcase Growth:** Use Before/After ratings to provide quantitative evidence of professional development.
+- **Incentivize High Impact:** Direct teachers toward the "High Reward" subdomains that most significantly impact student outcomes.
+- **Low Friction:** Static export on GitHub Pages with local-first persistence.
