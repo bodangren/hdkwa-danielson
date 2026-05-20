@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
 import { 
   Home, 
   LayoutDashboard, 
@@ -22,6 +23,28 @@ const navItems = [
 
 export default function Sidebar() {
   const pathname = usePathname();
+  const [completedCount, setCompletedCount] = useState(0);
+
+  useEffect(() => {
+    const updateProgress = () => {
+      const saved = localStorage.getItem('completed_techniques');
+      if (saved) {
+        try {
+          const completed = JSON.parse(saved);
+          setCompletedCount(Array.isArray(completed) ? completed.length : 0);
+        } catch (e) {
+          setCompletedCount(0);
+        }
+      }
+    };
+
+    updateProgress();
+    window.addEventListener('storage_update', updateProgress);
+    return () => window.removeEventListener('storage_update', updateProgress);
+  }, []);
+
+  const totalTechniques = 11; // Current total in techniques.ts
+  const percentage = Math.round((completedCount / totalTechniques) * 100);
 
   return (
     <nav className="w-64 border-r border-gray-200 h-screen sticky top-0 p-8 flex flex-col gap-8 bg-white z-10">
@@ -66,9 +89,12 @@ export default function Sidebar() {
         <div className="bg-hdkwa-gold/10 p-4 rounded-xl border border-hdkwa-gold/20">
           <p className="text-[10px] font-bold text-hdkwa-gold uppercase mb-1">Total Progress</p>
           <div className="w-full bg-gray-200 h-1 rounded-full overflow-hidden">
-            <div className="bg-hdkwa-gold w-1/3 h-full"></div>
+            <div 
+              className="bg-hdkwa-gold h-full transition-all duration-500 ease-out" 
+              style={{ width: `${percentage}%` }}
+            ></div>
           </div>
-          <p className="text-xs mt-2 font-medium">12 / 24 Techniques</p>
+          <p className="text-xs mt-2 font-medium">{completedCount} / {totalTechniques} Techniques</p>
         </div>
       </div>
     </nav>

@@ -6,6 +6,7 @@ export interface Technique {
   source: string; // e.g., "TLAC 3.0"
   alignment: string; // e.g., "3b: Using Questioning"
   description: string;
+  detailedSummary?: string;
   quote?: string;
   actionSteps: string[];
   videos: {

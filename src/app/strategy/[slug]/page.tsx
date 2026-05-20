@@ -50,7 +50,7 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
 
             <section>
               <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 mb-6">Action Steps</h3>
-              <ul className="space-y-6">
+              <ul className="space-y-6 mb-10">
                 {technique.actionSteps.map((step, index) => (
                   <li key={index} className="flex gap-4">
                     <span className="w-6 h-6 rounded-full bg-hdkwa-navy text-white text-[10px] flex items-center justify-center flex-shrink-0 mt-1 shadow-sm">
@@ -60,6 +60,15 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
                   </li>
                 ))}
               </ul>
+              
+              {technique.detailedSummary && (
+                <div className="bg-white border border-gray-100 p-8 rounded-[24px] shadow-sm">
+                  <h4 className="text-xs font-bold uppercase text-hdkwa-navy mb-4 tracking-widest">Technique Overview</h4>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {technique.detailedSummary}
+                  </p>
+                </div>
+              )}
             </section>
 
             <ReflectionModule technique={technique} />
@@ -69,7 +78,7 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
         <div className="col-span-5">
           <div className="sticky top-16 space-y-8">
             {/* VIDEO SECTION */}
-            <div className="space-y-4">
+            <div className="space-y-6">
                <h4 className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">Technique Demonstration</h4>
                <div className="aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl relative group border border-gray-100">
                   <iframe 
@@ -80,7 +89,25 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
                     allowFullScreen
                   ></iframe>
                </div>
-               <p className="text-[11px] text-center text-gray-400 italic">Demo Breakdown by @DangRenBo</p>
+               
+               {technique.videos.curated && technique.videos.curated.length > 0 && (
+                 <div className="space-y-3 mt-8">
+                    <h5 className="text-[9px] font-bold text-gray-400 uppercase tracking-widest">Additional Examples</h5>
+                    <div className="grid grid-cols-2 gap-3">
+                      {technique.videos.curated.map((videoId, idx) => (
+                        <div key={idx} className="aspect-video bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
+                           <iframe 
+                              className="w-full h-full"
+                              src={`https://www.youtube.com/embed/${videoId}?rel=0&modestbranding=1`}
+                              title={`${technique.title} Example ${idx + 1}`}
+                              allowFullScreen
+                            ></iframe>
+                        </div>
+                      ))}
+                    </div>
+                 </div>
+               )}
+               <p className="text-[11px] text-center text-gray-400 italic">Content curated by @DangRenBo</p>
             </div>
 
             {/* LITERATURE SECTION */}
