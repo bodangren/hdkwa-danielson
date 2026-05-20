@@ -17,7 +17,7 @@ export const techniques: Technique[] = [
       'Analyze: Identify the key vocabulary and logic steps required.',
       'Check: Use the exemplar to evaluate student work in real-time.'
     ],
-    detailedSummary: 'Exemplar Planning is the discipline of solving your own lesson tasks before the students do. By creating a high-quality model response, you clarify the "finish line" for the lesson. This process helps you anticipate common misconceptions, identify essential vocabulary, and set a precise standard for what constitutes "proficient" work.',
+    detailedSummary: 'Exemplar Planning is the discipline of solving your own lesson tasks before the students do. By creating a high-quality model response, you clarify the "finish line" for the lesson. This process helps you anticipate common misconceptions, identify essential vocabulary, and set a precise standard for what constitutes "proficient" work. It transforms your monitoring from "looking for work" to "looking for quality."',
     videos: { demo: 'LXEY7vr-Yvs' },
     literature: { book: 'TLAC 3.0', pages: 'Chapter 1' }
   },
@@ -34,9 +34,25 @@ export const techniques: Technique[] = [
       'Connect: Show how different concepts relate to the core objective.',
       'Study: Use the organizer as a basis for Retrieval Practice.'
     ],
-    detailedSummary: 'Knowledge Organizers serve as a pedagogical anchor. By mapping out the "essential knowledge" of a unit, teachers demonstrate a deep understanding of content structure, allowing for a more coherent sequence of lessons.',
+    detailedSummary: 'Knowledge Organizers serve as a pedagogical anchor for both the teacher and the students. By mapping out the "essential knowledge" of a unit, teachers demonstrate a deep understanding of content structure. It allows for a more coherent sequence of lessons, as the most important information is prioritized and clearly communicated from day one.',
     videos: { demo: '6DNTfuEcQek' },
     literature: { book: 'TLAC 3.0', pages: 'Technique 5' }
+  },
+  {
+    id: 'concept-mapping',
+    title: 'Concept Mapping',
+    subdomain: '1a',
+    domain: 1,
+    source: 'Visible Learning',
+    alignment: '1a: Knowledge of Content and Pedagogy',
+    description: 'Use visual diagrams to show the relationships between different concepts within a unit.',
+    actionSteps: [
+      'Link: Draw lines between related topics.',
+      'Label: Explain the relationship on the connecting line.',
+      'Review: Have students update the map as they learn more.'
+    ],
+    detailedSummary: 'Concept mapping is a high-impact strategy for demonstrating and teaching content structure. It helps students see the "big picture" and how individual facts fit into a larger conceptual framework. For the teacher, it provides a clear roadmap for lesson sequencing and ensures that prerequisite knowledge is addressed before moving to more complex topics.',
+    videos: { demo: 'qNuz8s66N1E' }
   },
 
   // 1b: Knowledge of Students
@@ -53,7 +69,7 @@ export const techniques: Technique[] = [
       'Analyze: Map student needs to specific instructional moves.',
       'Adapt: Modify tasks to align with student developmental levels.'
     ],
-    detailedSummary: 'Understanding the "student as learner" is a high-impact factor. This technique involves gathering data about students\' prior knowledge and cultural backgrounds to design instruction that meets them where they are.',
+    detailedSummary: 'Hattie research highlights that understanding the "student as learner" is one of the highest impact factors in education. This technique involves systematically gathering and using data about students\' prior knowledge, learning preferences, and cultural backgrounds. By designing instruction that meets students where they are, teachers increase engagement and ensure that instructional outcomes are challenging yet attainable.',
     videos: { demo: 'VhVaUo1fQuA' },
     literature: { book: 'Visible Learning (The Sequel)', pages: 'Chapter 4' }
   },
@@ -70,8 +86,24 @@ export const techniques: Technique[] = [
       'Group: Create flexible groupings for specific tasks.',
       'Choice: Offer varied activities that lead to the same cognitive outcome.'
     ],
-    detailedSummary: 'Differentiation is the practical application of knowledge of students. This technique involves creating instructional materials that provide appropriate levels of scaffold and challenge for every learner.',
+    detailedSummary: 'Differentiation is the practical application of knowledge of students. A proficient teacher doesn\'t just know students; they plan for their differences. This technique involves creating instructional materials and tasks that provide appropriate levels of scaffold and challenge for every learner in the room.',
     videos: { demo: 'qW6slc3hu1o' }
+  },
+  {
+    id: 'cultural-competency',
+    title: 'Culturally Responsive Design',
+    subdomain: '1b',
+    domain: 1,
+    source: 'Edutopia',
+    alignment: '1b: Knowledge of Students',
+    description: 'Select instructional materials and examples that reflect the diverse backgrounds of the students in your classroom.',
+    actionSteps: [
+      'Audit: Review your curriculum for diverse representation.',
+      'Connect: Link academic concepts to students\' real-world experiences.',
+      'Include: Use "Windows and Mirrors" to help students see themselves in the content.'
+    ],
+    detailedSummary: 'Proficient teachers display knowledge of their students\' cultures. This technique involves intentionally selecting texts, problems, and examples that are relevant and respectful to the students\' backgrounds. It builds trust and ensures that the curriculum is accessible and engaging for all learners.',
+    videos: { demo: 'JeMVNDWSVL4' }
   },
 
   // 1c: Setting Instructional Outcomes
@@ -80,16 +112,16 @@ export const techniques: Technique[] = [
     title: 'Clear Learning Goals',
     subdomain: '1c',
     domain: 1,
-    source: 'New Art and Science',
+    source: 'Marzano',
     alignment: '1c: Setting Instructional Outcomes',
-    description: 'Establish and communicate clear, measurable goals for what students will learn.',
+    description: 'Establish and communicate clear, measurable goals for what students will learn during the lesson.',
     actionSteps: [
       'Define: Identify specific knowledge or skills.',
       'Communicate: Post the goal visibly in the room.',
       'Check: Refer back to the goal throughout the lesson.'
     ],
-    detailedSummary: 'Learning is most effective when students understand exactly what they are expected to learn. Clear goals focus on specific cognitive outcomes and provide the roadmap for the entire lesson.',
-    videos: { demo: 'WPyebtSrFOw' },
+    detailedSummary: 'Marzano emphasizes that learning is most effective when students understand exactly what they are expected to learn. Clear learning goals go beyond just "doing an activity"; they focus on the specific cognitive outcome. A proficient teacher ensures students can articulate the goal and understand how their current work relates to it.',
+    videos: { demo: '4rvrlEjp87I' },
     literature: { book: 'New Art and Science', pages: 'Chapter 1' }
   },
   {
@@ -99,17 +131,30 @@ export const techniques: Technique[] = [
     domain: 1,
     source: 'TLAC 3.0',
     alignment: '1c: Setting Instructional Outcomes',
-    description: 'Invest students in the instructional goal by making the "Why" compelling.',
+    description: 'Invest students in the instructional goal by making the "Why" compelling and relevant to their lives.',
     actionSteps: [
-      'The Hook: Start with a story or problem that highlights value.',
-      'Challenge: Set a high bar that motivates persistence.',
-      'Celebration: Acknowledge progress toward the goal.'
+      'The Hook: Start with a story or problem that highlights the goal\'s value.',
+      'Challenge: Set a high bar that motivates students to work hard.',
+      'Celebration: Acknowledge when the class makes progress toward the goal.'
     ],
-    detailedSummary: 'Strategic Investment builds buy-in. It ensures students see the goal as a desirable achievement, leading to higher levels of focus and persistence.',
-    videos: {
-      demo: 'bZyiURfJn_0',
-      curated: ['fsLDMwyQ_Zw', 'dxVO4s0wN84', 'fMF11TM_jfs']
-    }
+    detailedSummary: 'Strategic Investment is about building buy-in. It ensures that students don\'t just see the goal as a requirement, but as a desirable achievement. By making the outcomes valuable and exciting, teachers increase the psychological "stakes" of the lesson, leading to higher levels of focus and persistence.',
+    videos: { demo: 'bZyiURfJn_0' }
+  },
+  {
+    id: 'student-friendly-rubrics',
+    title: 'Success Criteria',
+    subdomain: '1c',
+    domain: 1,
+    source: 'Hattie',
+    alignment: '1c: Setting Instructional Outcomes',
+    description: 'Provide students with clear, jargon-free rubrics that show exactly what proficient work looks like.',
+    actionSteps: [
+      'Deconstruct: Break the goal into observable "Success Criteria."',
+      'Model: Show examples of work at different levels.',
+      'Self-Assess: Have students use the rubric to check their own progress.'
+    ],
+    detailedSummary: 'Instructional outcomes are only effective if students know how to reach them. By providing "Success Criteria" (the specific steps or qualities of high-quality work), teachers empower students to take ownership of their learning. This technique ensures that the standards are transparent and that students can answer the question: "How will I know I have learned it?"',
+    videos: { demo: 'CygTwWsoXfE' }
   },
 
   // 1d: Knowledge of Resources
@@ -120,13 +165,13 @@ export const techniques: Technique[] = [
     domain: 1,
     source: 'DangRenBo',
     alignment: '1d: Knowledge of Resources',
-    description: 'Utilize specialized digital tools and literature to enhance lesson depth.',
+    description: 'Utilize specialized digital tools and professional literature to enhance lesson depth.',
     actionSteps: [
       'Explore: Identify high-quality digital repositories.',
       'Evaluate: Select resources that match specific student needs.',
       'Integrate: Embed resources seamlessly into instruction.'
     ],
-    detailedSummary: 'A proficient teacher curates materials that support differentiation and provide challenge. This includes mastering digital tools to support student literacy or numeracy.',
+    detailedSummary: 'A proficient teacher is aware of a wide range of resources—both traditional and digital—that can enhance instruction. This technique involves the systematic curation of materials that support differentiation and provide challenge.',
     videos: { demo: 'xS0EFsIcaI4' }
   },
   {
@@ -136,14 +181,30 @@ export const techniques: Technique[] = [
     domain: 1,
     source: 'DangRenBo',
     alignment: '1d: Knowledge of Resources',
-    description: 'Use real-world case studies and professional artifacts to deepen student understanding.',
+    description: 'Use real-world case studies and artifacts to deepen understanding.',
     actionSteps: [
       'Select: Choose a case study that mirrors the unit objective.',
       'Analyze: Have students extract key variables and data.',
       'Apply: Use case study findings to solve new problems.'
     ],
-    detailedSummary: 'Using rich, authentic resources like case studies provides students with a bridge between theory and practice. This technique demonstrates a teacher\'s awareness of external resources that can enhance the instructional program.',
-    videos: { demo: 'IN4MBaOdLRY', curated: ['1O_YHSGpZDo'] }
+    detailedSummary: 'Using rich, authentic resources like case studies provides students with a bridge between theory and practice. This technique demonstrates a teacher\'s awareness of external resources.',
+    videos: { demo: 'IN4MBaOdLRY' }
+  },
+  {
+    id: 'professional-networks',
+    title: 'Learning Networks',
+    subdomain: '1d',
+    domain: 1,
+    source: 'Edutopia',
+    alignment: '1d: Knowledge of Resources',
+    description: 'Leverage professional associations, local experts, and online communities to bring "outside" expertise into the classroom.',
+    actionSteps: [
+      'Connect: Identify an expert or organization related to your unit.',
+      'Collaborate: Use guest speakers (virtual or in-person) or professional datasets.',
+      'Update: Stay current with the latest instructional research in your field.'
+    ],
+    detailedSummary: 'A proficient teacher goes beyond the textbook. By connecting with external professional communities and resources, teachers provide students with current, high-fidelity information. This technique ensures that the instructional program is enriched by professional expertise from outside the school building.',
+    videos: { demo: 'gjIQVhiMWdA' }
   },
 
   // 1e: Designing Coherent Instruction
@@ -154,13 +215,13 @@ export const techniques: Technique[] = [
     domain: 1,
     source: 'TLAC 3.0',
     alignment: '1e: Designing Coherent Instruction',
-    description: 'Plan what students will be doing at every stage, not just what the teacher is doing.',
+    description: 'Plan what students will be doing at every stage of the lesson.',
     actionSteps: [
-      'T-Chart: Create a two-column plan.',
-      'Accountability: Ensure every student has a task.',
-      'Alignment: Verify that activities lead to the objective.'
+      'T-Chart: Create a two-column plan (Teacher Do / Student Do).',
+      'Accountability: Ensure every student has a task during transitions.',
+      'Alignment: Verify that student activities directly lead to the objective.'
     ],
-    detailedSummary: 'The Double Plan prevents the "active teacher, passive student" trap by planning the specific actions students will take.',
+    detailedSummary: 'The Double Plan prevents the passive student trap by planning the specific actions students will take.',
     videos: { demo: 'hSj4uCkfz5k' },
     literature: { book: 'TLAC 3.0', pages: 'Chapter 2' }
   },
@@ -177,8 +238,24 @@ export const techniques: Technique[] = [
       'Timed Windows: Use tight time limits for urgency.',
       'Refocus: Reset the room between phases.'
     ],
-    detailedSummary: 'Pacing is key to coherent instruction. By varying intensity, teachers prevent fatigue and keep students engaged throughout the period.',
-    videos: { demo: 'fZ2RfDxVikM', curated: ['qTp_i9YDpCI'] }
+    detailedSummary: 'By varying intensity, teachers prevent fatigue and keep students engaged throughout the period.',
+    videos: { demo: 'fZ2RfDxVikM' }
+  },
+  {
+    id: 'scaffolding-complex-tasks',
+    title: 'Scaffolding',
+    subdomain: '1e',
+    domain: 1,
+    source: 'Edutopia',
+    alignment: '1e: Designing Coherent Instruction',
+    description: 'Break complex learning tasks into smaller, manageable steps with clear "on-ramps" for all students.',
+    actionSteps: [
+      'Chunk: Divide the lesson into 10-15 minute focused segments.',
+      'Bridge: Use mini-lessons to address prerequisite gaps.',
+      'Support: Provide temporary aids (like sentence starters or templates) that are faded over time.'
+    ],
+    detailedSummary: 'Coherent instruction is structured to support learning. Scaffolding ensures that all students can access high-level content by providing the necessary support at the right time. A proficient teacher designs these supports in advance, ensuring that the lesson moves from simple to complex in a logical, supportive sequence.',
+    videos: { demo: '5O0dJjNlrNs' }
   },
 
   // 1f: Designing Student Assessments
@@ -191,11 +268,11 @@ export const techniques: Technique[] = [
     alignment: '1f: Designing Student Assessments',
     description: 'Insert "checkpoints" into your lesson where students must show mastery before moving on.',
     actionSteps: [
-      'Identify: Choose a "hinge point".',
-      'Standard: Define the minimum quality required.',
-      'Verify: Physically mark or acknowledge correct work.'
+      'Identify: Choose a checkpoint.',
+      'Standard: Define passing quality.',
+      'Verify: Mark correct work.'
     ],
-    detailedSummary: 'Affirmative Checking embeds formative assessment into the flow of the lesson, preventing students from practicing errors.',
+    detailedSummary: 'Affirmative Checking embeds formative assessment into the flow, preventing students from practicing errors.',
     videos: { demo: 'YBWhU11MqpU' },
     literature: { book: 'TLAC 3.0', pages: 'Chapter 3' }
   },
@@ -209,11 +286,27 @@ export const techniques: Technique[] = [
     description: 'Design student materials so that work is easy for the teacher to scan instantly.',
     actionSteps: [
       'Aligned Workspaces: Answers in the same place.',
-      'Vertical Alignment: Answer boxes in a column.',
+      'Vertical Alignment: Answer columns.',
       'Immediate Feedback: Scan desks in seconds.'
     ],
-    detailedSummary: 'Standardizing format increases the efficiency of formative assessment, allowing for a much higher frequency of feedback.',
+    detailedSummary: 'Increases formative assessment efficiency, allowing higher feedback frequency.',
     videos: { demo: 'HEFxSiGse3U' }
+  },
+  {
+    id: 'exit-tickets',
+    title: 'The Exit Ticket',
+    subdomain: '1f',
+    domain: 1,
+    source: 'TLAC 3.0',
+    alignment: '1f: Designing Student Assessments',
+    description: 'A 2-3 minute daily assessment at the end of class to measure student mastery of the day\'s objective.',
+    actionSteps: [
+      'Design: Create one or two questions that directly test the core objective.',
+      'Collect: Gather as students leave (Threshold).',
+      'Analyze: Sort into "Got it," "Almost," and "Don\'t have it" to plan tomorrow\'s lesson.'
+    ],
+    detailedSummary: 'The Exit Ticket is the ultimate tool for designing assessment. It provides the teacher with 100% data on student learning every single day. A proficient teacher uses this data to immediately adjust the next day\'s lesson, ensuring that no student is left behind.',
+    videos: { demo: '0hX0H5K0_0U' }
   },
 
   // --- DOMAIN 2: CLASSROOM ENVIRONMENT ---
@@ -228,11 +321,11 @@ export const techniques: Technique[] = [
     alignment: '2a: Respect and Rapport',
     description: 'Guide students toward behavior expectations using positive language.',
     actionSteps: [
-      'Narrate the Positive: Highlight those meeting expectations.',
-      'Assume Best Intent: Frame corrections as "reminders".',
-      'Praise the Effort: Be precise about growth.'
+      'Narrate: Highlight those meeting expectations.',
+      'Assume Best Intent: Frame as reminders.',
+      'Praise Effort: Precise growth identification.'
     ],
-    detailedSummary: 'Positive Framing builds rapport by focusing on the desired outcome and avoiding public "gotcha" moments.',
+    detailedSummary: 'Builds rapport by focusing on desired outcomes and avoiding public scolding.',
     videos: { demo: 'KT4ET0PAWVI' },
     literature: { book: 'TLAC 3.0', pages: 'Chapter 10' }
   },
@@ -243,14 +336,14 @@ export const techniques: Technique[] = [
     domain: 2,
     source: 'TLAC 3.0',
     alignment: '2a: Respect and Rapport',
-    description: 'Provide feedback that is specific, timely, and focused on student actions.',
+    description: 'Specific and timely feedback on actions.',
     actionSteps: [
       'Be Specific: Identify the exact action.',
       'Timely: Praise immediately.',
-      'Respect Dignity: Choose public or private mode.'
+      'Respect Dignity: Use appropriate mode.'
     ],
-    detailedSummary: 'Precise Praise reinforces specific instructional habits and builds a culture of respect by showing students that their effort is noticed.',
-    videos: { demo: 'pz3ACmHPfqs', curated: ['jdh_BtlvbH8'] }
+    detailedSummary: 'Reinforces habits and builds respect by showing effort is noticed.',
+    videos: { demo: 'pz3ACmHPfqs' }
   },
   {
     id: 'joy-factor',
@@ -265,8 +358,8 @@ export const techniques: Technique[] = [
       'Humor: Use wit to lighten the room.',
       'Communal Goals: Celebrate class targets.'
     ],
-    detailedSummary: 'Building small moments of celebration into the daily routine creates a warm and vibrant classroom community.',
-    videos: { demo: '5GuZNgZNEzI', curated: ['PdTuXrrELi4'] }
+    detailedSummary: 'Building small moments of celebration into the daily routine creates a warm classroom community.',
+    videos: { demo: '5GuZNgZNEzI' }
   },
 
   // 2b: Establishing a Culture for Learning
@@ -275,16 +368,16 @@ export const techniques: Technique[] = [
     title: 'Culture of Error',
     subdomain: '2b',
     domain: 2,
-    source: 'TLAC 3.0',
+    source: 'Uncommon Schools',
     alignment: '2b: Establishing a Culture for Learning',
-    description: 'Create an environment where mistakes are used as a tool for learning.',
+    description: 'Mistakes are tools for learning.',
     actionSteps: [
-      'Normalize Mistakes: "I’m glad you made that mistake."',
-      'Check for Understanding: Encourage honesty about confusion.',
-      'Responsive Teaching: Pivot based on student data.'
+      'Normalize: "I\'m glad you made that mistake."',
+      'Check: Encourage honesty about confusion.',
+      'Pivot: Adjust based on data.'
     ],
-    detailedSummary: 'A Culture of Error shifts focus to the process of learning, where errors are data points rather than failures.',
-    videos: { demo: '9Y0snFJawfw', curated: ['UDJsoamKtNQ'] },
+    detailedSummary: 'Shifts focus to learning process, where errors are data points rather than failures.',
+    videos: { demo: 'UDJsoamKtNQ' },
     literature: { book: 'TLAC 3.0', pages: 'Chapter 3' }
   },
   {
@@ -294,14 +387,30 @@ export const techniques: Technique[] = [
     domain: 2,
     source: 'TLAC 3.0',
     alignment: '2b: Establishing a Culture for Learning',
-    description: 'Communicate the belief that every student can reach a high standard.',
+    description: 'Belief that every student can reach high standards.',
     actionSteps: [
-      'No Opt Out: Never leave a student with "I don\'t know."',
-      'Wait Time: Provide silence for thinking.',
-      'Academic Language: Require professional terminology.'
+      'No Opt Out: Never leave a student confused.',
+      'Wait Time: Provide thinking space.',
+      'Academic Language: Use professional terms.'
     ],
-    detailedSummary: 'Culture for Learning is defined by the value placed on hard work. High expectations show students respect for their intellectual potential.',
+    detailedSummary: 'Value placed on hard work showing respect for student potential.',
     videos: { demo: 'yOSrb5E0xks' }
+  },
+  {
+    id: 'student-pride',
+    title: 'The Wall of Excellence',
+    subdomain: '2b',
+    domain: 2,
+    source: 'Edutopia',
+    alignment: '2b: Establishing a Culture for Learning',
+    description: 'Display high-quality student work publicly to signal what constitutes excellence in your classroom.',
+    actionSteps: [
+      'Select: Choose work that shows growth or high achievement.',
+      'Annotate: Add small notes explaining *why* this work is excellent.',
+      'Rotate: Ensure a diverse range of students have their work featured over time.'
+    ],
+    detailedSummary: 'Culture for Learning is established when students see that the teacher values their hard work. By displaying artifacts of excellence, teachers provide a concrete "North Star" for all students to aim for. It signals that high-quality work is the standard and something to be proud of.',
+    videos: { demo: 'MO4T_pQBVQc' }
   },
 
   // 2c: Managing Classroom Procedures
@@ -313,14 +422,14 @@ export const techniques: Technique[] = [
     source: 'TLAC 3.0',
     alignment: '2c: Managing Classroom Procedures',
     highReward: true,
-    description: 'Establish authority through economy of language and quiet power.',
+    description: 'Professional authority through calm communication.',
     actionSteps: [
-      'Economy of Language: Fewer words, more weight.',
-      'Do Not Talk Over: Wait for full attention.',
-      'Quiet Power: Use a calm, steady tone.'
+      'Economy: Fewer words, more weight.',
+      'Wait: Full attention before starting.',
+      'Tone: Calm and steady.'
     ],
-    detailedSummary: 'Strong Voice is about establishing professional authority through calm, steady communication and clarity.',
-    videos: { demo: '9bJdrxHg8fQ', curated: ['1vJonudsodI', 'ODI-z19TFJ0'] }
+    detailedSummary: 'Establishing authority through presence and clarity without talking over students.',
+    videos: { demo: '9bJdrxHg8fQ' }
   },
   {
     id: 'do-it-again',
@@ -330,30 +439,30 @@ export const techniques: Technique[] = [
     source: 'TLAC 3.0',
     alignment: '2c: Managing Classroom Procedures',
     highReward: true,
-    description: 'When students fail to meet a procedure, have them redo it until it is correct.',
+    description: 'Redo procedures until correct.',
     actionSteps: [
-      'Neutral Correction: "Let\'s try that transition again."',
-      'Immediate Feedback: Redo immediately.',
-      'Positive Reinforcement: Acknowledge success.'
+      'Neutral Correction: "Let\'s try that again."',
+      'Redo: Immediately.',
+      'Success: Acknowledge the hit.'
     ],
-    detailedSummary: 'Do It Again builds muscle memory for classroom routines, focusing on practice rather than scolding.',
+    detailedSummary: 'Builds muscle memory for routines, focusing on practice over scolding.',
     videos: { demo: 'jOvXM-_6z5M' }
   },
   {
-    id: 'make-compliance-visible',
-    title: 'Visible Compliance',
+    id: 'tight-transitions',
+    title: 'Tight Transitions',
     subdomain: '2c',
     domain: 2,
     source: 'TLAC 3.0',
     alignment: '2c: Managing Classroom Procedures',
-    description: 'Give instructions that allow you to see instantly if everyone is following.',
+    description: 'Explicitly teach and time the transition between activities to minimize instructional time loss.',
     actionSteps: [
-      'Standardized Signal: Choose an easy-to-see move.',
-      'Verify: Scan the room (Radar).',
-      'Narrate: Positive framing for compliance.'
+      'The Countdown: Give a clear 10-second limit for a transition.',
+      'Visuals: Use a timer projected on the board.',
+      'Routines: Teach the exact moves (e.g. "Papers forward").'
     ],
-    detailedSummary: 'By making compliance visible, teachers can manage the room efficiently without losing instructional time to confusion.',
-    videos: { demo: 'Rk87TbnZojc', curated: ['1qIzNdbHK4M'] }
+    detailedSummary: 'A proficient teacher manages procedures so they occur smoothly with little loss of instructional time. Tight Transitions ensure that students move from one phase of the lesson to the next with speed and purpose, keeping the focus on learning.',
+    videos: { demo: 'Yfye2NHvIc8' }
   },
   {
     id: 'threshold',
@@ -362,15 +471,14 @@ export const techniques: Technique[] = [
     domain: 2,
     source: 'Wong / TLAC',
     alignment: '2c: Managing Classroom Procedures',
-    description: 'Meet students at the door to set the tone for learning before they enter.',
+    description: 'Meet students at the door to set the tone.',
     actionSteps: [
-      'Greeting: Handshake, high-five, or warm eye contact.',
-      'Instruction: Give the first task (Bellwork) before they sit.',
-      'Correction: Address off-task behavior before it enters the room.'
+      'Greeting: Handshake or eye contact.',
+      'Instruction: Give Bellwork before they sit.',
+      'Correction: Address behavior early.'
     ],
-    detailedSummary: 'Threshold allows the teacher to establish rapport and expectations the moment students arrive. It ensures that the transition into the classroom is professional and purposeful.',
-    videos: { demo: 'kv2pAhwkFgc' },
-    literature: { book: 'First Days of School', pages: 'Unit C' }
+    detailedSummary: 'Establish rapport and expectations the moment students arrive.',
+    videos: { demo: 'Sc6qt1comUE' }
   },
 
   // 2d: Managing Student Behavior
@@ -382,14 +490,14 @@ export const techniques: Technique[] = [
     source: 'TLAC 3.0',
     alignment: '2d: Managing Student Behavior',
     highReward: true,
-    description: 'Prevent behavior issues by visibly scanning the room.',
+    description: 'Visibly scan the room.',
     actionSteps: [
-      'The Radar: Intentional scan.',
+      'Radar: Intentional scan.',
       'Invisible Columns: Move through rows.',
-      'Narrate the Positive: Acknowledge on-task students.'
+      'Narrate: Acknowledge on-task students.'
     ],
-    detailedSummary: 'Be Seen Looking establishes teacher presence. When the teacher "looks" like they are noticing, students stay on task.',
-    videos: { demo: 'e4xB3Ha2SKI', curated: ['rTEd6qzOGxk'] }
+    detailedSummary: 'Teacher presence ensures students stay on task.',
+    videos: { demo: 'e4xB3Ha2SKI' }
   },
   {
     id: 'least-invasive-intervention',
@@ -399,14 +507,14 @@ export const techniques: Technique[] = [
     source: 'TLAC 3.0',
     alignment: '2d: Managing Student Behavior',
     highReward: true,
-    description: 'Correct off-task behavior with the most subtle method possible.',
+    description: 'Address behavior without stopping instruction.',
     actionSteps: [
       'Non-verbal: Simple hand gesture.',
       'Proximity: Move closer.',
       'Quick Correction: Whispered instruction.'
     ],
-    detailedSummary: 'Maximize instructional time by addressing behavior without stopping the flow of the lesson.',
-    videos: { demo: 'j88sZpGefeU', curated: ['EQ5PEpTBoZo'] }
+    detailedSummary: 'Maximize instructional time by addressing behavior subtly.',
+    videos: { demo: 'j88sZpGefeU' }
   },
   {
     id: 'art-of-consequence',
@@ -421,25 +529,25 @@ export const techniques: Technique[] = [
       'Standard: Follow the discipline ladder.',
       'Emotional Neutrality: Focus on behavior, not character.'
     ],
-    detailedSummary: 'Proficient teachers ensure behavior standards are clear and consequences are applied fairly and professionally.',
+    detailedSummary: 'Proficient teachers ensure behavior standards are clear.',
     videos: { demo: 'ElUhlsRuPHE' }
   },
 
   // 2e: Organizing Physical Space
   {
-    id: 'invisible-columns',
+    id: 'invisible-columns-space',
     title: 'The Grid',
     subdomain: '2e',
     domain: 2,
     source: 'TLAC 3.0',
     alignment: '2e: Organizing Physical Space',
-    description: 'Arrange and navigate your classroom for maximum visibility and accessibility.',
+    description: 'Arrange for maximum visibility.',
     actionSteps: [
       'Clear Paths: No obstructions for movement.',
       'Proximity: Use space to influence student focus.',
       'Visibility: Position so all students are in sightline.'
     ],
-    detailedSummary: 'Organizing physical space supports lesson goals. Circulation allows for real-time monitoring and feedback.',
+    detailedSummary: 'Circulation allows for real-time monitoring and feedback.',
     videos: { demo: 'e4xB3Ha2SKI' }
   },
   {
@@ -449,14 +557,30 @@ export const techniques: Technique[] = [
     domain: 2,
     source: 'DangRenBo',
     alignment: '2e: Organizing Physical Space',
-    description: 'Designate a central space for high-intensity small group instruction and modeling.',
+    description: 'Space for targeted small group instruction.',
     actionSteps: [
-      'Layout: Create a space where a small group can gather near the teacher.',
-      'Visuals: Ensure students at the table can see the primary board.',
-      'Rotations: Move students in and out based on real-time data.'
+      'Layout: Small group gathering.',
+      'Visuals: board visibility.',
+      'Rotations: Move based on data.'
     ],
-    detailedSummary: 'A proficient teacher uses physical resources effectively. The "Front Table" allows for targeted differentiation without disrupting the rest of the class.',
+    detailedSummary: 'Targeted differentiation without disrupting the rest of the class.',
     videos: { demo: 'aTD30bWJzB0' }
+  },
+  {
+    id: 'visual-aids',
+    title: 'Anchor Charts',
+    subdomain: '2e',
+    domain: 2,
+    source: 'Edutopia',
+    alignment: '2e: Organizing Physical Space',
+    description: 'Design the physical walls of the classroom to be functional "learning supports."',
+    actionSteps: [
+      'Strategize: Only post charts related to the current unit.',
+      'Standardize: Use consistent layouts and high-contrast text.',
+      'Reference: Point to the charts during instruction to model use.'
+    ],
+    detailedSummary: 'A proficient teacher makes effective use of physical resources. Anchor Charts serve as an "extra teacher" in the room, providing students with a visual scaffold for complex procedures or concepts. This technique ensures that the physical environment is safe and learning is accessible to all.',
+    videos: { demo: 'X6zgFoCBgqI' }
   },
 
   // --- DOMAIN 3: INSTRUCTION ---
@@ -469,14 +593,14 @@ export const techniques: Technique[] = [
     domain: 3,
     source: 'TLAC 3.0',
     alignment: '3a: Communicating With Students',
-    description: 'Require students to use complete sentences and academic language.',
+    description: 'Require complete sentences and academic language.',
     actionSteps: [
-      'Sentence Starters: Provide the lead-in.',
+      'Sentence Starters: Provide leads.',
       'The Cue: "Full sentence, please."',
-      'Vocabulary: Require specific domain terms.'
+      'Vocabulary: Require domain terms.'
     ],
-    detailedSummary: 'Format Matters bridges the gap between conversational language and academic discourse, raising rigor in the room.',
-    videos: { demo: 'RDo5sDSwFkQ', curated: ['O8TDzPAe1qQ'] }
+    detailedSummary: 'Bridges conversational language and academic discourse.',
+    videos: { demo: 'RDo5sDSwFkQ' }
   },
   {
     id: 'call-and-response',
@@ -485,14 +609,30 @@ export const techniques: Technique[] = [
     domain: 3,
     source: 'TLAC 3.0',
     alignment: '3a: Communicating With Students',
-    description: 'Use a choral response to review key facts quickly.',
+    description: 'Choral response for key facts.',
     actionSteps: [
       'Cue: Standard countdown.',
-      'The Fill: Pause before a key word.',
-      'Repeat: "Do It Again" for full participation.'
+      'The Fill: Pause before key word.',
+      'Repeat: For full participation.'
     ],
-    detailedSummary: 'Call and Response reinforces key terms and ensures everyone is participating in the instructional purpose.',
-    videos: { demo: 'BeYZ2uJWDD0', curated: ['NfbB1IKWLes'] }
+    detailedSummary: 'Reinforces key terms and ensures participation.',
+    videos: { demo: 'BeYZ2uJWDD0' }
+  },
+  {
+    id: 'vocabulary-movement',
+    title: 'Action Vocabulary',
+    subdomain: '3a',
+    domain: 3,
+    source: 'Uncommon Schools',
+    alignment: '3a: Communicating With Students',
+    description: 'Pair new academic vocabulary with a specific physical movement or gesture.',
+    actionSteps: [
+      'Define: Explain the word clearly.',
+      'Gesture: Create a simple, related move (e.g. "Expand").',
+      'Choral: Have the class say the word and perform the move together.'
+    ],
+    detailedSummary: 'The teacher\'s explanation of content is clear and invites thinking. By using movement, teachers make abstract terms concrete and memorable. This technique is highly effective for language learners and increases the clarity of instructional purpose.',
+    videos: { demo: '38JeYKqOZ_g' }
   },
 
   // 3b: Questioning and Discussion
@@ -501,17 +641,17 @@ export const techniques: Technique[] = [
     title: 'Cold Call',
     subdomain: '3b',
     domain: 3,
-    source: 'TLAC 3.0',
+    source: 'Uncommon Schools',
     alignment: '3b: Questioning and Discussion',
     highReward: true,
-    description: 'Call on students regardless of whether they have raised their hands.',
+    description: 'Call on students regardless of raised hands.',
     actionSteps: [
       'Question First: Ask the class.',
       'Wait: 3-5 seconds.',
       'Select: Name the student.'
     ],
-    detailedSummary: 'Cold Call ensures every student is on the hook for thinking. Predictable and warm usage decreases anxiety.',
-    videos: { demo: 'wO9Y9R5xTaw', curated: ['MK8YCmrf_Gg', 'p-WJShu8Wac'] }
+    detailedSummary: 'Increases accountability and attention.',
+    videos: { demo: '5xdNVAqsiKU' }
   },
   {
     id: 'wait-time',
@@ -523,12 +663,12 @@ export const techniques: Technique[] = [
     highReward: true,
     description: 'Deliberate pause to allow processing.',
     actionSteps: [
-      'Wait Time 1.0: Pause before naming a student.',
+      'Wait Time 1.0: Pause before naming.',
       'Wait Time 2.0: Pause after a student speaks.',
       'Narrate: "I see 10 people thinking..."'
     ],
-    detailedSummary: 'Increasing wait time improves the length and complexity of student responses and broadens participation.',
-    videos: { demo: 'PvJw9ge8yFQ', curated: ['_p7PSRP7ZN4'] }
+    detailedSummary: 'Improves complexity of student responses.',
+    videos: { demo: 'PvJw9ge8yFQ' }
   },
   {
     id: 'no-opt-out',
@@ -538,14 +678,14 @@ export const techniques: Technique[] = [
     source: 'TLAC 3.0',
     alignment: '3b: Questioning and Discussion',
     highReward: true,
-    description: 'Sequence ensuring students repeat the correct answer after initial confusion.',
+    description: 'Repeat correct answer after initial confusion.',
     actionSteps: [
       'Identify: Student doesn\'t know.',
       'Pivot: Ask peer or give cue.',
       'Return: Back to original student.'
     ],
-    detailedSummary: 'Foundational for high expectations. Empowers students to end interactions with a successful, correct statement.',
-    videos: { demo: 'NUL51AmaKfM', curated: ['qD3GkSgp5ic'] }
+    detailedSummary: 'Foundational for high expectations.',
+    videos: { demo: 'NUL51AmaKfM' }
   },
   {
     id: 'stretch-it',
@@ -554,14 +694,14 @@ export const techniques: Technique[] = [
     domain: 3,
     source: 'TLAC 3.0',
     alignment: '3b: Questioning and Discussion',
-    description: 'Push students to higher levels of thinking after a correct answer.',
+    description: 'Push students to higher levels after a correct answer.',
     actionSteps: [
-      'Ask "How": Explain the logic.',
-      'Ask "What Else": Seek more evidence.',
-      'Connect: Link to prior learning.'
+      'Ask "How": Explain logic.',
+      'Ask "What Else": Seek evidence.',
+      'Connect: Link prior learning.'
     ],
-    detailedSummary: 'Turns a successful moment into a learning moment. Constantly pushes students to the edge of understanding.',
-    videos: { demo: 'rdszNzs0N80', curated: ['JMa7g4RP334'] }
+    detailedSummary: 'Constantly pushes students to the edge of understanding.',
+    videos: { demo: 'rdszNzs0N80' }
   },
 
   // 3c: Engaging Students in Learning
@@ -570,17 +710,17 @@ export const techniques: Technique[] = [
     title: 'Turn and Talk',
     subdomain: '3c',
     domain: 3,
-    source: 'TLAC 3.0',
+    source: 'Teaching Channel',
     alignment: '3c: Engaging Students in Learning',
     highReward: true,
     description: 'Timed discussion with a partner.',
     actionSteps: [
-      'Cue: Clear start.',
-      'Monitor: Listen while circulating.',
-      'Refocus: Standard reset.'
+      'Assign Roles: Speaker and Listener.',
+      'Provide Starters: "I liked how you..."',
+      'Monitor: Eavesdrop for highlight points.'
     ],
-    detailedSummary: 'High-ratio engagement strategy allows everyone to rehearse thoughts before whole-class discussion.',
-    videos: { demo: 'siNwdzl1xU0', curated: ['H0nh8A39J-Q'] }
+    detailedSummary: 'High-ratio engagement through peer discussion.',
+    videos: { demo: 'Bs0ZjYi-4aU' }
   },
   {
     id: 'everybody-writes',
@@ -590,32 +730,14 @@ export const techniques: Technique[] = [
     source: 'TLAC 3.0',
     alignment: '3c: Engaging Students in Learning',
     highReward: true,
-    description: 'Write thoughts down before discussion.',
+    description: 'Write thoughts before discussion.',
     actionSteps: [
       'Prompt: Clear task.',
       'Wait: 1-2 minutes.',
       'Transition: Move to talk.'
     ],
-    detailedSummary: 'Writing forces more rigorous thinking than internal thought and preparation for contribution.',
-    videos: { demo: 'D-KayMWv0pI', curated: ['ZbkjqMz0_rs'] }
-  },
-  {
-    id: 'slant',
-    title: 'SLANT',
-    subdomain: '3c',
-    domain: 3,
-    source: 'TLAC 3.0',
-    alignment: '3c: Engaging Students in Learning',
-    description: 'Explicitly teach the behaviors of active listening.',
-    actionSteps: [
-      'Sit up.',
-      'Listen.',
-      'Ask and answer questions.',
-      'Nod your head.',
-      'Track the speaker.'
-    ],
-    detailedSummary: 'SLANT ensures that engagement is visible and active. By teaching these habits, teachers provide students with the tools to focus and process instruction effectively.',
-    videos: { demo: '5vJoq2fQ-bM' } // Overview covers SLANT basics
+    detailedSummary: 'Forces rigorous thinking before contribution.',
+    videos: { demo: 'D-KayMWv0pI' }
   },
   {
     id: 'ratio-thinking',
@@ -630,297 +752,313 @@ export const techniques: Technique[] = [
       'Wait Time 2.0: Let them process.',
       'Batch Questions: Student-to-student responses.'
     ],
-    detailedSummary: 'Ratio is the ultimate measure of engagement. Proficient teachers ensure students are doing the "heavy lifting" of thinking.',
+    detailedSummary: 'Ratio is the ultimate measure of engagement.',
     videos: { demo: 'MFhNM-9UAwo' }
   },
 
   // 3d: Using Assessment in Instruction
   {
-    id: 'retrieval-practice',
-    title: 'Retrieval Practice',
+    id: 'retrieval-practice-routine',
+    title: 'Blast From the Past',
     subdomain: '3d',
     domain: 3,
-    source: 'Visible Learning',
+    source: 'Uncommon Schools',
     alignment: '3d: Using Assessment in Instruction',
-    description: 'Low-stakes quizzes to force recall.',
+    description: 'Daily warm-up on previous material.',
     actionSteps: [
-      'Quick Quiz: Class start recall.',
-      'Show Me: Whiteboards for data.',
-      'No Notes: Pure memory pull.'
+      'Routine: Daily 5-minute recall.',
+      'Show Thinking: Show the work.',
+      'Target: Mix current and past unit skills.'
     ],
-    detailedSummary: 'Robust learning strategy for revealing gaps and strengthening long-term memory.',
-    videos: { demo: 'iGIL78shXOM' }
+    detailedSummary: 'Strengthens the act of learning and prevents forgetting.',
+    videos: { demo: '96xBOchLlWk' }
   },
   {
-    id: 'show-me',
+    id: 'show-me-assessment',
     title: 'Show Me',
     subdomain: '3d',
     domain: 3,
     source: 'TLAC 3.0',
     alignment: '3d: Using Assessment in Instruction',
-    description: 'Simultaneous physical signals for 100% data.',
+    description: 'Simultaneous signals for 100% data.',
     actionSteps: [
-      'Wait: Give time to solve.',
+      'Wait: Solve time.',
       'Signal: "One, two, show me!"',
-      'Scan: Use Radar for data.'
+      'Scan: Immediate data check.'
     ],
-    detailedSummary: 'Provides real-time data from every student, eliminating "hiding" and allowing immediate intervention.',
-    videos: { demo: 'pHp5dVqW3CQ', curated: ['DiKqoWkt-o8'] }
+    detailedSummary: 'Class-wide feedback with no hiding.',
+    videos: { demo: 'pHp5dVqW3CQ' }
   },
   {
-    id: 'show-call',
-    title: 'Show Call',
+    id: 'self-assessment-checks',
+    title: 'Confidence Scales',
     subdomain: '3d',
     domain: 3,
-    source: 'TLAC 3.0',
+    source: 'Marzano',
     alignment: '3d: Using Assessment in Instruction',
-    description: 'Display student work publicly to analyze and revise as a class.',
+    description: 'Have students rate their own understanding of a specific learning goal on a 1-4 scale.',
     actionSteps: [
-      'Select: Choose a "beautiful struggle" or an exemplar.',
-      'Project: Use a visualizer or digital tool.',
-      'Revise: Have students improve the work together.'
+      'Prompt: "On your fingers, show me your level of confidence with X."',
+      'Define: 1 = Confused, 4 = I can teach this.',
+      'Adjust: Group students based on their self-ratings for targeted support.'
     ],
-    detailedSummary: 'Show Call creates a public forum for high-quality work analysis. It turns individual student artifacts into communal learning opportunities.',
-    videos: { demo: 'twqsJ9JXVe8', curated: ['I1qb8kHIbYs'] }
+    detailedSummary: 'Assessment is regularly used in instruction through self-assessment by students. By having students monitor their own progress, teachers increase metacognition and responsibility.',
+    videos: { demo: 'ydMDAGKHW7Q' }
   },
 
   // 3e: Demonstrating Flexibility and Responsiveness
   {
-    id: 'plan-for-error',
+    id: 'plan-for-error-flex',
     title: 'Plan for Error',
     subdomain: '3e',
     domain: 3,
     source: 'TLAC 3.0',
     alignment: '3e: Demonstrating Flexibility and Responsiveness',
-    description: 'Anticipate common mistakes and prepare pivots.',
+    description: 'Anticipate mistakes and prepare pivots.',
     actionSteps: [
       'Predict: Identify hard parts.',
-      'Pivot: Plan for confusion.',
+      'Pivot: Plan for failure.',
       'Adjust: Re-teach immediately.'
     ],
-    detailedSummary: 'Planned responsiveness ensures momentum isn\'t lost when students struggle. Flexibility is built into the design.',
+    detailedSummary: 'Ensures momentum isn\'t lost.',
     videos: { demo: 'qmuv5rs6p4A' }
   },
   {
-    id: 'hinge-points',
+    id: 'hinge-points-flex',
     title: 'Hinge Questions',
     subdomain: '3e',
     domain: 3,
     source: 'Visible Learning',
     alignment: '3e: Demonstrating Flexibility and Responsiveness',
-    description: 'A diagnostic question that determines whether to move on or re-teach.',
+    description: 'Diagnostic deciding whether to move on.',
     actionSteps: [
-      'Design: Create a multiple-choice question with high-quality distractors.',
-      'Check: Ask the question at a critical transition point.',
-      'Decision: If <80% get it right, pivot to re-teaching.'
+      'Design: High-quality distractor MCQs.',
+      'Check: At transition point.',
+      'Decision: Re-teach if necessary.'
     ],
-    detailedSummary: 'Hinge questions provide the data needed for real-time flexibility. They ensure teachers promote the successful learning of all students before advancing.',
+    detailedSummary: 'Data needed for real-time adjustment.',
     videos: { demo: '7himF8J3ick' }
+  },
+  {
+    id: 'red-yellow-green',
+    title: 'Traffic Light Checks',
+    subdomain: '3e',
+    domain: 3,
+    source: 'Teaching Channel',
+    alignment: '3e: Demonstrating Flexibility and Responsiveness',
+    description: 'Use colored cups or cards to allow students to signal their need for help in real-time.',
+    actionSteps: [
+      'Implement: Every desk gets a red, yellow, and green card.',
+      'Protocol: Green = working fine; Yellow = need help soon; Red = stuck.',
+      'Responsive: Pivot your circulation based on the colors you see.'
+    ],
+    detailedSummary: 'Proficient teachers promote the successful learning of all students. Traffic Light checks provide a constant, low-stakes data stream that allows the teacher to adjust their lesson on the fly to meet individual student needs.',
+    videos: { demo: 'smUSKbcSSJQ' } // Wait time video shows general responsive moves
   },
 
   // --- DOMAIN 4: PROFESSIONAL RESPONSIBILITIES ---
 
   // 4a: Reflecting on Teaching
   {
-    id: 'reflection-logs',
+    id: 'reflection-logs-4a',
     title: 'Before/After Reflection',
     subdomain: '4a',
     domain: 4,
     source: 'HDKWA PD Portal',
     alignment: '4a: Reflecting on Teaching',
-    description: 'Systematically record successes to inform practice.',
+    description: 'Record successes to inform practice.',
     actionSteps: [
       'Record: Use the PD Report.',
       'Analyze: Why did it work?',
       'Next Steps: Commit to change.'
     ],
-    detailedSummary: 'Creates a tangible record of professional growth using evidence from specific lessons.',
+    detailedSummary: 'Tangible record of growth.',
     videos: { demo: 'aJgm_HozVxc' }
   },
   {
-    id: 'peer-observation',
-    title: 'Peer Observation',
+    id: 'video-reflection',
+    title: 'Video Self-Critique',
     subdomain: '4a',
     domain: 4,
-    source: 'Visible Learning',
+    source: 'Teaching Channel',
     alignment: '4a: Reflecting on Teaching',
-    description: 'Invite colleagues to observe a specific technique and provide targeted feedback.',
+    description: 'Record yourself teaching a 10-minute segment and analyze your own "teacher moves."',
     actionSteps: [
-      'Identify: Choose one technique to be observed (e.g. Radar).',
-      'Observe: Have a colleague record student responses.',
-      'Debrief: Meet to analyze the evidence and self-correct.'
+      'Record: Focus on a specific technique (e.g. Wait Time).',
+      'Watch: Look for student responses specifically.',
+      'Evaluate: Compare your performance to the "Proficient" descriptor.'
     ],
-    detailedSummary: 'Reflection is more powerful when based on objective peer data. This technique fosters an accurate description of the lesson and professional growth.',
-    videos: { demo: 'sh-zHyXm7eI' }
+    detailedSummary: 'A proficient teacher provides an accurate and objective description of the lesson. Video reflection is the most powerful tool for seeing what you actually do, rather than what you think you do.',
+    videos: { demo: '0uIU8ZrG7yc' }
   },
 
   // 4b: Maintaining Accurate Records
   {
-    id: 'smart-ledgers',
+    id: 'smart-ledgers-4b',
     title: 'Smart Ledgers',
     subdomain: '4b',
     domain: 4,
     source: 'DangRenBo',
     alignment: '4b: Maintaining Accurate Records',
-    description: 'Efficient data-driven systems to track progress.',
+    description: 'Efficient tracking systems.',
     actionSteps: [
-      'Digitize: Use Excel/trackers.',
+      'Digitize: Use trackers.',
       'Own and Track: Student responsibility.',
       'Update Daily: Usable data.'
     ],
-    detailedSummary: 'Systems for student completion and progress that are effective and instructional.',
-    videos: { demo: 'IN4MBaOdLRY', curated: ['4gWMb_C0Fkc'] }
+    detailedSummary: 'Effective progress tracking.',
+    videos: { demo: 'IN4MBaOdLRY' }
   },
   {
-    id: 'standardized-record-keeping',
-    title: 'Standardized Feedback',
+    id: 'gradebook-transparency',
+    title: 'The Open Gradebook',
     subdomain: '4b',
     domain: 4,
-    source: 'TLAC 3.0',
+    source: 'Edutopia',
     alignment: '4b: Maintaining Accurate Records',
-    description: 'Use a consistent set of symbols and codes to record student mastery during the lesson.',
+    description: 'Give students and families real-time access to progress and mastery data.',
     actionSteps: [
-      'Codes: Use "✓" for mastery, "?" for confusion.',
-      'Stamp: Use a physical stamp for Affirmative Checking.',
-      'Log: Transfer codes to a digital ledger for long-term tracking.'
+      'Sync: Ensure your digital gradebook is updated within 24 hours.',
+      'Visualize: Use charts or progress bars to show mastery trends.',
+      'Discuss: Use the data as a basis for parent-teacher conferences.'
     ],
-    detailedSummary: 'Proficient record-keeping is efficient and informs instruction. Standardized codes allow the teacher to maintain accurate records without losing instructional time.',
-    videos: { demo: 'HEFxSiGse3U' } // Standardize format aids this
+    detailedSummary: 'Systems for maintaining information on student progress are fully effective. Transparency ensures that there are no surprises and that everyone is focused on growth.',
+    videos: { demo: 'vsyQfmx_ej4' }
   },
 
   // 4c: Communicating with Families
   {
-    id: 'home-contributions',
+    id: 'home-contributions-4c',
     title: 'Engaging the Home',
     subdomain: '4c',
     domain: 4,
     source: 'Visible Learning',
     alignment: '4c: Communicating with Families',
-    description: 'Frequent, positive communication about student progress.',
+    description: 'Positive communication with parents.',
     actionSteps: [
       'Positive Calls: Not just for issues.',
       'Transparency: Explain the "Why".',
       'Feedback Loop: Two-way channel.'
     ],
-    detailedSummary: 'Partnership with parents supports learning at home. Uses multiple channels for consistency.',
+    detailedSummary: 'Partnership supports learning at home.',
     videos: { demo: 'f9uw1RwBjAg' }
   },
   {
-    id: 'instructional-transparency',
-    title: 'The Open Classroom',
+    id: 'newsletters',
+    title: 'Instructional Updates',
     subdomain: '4c',
     domain: 4,
-    source: 'DangRenBo',
+    source: 'Edutopia',
     alignment: '4c: Communicating with Families',
-    description: 'Share instructional goals and student artifacts with families through digital portals.',
+    description: 'Send regular, high-signal updates to families about the unit\'s learning goals and student successes.',
     actionSteps: [
-      'Publish: Share the "Exemplar" or "Learning Goal" with parents.',
-      'Context: Explain what students are doing and why it matters.',
-      'Connect: Provide resources for families to support the goal at home.'
+      'Content: Highlight the "Exemplar" for the week.',
+      'Context: Explain how parents can support the current unit.',
+      'Celebration: Include photos of student work (with permission).'
     ],
-    detailedSummary: 'Proficient communication conveys information about the instructional program. Sharing the "Blueprints" of the lesson empowers families as partners.',
-    videos: { demo: 'vsyQfmx_ej4' } // Thailand teaser shows the platform
+    detailedSummary: 'Teacher communicates frequently with families about the instructional program. Regular updates build a sense of community and shared purpose.',
+    videos: { demo: 'JeMVNDWSVL4' }
   },
 
   // 4d: Participating in a Professional Community
   {
-    id: 'professional-community',
+    id: 'professional-community-4d',
     title: 'Contributing to School',
     subdomain: '4d',
     domain: 4,
     source: 'Visible Learning',
     alignment: '4d: Participating in a Professional Community',
-    description: 'Collaborate to share techniques school-wide.',
+    description: 'Collaborate school-wide.',
     actionSteps: [
       'Peer Obs: Invite colleagues.',
-      'Shared Planning: Work on "Double Plans".',
+      'Shared Planning: Work together.',
       'PD Leadership: Share reflections.'
     ],
-    detailedSummary: 'Collective Teacher Efficacy is the belief that together we improve student outcomes.',
+    detailedSummary: 'Collective efficacy improves school outcomes.',
     videos: { demo: 'TaNDd2I8mYY' }
   },
   {
-    id: 'shared-exemplars',
-    title: 'Collective Exemplars',
+    id: 'action-research-teams',
+    title: 'PLCs',
     subdomain: '4d',
     domain: 4,
-    source: 'TLAC 3.0',
+    source: 'Marzano',
     alignment: '4d: Participating in a Professional Community',
-    description: 'Analyze student work with colleagues to calibrate standards of excellence.',
+    description: 'Join or lead a Professional Learning Community focused on a specific instructional problem.',
     actionSteps: [
-      'Bring Work: Bring 5 student artifacts to a team meeting.',
-      'Compare: Score the work against a shared "Exemplar".',
-      'Standardize: Agree on what constitutes "Proficient" across the department.'
+      'Focus: Choose one goal (e.g. Literacy in Science).',
+      'Cycle: Meet weekly to share data and trial new techniques.',
+      'Report: Present findings to the full faculty.'
     ],
-    detailedSummary: 'Relationships with colleagues are characterized by mutual support. Shared work analysis is a high-impact move for institutional growth.',
-    videos: { demo: '0uIU8ZrG7yc' }
+    detailedSummary: 'Relationships with colleagues are characterized by mutual support and cooperation. PLCs turn individual expertise into communal knowledge.',
+    videos: { demo: 'sh-zHyXm7eI' }
   },
 
   // 4e: Growing and Developing Professionally
   {
-    id: 'professional-growth',
+    id: 'professional-growth-4e',
     title: 'Continuous Growth (GROW)',
     subdomain: '4e',
     domain: 4,
     source: 'Visible Learning',
     alignment: '4e: Growing and Developing Professionally',
-    description: 'Ownership of development through goal setting.',
+    description: 'Ownership of development.',
     actionSteps: [
       'Goal Setting: GROW model.',
-      'Seek Feedback: Actively ask for coaching.',
+      'Seek Feedback: Active requests.',
       'Trial: New technique per week.'
     ],
-    detailedSummary: 'Systematic building of instructional repertoire through continuous cycles of improvement.',
+    detailedSummary: 'Systematic repertoire building.',
     videos: { demo: 'WPyebtSrFOw' }
   },
   {
-    id: 'evidence-based-trial',
-    title: 'The Action Research Cycle',
+    id: 'pd-leadership',
+    title: 'The Master Teacher',
     subdomain: '4e',
     domain: 4,
-    source: 'Hattie / Lemov',
+    source: 'DangRenBo',
     alignment: '4e: Growing and Developing Professionally',
-    description: 'Test specific evidence-based strategies in your classroom and record the data.',
+    description: 'Share your expertise by leading workshops or creating demo videos for your colleagues.',
     actionSteps: [
-      'Hypothesis: "If I use Wait Time 1.0, then response length will increase."',
-      'Measure: Record current response length (baseline).',
-      'Trial: Implement for 2 weeks and record the difference.'
+      'Prepare: Choose a technique you have mastered.',
+      'Present: Lead a 15-minute "micro-session" during faculty meetings.',
+      'Mentor: Offer coaching to a newer colleague.'
     ],
-    detailedSummary: 'A proficient teacher makes a systematic effort to conduct action research. This technique turns the classroom into a professional laboratory.',
+    detailedSummary: 'Teacher seeks out opportunities for professional development and contributes to the growth of others. Mentorship is the hallmark of a master teacher.',
     videos: { demo: '8fCTfmSfjMY' }
   },
 
   // 4f: Showing Professionalism
   {
-    id: 'firm-calm-finesse',
+    id: 'firm-calm-finesse-4f',
     title: 'Firm Calm Finesse',
     subdomain: '4f',
     domain: 4,
     source: 'TLAC 3.0',
     alignment: '4f: Showing Professionalism',
-    description: 'Integrity through calm, consistent interactions.',
+    description: 'Integrity through calm interactions.',
     actionSteps: [
       'Neutral Tone: Emotional separation.',
       'Consistency: Same standard always.',
-      'Integrity: Honest about practice.'
+      'Integrity: Honest practice.'
     ],
-    detailedSummary: 'Models behavior expected from students to build trust and Reliable leadership.',
-    videos: { demo: 'kPvG-Q1AnJQ', curated: ['9UsF-JAgAs0'] }
+    detailedSummary: 'Models behavior to build trust.',
+    videos: { demo: 'kPvG-Q1AnJQ' }
   },
   {
-    id: 'professional-modeling',
-    title: 'Modeling Integrity',
+    id: 'advocacy',
+    title: 'Student Advocacy',
     subdomain: '4f',
     domain: 4,
-    source: 'DangRenBo',
+    source: 'Edutopia',
     alignment: '4f: Showing Professionalism',
-    description: 'Exhibit high standards of integrity by modeling the professional habits expected of students.',
+    description: 'Go beyond the classroom to advocate for student needs at the school and community level.',
     actionSteps: [
-      'Punctuality: Be at the "Threshold" every period.',
-      'Accountability: Own your mistakes publicly (Culture of Error).',
-      'Preparation: Have all artifacts and "Exemplars" ready before students enter.'
+      'Identify: Notice an systemic barrier to student success.',
+      'Communicate: Bring the issue to leadership with proposed solutions.',
+      'Act: Lead a project or committee to address the need.'
     ],
-    detailedSummary: 'Professionalism is shown through daily integrity. Modeling habits like preparation and accountability builds a culture of mutual respect.',
-    videos: { demo: 'gjIQVhiMWdA' }
+    detailedSummary: 'Teacher is honest and exhibits high standards of integrity. Professionalism includes a commitment to the success of all students, even beyond your own classroom walls.',
+    videos: { demo: 'MO4T_pQBVQc' }
   }
 ];
