@@ -10,6 +10,9 @@ import {
   ChevronRight 
 } from 'lucide-react';
 
+import Image from 'next/image';
+import logo from '../../public/logo.png';
+
 const navItems = [
   { name: 'Home', href: '/', icon: Home },
   { name: 'Instructional Hub', href: '/domains', icon: LayoutDashboard },
@@ -24,11 +27,15 @@ export default function Sidebar() {
     <nav className="w-64 border-r border-gray-200 h-screen sticky top-0 p-8 flex flex-col gap-8 bg-white z-10">
       <div className="mb-4">
         <Link href="/">
-          <img 
-            src="https://www.hdkwa.com/wp-content/themes/kaiwen/images/logo.png" 
-            alt="HDKWA Logo" 
-            className="w-full cursor-pointer"
-          />
+          <div className="relative w-full h-16 cursor-pointer">
+            <Image 
+              src={logo} 
+              alt="HDKWA Logo" 
+              fill
+              className="object-contain object-left"
+              priority
+            />
+          </div>
         </Link>
         <p className="text-[10px] uppercase tracking-widest text-gray-400 mt-4 font-semibold">
           Danielson PD Portal
