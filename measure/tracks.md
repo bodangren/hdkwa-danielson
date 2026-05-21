@@ -8,3 +8,8 @@
 
 - [x] **Track: Mobile Navigation and Technique Coaching Enrichment**
   *Link: [./tracks/mobile_coaching_enrichment_20260521/](./tracks/mobile_coaching_enrichment_20260521/)*
+
+---
+
+- [x] **Track: Replace Abstract Technique Images**
+  *Link: [./tracks/replace_technique_images_20260521/](./tracks/replace_technique_images_20260521/)*

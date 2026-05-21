@@ -1,0 +1,11 @@
+{
+  "track_id": "replace_technique_images_20260521",
+  "type": "feature",
+  "status": "completed",
+  "created_at": "2026-05-21T00:00:00Z",
+  "updated_at": "2026-05-21T00:00:00Z",
+  "description": "Replace abstract technique images with photorealistic classroom-interaction images.",
+  "estimated_tasks": 3,
+  "actual_tasks": 3,
+  "deviation_notes": "Replaced the previous abstract title-card image assets with built-in imagegen photorealistic classroom-interaction images mapped to each technique slug."
+}
