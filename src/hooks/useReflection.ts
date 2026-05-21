@@ -12,6 +12,8 @@ export function useReflection(techniqueId: string) {
     const saved = localStorage.getItem(`reflection_${techniqueId}`);
     if (saved) {
       try {
+        // localStorage is client-only; load after mount to avoid server/client markup drift.
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setReflection(JSON.parse(saved));
       } catch (e) {
         console.error('Failed to parse reflection', e);

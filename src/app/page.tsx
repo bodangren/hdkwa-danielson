@@ -4,15 +4,15 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
-      <header className="mb-20">
-        <h1 className="heading-display text-6xl mb-6">Master Your Craft.</h1>
-        <p className="text-2xl text-gray-500 max-w-2xl leading-relaxed">
+      <header className="mb-14 lg:mb-20">
+        <h1 className="heading-display mb-6 text-4xl text-hdkwa-navy sm:text-6xl">Master Your Craft.</h1>
+        <p className="max-w-2xl text-xl leading-relaxed text-gray-500 sm:text-2xl">
           A specialized portal for HDKWA teachers to bridge Danielson Framework theory with classroom-ready techniques.
         </p>
       </header>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-        <div className="p-8 bg-apple-tile rounded-display border border-gray-100">
+      <section className="mb-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mb-20 lg:gap-12">
+        <div className="rounded-[24px] border border-gray-100 bg-apple-tile p-6 sm:p-8 lg:rounded-display">
           <h3 className="text-sm font-bold uppercase tracking-widest text-hdkwa-navy mb-4">For Teachers</h3>
           <ul className="space-y-3 text-sm text-gray-600">
             <li className="flex gap-3">
@@ -29,7 +29,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-        <div className="p-8 bg-hdkwa-navy text-white rounded-display shadow-xl">
+        <div className="rounded-[24px] bg-hdkwa-navy p-6 text-white shadow-xl sm:p-8 lg:rounded-display">
           <h3 className="text-sm font-bold uppercase tracking-widest text-hdkwa-gold mb-4">For SLT & Coaches</h3>
           <ul className="space-y-3 text-sm text-gray-300">
             <li className="flex gap-3">
@@ -48,10 +48,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid grid-cols-2 gap-8">
+      <section className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8">
         <Link 
           href="/domains/1" 
-          className="bg-apple-tile p-12 rounded-display hover:scale-[1.02] transition-transform cursor-pointer group border border-transparent hover:border-gray-200"
+          className="group cursor-pointer rounded-[24px] border border-transparent bg-apple-tile p-7 transition-transform hover:scale-[1.02] hover:border-gray-200 sm:p-12 lg:rounded-display"
         >
           <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Domain 1</span>
           <h2 className="text-3xl font-semibold mt-4 mb-2">Planning & Prep</h2>
@@ -63,7 +63,7 @@ export default function Home() {
 
         <Link 
           href="/domains/2" 
-          className="bg-hdkwa-navy text-white p-12 rounded-display hover:scale-[1.02] transition-transform cursor-pointer group"
+          className="group cursor-pointer rounded-[24px] bg-hdkwa-navy p-7 text-white transition-transform hover:scale-[1.02] sm:p-12 lg:rounded-display"
         >
           <span className="text-xs font-bold text-gray-300 uppercase tracking-widest">Domain 2</span>
           <h2 className="text-3xl font-semibold mt-4 mb-2">Classroom Environment</h2>
@@ -75,7 +75,7 @@ export default function Home() {
 
         <Link 
           href="/domains/3" 
-          className="bg-apple-tile p-12 rounded-display hover:scale-[1.02] transition-transform cursor-pointer group border border-transparent hover:border-gray-200"
+          className="group cursor-pointer rounded-[24px] border border-transparent bg-apple-tile p-7 transition-transform hover:scale-[1.02] hover:border-gray-200 sm:p-12 lg:rounded-display"
         >
           <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Domain 3</span>
           <h2 className="text-3xl font-semibold mt-4 mb-2">Instruction</h2>
@@ -87,7 +87,7 @@ export default function Home() {
 
         <Link 
           href="/domains/4" 
-          className="bg-apple-tile p-12 rounded-display hover:scale-[1.02] transition-transform cursor-pointer group border border-transparent hover:border-gray-200"
+          className="group cursor-pointer rounded-[24px] border border-transparent bg-apple-tile p-7 transition-transform hover:scale-[1.02] hover:border-gray-200 sm:p-12 lg:rounded-display"
         >
           <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Domain 4</span>
           <h2 className="text-3xl font-semibold mt-4 mb-2">Professional Responsibilities</h2>

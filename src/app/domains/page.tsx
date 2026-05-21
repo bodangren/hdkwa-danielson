@@ -5,9 +5,9 @@ import Link from 'next/link';
 export default function DomainsHub() {
   return (
     <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
-      <header className="mb-20">
-        <h1 className="heading-display text-6xl mb-6 text-hdkwa-navy">Instructional Hub.</h1>
-        <p className="text-2xl text-gray-500 max-w-2xl leading-relaxed">
+      <header className="mb-14 lg:mb-20">
+        <h1 className="heading-display mb-6 text-4xl text-hdkwa-navy sm:text-6xl">Instructional Hub.</h1>
+        <p className="max-w-2xl text-xl leading-relaxed text-gray-500 sm:text-2xl">
           Master the Danielson Framework through evidence-based techniques and actionable demonstrations.
         </p>
       </header>
@@ -19,7 +19,7 @@ export default function DomainsHub() {
             <Link 
               key={domain.id}
               href={`/domains/${domain.id}`}
-              className={`p-12 rounded-display hover:scale-[1.02] transition-transform cursor-pointer group border ${
+              className={`group cursor-pointer rounded-[24px] border p-7 transition-transform hover:scale-[1.02] sm:p-12 lg:rounded-display ${
                 domain.id === 2 ? 'bg-hdkwa-navy text-white' : 'bg-apple-tile border-transparent hover:border-gray-200'
               }`}
             >

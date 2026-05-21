@@ -3,3 +3,8 @@
   *Link: [./tracks/scaffold_base_app_20260520/](./tracks/scaffold_base_app_20260520/)*
 - [x] **Track: Implement Domain 3 Hub & Reporting**
   *Link: [./tracks/implement_domain_3_hub_20260520/](./tracks/implement_domain_3_hub_20260520/)*
+
+---
+
+- [x] **Track: Mobile Navigation and Technique Coaching Enrichment**
+  *Link: [./tracks/mobile_coaching_enrichment_20260521/](./tracks/mobile_coaching_enrichment_20260521/)*

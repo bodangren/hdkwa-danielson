@@ -1,7 +1,7 @@
 'use client';
 
 import { Technique } from '@/types';
-import { ClipboardList, Award, PlayCircle } from 'lucide-react';
+import { ClipboardList, Award } from 'lucide-react';
 import { useReflection } from '@/hooks/useReflection';
 
 interface ReflectionModuleProps {

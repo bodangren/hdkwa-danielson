@@ -1,9 +1,14 @@
 import type { NextConfig } from "next";
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/hdkwa-danielson',
+  ...(isProduction ? { basePath: '/hdkwa-danielson' } : {}),
   trailingSlash: true,
+  turbopack: {
+    root: process.cwd(),
+  },
   images: {
     unoptimized: true,
   },

@@ -1,5 +1,4 @@
 import { BookOpen, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
 
 const BOOKS = [
   {
@@ -35,14 +34,14 @@ const BOOKS = [
 export default function ReferencesPage() {
   return (
     <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
-      <header className="mb-20">
-        <h1 className="heading-display text-6xl mb-6 text-hdkwa-navy">The Pedagogy Shelf.</h1>
-        <p className="text-2xl text-gray-500 max-w-2xl leading-relaxed">
+      <header className="mb-14 lg:mb-20">
+        <h1 className="heading-display mb-6 text-4xl text-hdkwa-navy sm:text-6xl">The Pedagogy Shelf.</h1>
+        <p className="max-w-2xl text-xl leading-relaxed text-gray-500 sm:text-2xl">
           Our curated selection of evidence-based instructional frameworks, fully cross-referenced with Danielson components.
         </p>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:gap-12">
         {BOOKS.map((book) => (
           <div key={book.title} className="flex flex-col h-full group">
             <div className={`aspect-[3/4] rounded-2xl mb-8 flex items-center justify-center p-12 text-center shadow-xl transition-transform group-hover:-translate-y-4 ${book.color}`}>
@@ -69,7 +68,7 @@ export default function ReferencesPage() {
         ))}
       </div>
 
-      <div className="mt-20 p-12 bg-hdkwa-navy rounded-display text-white relative overflow-hidden">
+      <div className="relative mt-16 overflow-hidden rounded-[28px] bg-hdkwa-navy p-7 text-white sm:p-12 lg:mt-20 lg:rounded-display">
          <div className="relative z-10">
             <h2 className="text-3xl font-bold mb-4">Professional Expertise</h2>
             <p className="text-gray-300 max-w-xl leading-relaxed">

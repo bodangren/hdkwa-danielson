@@ -30,23 +30,23 @@ export default async function DomainPage({ params }: { params: Promise<{ id: str
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
-      <nav className="mb-12 flex gap-4 text-sm font-medium text-gray-400">
+      <nav className="mb-8 flex gap-4 text-sm font-medium text-gray-400 lg:mb-12">
         <Link href="/" className="hover:text-black transition-colors">Danielson PD</Link>
         <span>/</span>
         <span className="text-black">Domain {id} Hub</span>
       </nav>
 
-      <div className="flex justify-between items-start mb-16">
+      <div className="mb-12 flex flex-col gap-8 lg:mb-16 lg:flex-row lg:items-start lg:justify-between">
         <div className="max-w-3xl">
-          <div className="flex items-center gap-4 mb-4">
-            <h1 className="heading-display text-5xl text-hdkwa-navy">{domain.title}</h1>
+          <div className="mb-4 flex flex-wrap items-center gap-4">
+            <h1 className="heading-display text-4xl text-hdkwa-navy sm:text-5xl">{domain.title}</h1>
             {isHighReward && (
               <span className="px-4 py-1.5 bg-hdkwa-gold text-white rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 shadow-sm">
                 <Award className="w-4 h-4" /> High Reward
               </span>
             )}
           </div>
-          <div className="p-6 bg-apple-tile rounded-3xl border border-gray-100 flex gap-4 items-start">
+          <div className="flex items-start gap-4 rounded-3xl border border-gray-100 bg-apple-tile p-5 sm:p-6">
              <Info className="w-5 h-5 text-hdkwa-navy mt-1 flex-shrink-0" />
              <div>
                 <p className="text-[10px] font-bold uppercase tracking-widest text-hdkwa-navy mb-2">Proficient (Level 3) Descriptor</p>
@@ -54,7 +54,7 @@ export default async function DomainPage({ params }: { params: Promise<{ id: str
              </div>
           </div>
         </div>
-        <div className="text-right">
+        <div className="text-left lg:text-right">
           <p className="text-4xl font-semibold text-hdkwa-gold mb-1">Domain {id}</p>
           <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Instructional Focus</p>
         </div>
@@ -66,8 +66,8 @@ export default async function DomainPage({ params }: { params: Promise<{ id: str
           return (
             <div key={comp.id} className="animate-in fade-in slide-in-from-left-4 duration-700">
               <div className="flex items-start justify-between mb-8 border-b border-gray-100 pb-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-hdkwa-navy text-white flex items-center justify-center font-bold text-base shadow-md">
+                <div className="flex items-start gap-4">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-hdkwa-navy text-base font-bold text-white shadow-md">
                     {comp.id}
                   </div>
                   <div>

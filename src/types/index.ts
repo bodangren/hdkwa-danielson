@@ -19,6 +19,13 @@ export interface Technique {
     pages: string;
   };
   highReward?: boolean;
+  coaching?: {
+    implementationGuide?: string;
+    videoSummary?: string;
+    teacherActions?: string[];
+    leaderLookFors?: string[];
+    commonMistakes?: string[];
+  };
 }
 
 export interface Reflection {

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { techniques } from '@/data/techniques';
 import { Reflection, Technique } from '@/types';
-import { Download, FileText, Printer, CheckCircle2, Calendar } from 'lucide-react';
+import { FileText, Printer, Calendar } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../../public/logo.png';
@@ -35,6 +35,8 @@ export default function ReportPage() {
     // Sort by most recent update
     allReflections.sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
     
+    // localStorage is client-only; keep the first server/client render empty, then hydrate report data.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setReflections(allReflections);
     setIsLoaded(true);
   }, []);
@@ -46,22 +48,22 @@ export default function ReportPage() {
   if (!isLoaded) return null;
 
   return (
-    <div className="animate-in fade-in slide-in-from-bottom-2 duration-500 max-w-4xl mx-auto pb-20">
-      <header className="flex justify-between items-start mb-16 no-print">
+    <div className="animate-in fade-in slide-in-from-bottom-2 duration-500 mx-auto max-w-4xl pb-20">
+      <header className="no-print mb-12 flex flex-col gap-6 lg:mb-16 lg:flex-row lg:items-start lg:justify-between">
         <div>
-          <h1 className="heading-display text-5xl mb-4 text-hdkwa-navy">My PD Implementation Report</h1>
-          <p className="text-xl text-gray-500">A professional summary of your instructional growth.</p>
+          <h1 className="heading-display mb-4 text-4xl text-hdkwa-navy sm:text-5xl">My PD Implementation Report</h1>
+          <p className="text-lg text-gray-500 sm:text-xl">A professional summary of your instructional growth.</p>
         </div>
         <button 
           onClick={handlePrint}
-          className="bg-hdkwa-navy text-white px-8 py-4 rounded-full font-semibold flex items-center gap-3 hover:bg-hdkwa-navy/90 transition-all shadow-lg hover:shadow-xl active:scale-95"
+          className="flex items-center justify-center gap-3 rounded-full bg-hdkwa-navy px-6 py-4 font-semibold text-white shadow-lg transition-all hover:bg-hdkwa-navy/90 hover:shadow-xl active:scale-95 sm:px-8"
         >
           <Printer className="w-5 h-5" /> Print / Export PDF
         </button>
       </header>
 
       {reflections.length > 0 ? (
-        <div className="space-y-12 bg-white p-12 rounded-[40px] border border-gray-100 shadow-sm print:p-0 print:border-0 print:shadow-none">
+        <div className="space-y-12 rounded-[28px] border border-gray-100 bg-white p-5 shadow-sm print:border-0 print:p-0 print:shadow-none sm:p-12 lg:rounded-[40px]">
           {/* LOGO AND HEADER FOR PRINT */}
           <div className="hidden print:flex justify-between items-center mb-12 border-b border-gray-100 pb-8">
             <div className="flex items-center gap-4">
@@ -78,9 +80,9 @@ export default function ReportPage() {
           <div className="space-y-16">
             {reflections.map((item) => (
               <div key={item.techniqueId} className="page-break-inside-avoid">
-                <div className="flex items-center justify-between mb-6 border-b border-gray-50 pb-4">
+                <div className="mb-6 flex flex-col gap-4 border-b border-gray-50 pb-4 sm:flex-row sm:items-center sm:justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-hdkwa-navy text-white flex items-center justify-center font-bold text-xs">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-hdkwa-navy text-xs font-bold text-white">
                       {item.technique.subdomain}
                     </div>
                     <div>
@@ -88,8 +90,8 @@ export default function ReportPage() {
                       <p className="text-[10px] text-gray-400 uppercase tracking-widest font-semibold">{item.technique.alignment}</p>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <div className="flex items-center gap-1 justify-end text-hdkwa-gold mb-1">
+                  <div className="text-left sm:text-right">
+                    <div className="mb-1 flex items-center gap-1 text-hdkwa-gold sm:justify-end">
                       <Calendar className="w-3 h-3" />
                       <span className="text-[10px] font-bold">
                         {new Date(item.updatedAt).toLocaleDateString(undefined, { dateStyle: 'medium' })}
@@ -98,7 +100,7 @@ export default function ReportPage() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-8 mb-8">
+                <div className="mb-8 grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-8">
                   <div className="p-6 bg-apple-tile rounded-3xl">
                     <h4 className="text-[10px] font-bold uppercase text-gray-400 mb-4 tracking-widest">Pre-Implementation</h4>
                     <div className="flex items-center gap-3 mb-4">
@@ -110,7 +112,7 @@ export default function ReportPage() {
                        </div>
                     </div>
                     <p className="text-sm text-gray-700 leading-relaxed italic">
-                      "{item.beforeGoal || 'No goal specified.'}"
+                      &ldquo;{item.beforeGoal || 'No goal specified.'}&rdquo;
                     </p>
                   </div>
 
