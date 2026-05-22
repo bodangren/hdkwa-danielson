@@ -4,6 +4,7 @@ import { BookOpen, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ReflectionModule from '@/components/ReflectionModule';
+import { publicPath } from '@/lib/imagePath';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -21,7 +22,7 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
   }
 
   const implementationGuide = implementationGuides[technique.id] ?? technique.detailedSummary;
-  const techniqueImage = `/technique-images/${technique.id}.png`;
+  const techniqueImage = publicPath(`/technique-images/${technique.id}.png`);
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
