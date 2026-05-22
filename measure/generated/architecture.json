@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-05-22T07:37:12Z",
+  "framework": "nextjs",
+  "language": "typescript",
+  "app_router": true,
+  "source_root": "src",
+  "structure": {
+    "app": {
+      "_root": {
+        "type": "root_layout",
+        "files": [
+          "favicon.ico",
+          "globals.css",
+          "layout.tsx",
+          "page.tsx"
+        ]
+      },
+      "domains": {
+        "type": "route_segment",
+        "files": [
+          "page.tsx"
+        ]
+      },
+      "domains/[id]": {
+        "type": "route_segment",
+        "files": [
+          "page.tsx"
+        ]
+      },
+      "references": {
+        "type": "route_segment",
+        "files": [
+          "page.tsx"
+        ]
+      },
+      "report": {
+        "type": "route_segment",
+        "files": [
+          "page.tsx"
+        ]
+      },
+      "strategy": {
+        "type": "route_segment",
+        "files": []
+      },
+      "strategy/[slug]": {
+        "type": "route_segment",
+        "files": [
+          "page.tsx"
+        ]
+      }
+    },
+    "components": [
+      "ReflectionModule.tsx",
+      "Sidebar.tsx",
+      "TechniqueCard.tsx"
+    ],
+    "data": [
+      "danielson.ts",
+      "implementationGuides.ts",
+      "techniques.ts"
+    ],
+    "hooks": [
+      "useReflection.ts"
+    ],
+    "types": [
+      "index.ts"
+    ]
+  }
+}
