@@ -21,6 +21,14 @@ export interface Technique {
   highReward?: boolean;
 }
 
+export interface TechniqueArticleSections {
+  inThisVideo: string;
+  coachsNuance: string;
+  forTeachers: string[];
+  forLeaders: string[];
+  commonMistakes: string[];
+}
+
 export interface Reflection {
   techniqueId: string;
   beforeRating: number;

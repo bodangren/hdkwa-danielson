@@ -1,5 +1,6 @@
 import { techniques } from '@/data/techniques';
 import { implementationGuides } from '@/data/implementationGuides';
+import { articleSections } from '@/data/articleSections';
 import { BookOpen, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -22,6 +23,7 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
   }
 
   const implementationGuide = implementationGuides[technique.id] ?? technique.detailedSummary;
+  const sections = articleSections[technique.id];
   const techniqueImage = publicPath(`/technique-images/${technique.id}.png`);
 
   return (
@@ -80,6 +82,67 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
                 </div>
               )}
             </section>
+
+            {sections && (
+              <section className="space-y-10">
+                {/* In This Video */}
+                <div className="rounded-[24px] border border-gray-100 bg-apple-tile p-8">
+                  <h4 className="text-xs font-bold uppercase text-hdkwa-navy mb-3 tracking-widest">In This Video</h4>
+                  <p className="text-sm text-gray-700 leading-relaxed">{sections.inThisVideo}</p>
+                </div>
+
+                {/* Coach&apos;s Nuance */}
+                <div className="rounded-[24px] border border-gray-100 bg-white p-8 shadow-sm">
+                  <h4 className="text-xs font-bold uppercase text-hdkwa-gold mb-3 tracking-widest">Coach&apos;s Nuance</h4>
+                  <p className="text-sm text-gray-700 leading-relaxed">{sections.coachsNuance}</p>
+                </div>
+
+                {/* For Teachers */}
+                <div className="rounded-[24px] border border-gray-100 bg-white p-8 shadow-sm">
+                  <h4 className="text-xs font-bold uppercase text-hdkwa-navy mb-4 tracking-widest">For Teachers</h4>
+                  <ul className="space-y-3">
+                    {sections.forTeachers.map((item, idx) => (
+                      <li key={idx} className="flex gap-3 text-sm text-gray-700 leading-relaxed">
+                        <span className="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-hdkwa-navy/10 text-[10px] font-bold text-hdkwa-navy">
+                          {idx + 1}
+                        </span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* For Leaders */}
+                <div className="rounded-[24px] border border-gray-100 bg-white p-8 shadow-sm">
+                  <h4 className="text-xs font-bold uppercase text-gray-400 mb-4 tracking-widest">For Leaders</h4>
+                  <ul className="space-y-3">
+                    {sections.forLeaders.map((item, idx) => (
+                      <li key={idx} className="flex gap-3 text-sm text-gray-700 leading-relaxed">
+                        <span className="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-gray-100 text-[10px] font-bold text-gray-500">
+                          {idx + 1}
+                        </span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Common Mistakes */}
+                <div className="rounded-[24px] border border-red-100 bg-red-50/30 p-8">
+                  <h4 className="text-xs font-bold uppercase text-red-700 mb-4 tracking-widest">Common Mistakes</h4>
+                  <ul className="space-y-3">
+                    {sections.commonMistakes.map((item, idx) => (
+                      <li key={idx} className="flex gap-3 text-sm text-gray-700 leading-relaxed">
+                        <span className="mt-1 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-red-100 text-[10px] font-bold text-red-700">
+                          {idx + 1}
+                        </span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </section>
+            )}
 
             <ReflectionModule technique={technique} />
           </div>
