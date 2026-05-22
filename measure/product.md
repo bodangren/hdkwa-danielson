@@ -15,15 +15,15 @@ To provide secondary K-12 teachers with a high-impact, bite-sized, and actionabl
 - **High-Reward Subdomains:** Four critical subdomains are prioritized as "High Reward" (yielding more badges/points and prominent visual status):
     - **3b:** Using Questioning and Discussion Techniques
     - **3c:** Engaging Students in Learning
-    - **2c:** Managing Classroom Procedures
-    - **2d:** Managing Student Behavior
+    - **2c:** Maintaining Purposeful Environments
+    - **2d:** Supporting Positive Student Behavior
 - **Subdomain Technique Hubs:** Each subdomain serves as a hub for multiple techniques (e.g., Cold Call, Radar, Threshold).
 - **Actionable Modules:** Each technique includes:
     - **Self-Assessment (Before):** 1-5 rating on current usage + implementation goal.
-    - **Demonstration:** Technique-focused videos (primarily from @DangRenBo).
+    - **Demonstration:** Technique-focused videos curated from the repo's video index and multiple creators/channels.
     - **Instructional Deep Dive:** In-depth explanation videos and step-by-step guides.
     - **Implementation Reflection (After):** 1-5 rating on student impact + reflection notes.
-- **Embedded Expertise:** Integration of technique-focused videos from the YouTube channel @DangRenBo and curated legacy content.
+- **Embedded Expertise:** Integration of technique-focused videos from the repo's video index, including @DangRenBo and other curated sources.
 - **Literature Integration:** Contextual integration of strategies from TLAC 3.0, Visible Learning, Marzano, and Wong.
 - **Progress Tracking & Gamification:** Local storage tracking for strategy completion, growth metrics, and domain mastery.
 - **Implementation Reporting (Export):** An aggregate summary page that compiles Before/After data and reflection notes into a professional report for HODs/ICs.

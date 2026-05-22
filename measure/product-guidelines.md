@@ -19,4 +19,4 @@
 ## Content Guidelines
 - **Video Integration:** Use responsive embeds. Provide a brief "Why this video?" caption for context.
 - **Source Citations:** Always credit the primary text (e.g., "Strategy 12 from TLAC 3.0").
-- **Danielson Alignment:** Explicitly state which component of the framework (e.g., 2b: Establishing a Culture for Learning) each strategy supports.
+- **Danielson Alignment:** Explicitly state which component of the framework (e.g., 2b: Fostering a Culture for Learning) each strategy supports.

@@ -146,13 +146,13 @@ export default function ReportPage() {
           <FileText className="w-16 h-16 text-gray-200 mb-6" />
           <h3 className="text-2xl font-semibold text-gray-400">Your report is empty.</h3>
           <p className="text-gray-400 mt-2 max-w-sm">
-            Start implementing techniques in the Instructional Hub and record your reflections to generate your growth report.
+            Start implementing techniques in the Framework Hub and record your reflections to generate your growth report.
           </p>
           <Link 
             href="/domains/3"
             className="mt-8 bg-hdkwa-navy text-white px-8 py-3 rounded-full text-sm font-bold shadow-md hover:shadow-lg active:scale-95 transition-all"
           >
-            Go to Instructional Hub
+            Go to Framework Hub
           </Link>
         </div>
       )}

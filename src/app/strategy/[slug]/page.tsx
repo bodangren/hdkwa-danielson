@@ -173,7 +173,7 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
                     </div>
                  </div>
                )}
-               <p className="text-[11px] text-center text-gray-400 italic">Content curated by @DangRenBo</p>
+               <p className="text-[11px] text-center text-gray-400 italic">Video source and link details are maintained in the repo&apos;s video index; sources vary by technique.</p>
             </div>
 
             <div className="rounded-[28px] border border-gray-100 bg-white p-6 shadow-sm">

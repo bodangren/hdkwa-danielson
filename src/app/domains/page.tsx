@@ -6,9 +6,9 @@ export default function DomainsHub() {
   return (
     <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
       <header className="mb-14 lg:mb-20">
-        <h1 className="heading-display mb-6 text-4xl text-hdkwa-navy sm:text-6xl">Instructional Hub.</h1>
+        <h1 className="heading-display mb-6 text-4xl text-hdkwa-navy sm:text-6xl">Framework Hub.</h1>
         <p className="max-w-2xl text-xl leading-relaxed text-gray-500 sm:text-2xl">
-          Master the Danielson Framework through evidence-based techniques and actionable demonstrations.
+          Master the updated Danielson Framework through evidence-based techniques and actionable demonstrations.
         </p>
       </header>
 

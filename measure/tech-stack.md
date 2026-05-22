@@ -18,4 +18,4 @@
 - **GitHub Actions:** For automated build and deployment pipelines.
 
 ## Multimedia
-- **YouTube Embed API:** For seamless video integration from @DangRenBo.
+- **YouTube Embed API:** For seamless video integration from the repo's curated video index.

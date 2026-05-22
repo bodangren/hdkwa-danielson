@@ -5,28 +5,28 @@ const BOOKS = [
     title: "Teach Like A Champion 3.0",
     author: "Doug Lemov",
     description: "63 techniques that put students on the path to college. Focuses heavily on high-ratio engagement and classroom behavioral control.",
-    contribution: "Mapped to Domain 3 (Instruction) and Domain 2 (Environment). Provides the core 'Action Steps' for classroom-ready habits.",
+    contribution: "Mapped to Domain 3 (Learning Experiences) and Domain 2 (Learning Environments). Provides the core 'Action Steps' for classroom-ready habits.",
     color: "bg-hdkwa-navy text-white"
   },
   {
     title: "Visible Learning (The Sequel)",
     author: "John Hattie",
     description: "A synthesis of over 2,100 meta-analyses relating to achievement. Focuses on 'what works best' in schools based on evidence.",
-    contribution: "Provides the research foundation for Domain 3d (Assessment) and Domain 1b (Knowledge of Students). Highlights high-impact factors like Retrieval Practice.",
+    contribution: "Provides research context for Domain 3d (Using Assessment for Learning) and Domain 1b (Knowing and Valuing Students). Highlights evidence-informed practice such as retrieval and feedback.",
     color: "bg-white border-gray-200 border"
   },
   {
     title: "The New Art and Science of Teaching",
     author: "Robert Marzano",
     description: "A framework for substantive change in instructional practice. Focuses on the cognitive outcomes of learning.",
-    contribution: "Primary source for Domain 1c (Setting Instructional Outcomes) and high-level lesson design.",
+    contribution: "Primary source for Domain 1c (Setting Instructional Outcomes) and coherent lesson design.",
     color: "bg-apple-tile text-hdkwa-navy"
   },
   {
     title: "The First Days of School",
     author: "Harry Wong",
     description: "The foundational guide to classroom management and establishing a culture of work and success from day one.",
-    contribution: "Mapped to Domain 2c (Managing Classroom Procedures). Focuses on establishing routines that eliminate behavior issues.",
+    contribution: "Mapped to Domain 2c (Maintaining Purposeful Environments). Focuses on establishing routines that preserve instructional time.",
     color: "bg-hdkwa-gold text-white"
   }
 ];
@@ -72,7 +72,7 @@ export default function ReferencesPage() {
          <div className="relative z-10">
             <h2 className="text-3xl font-bold mb-4">Professional Expertise</h2>
             <p className="text-gray-300 max-w-xl leading-relaxed">
-              All technique demonstrations on this portal are performed by Uncle Dan on his YouTube channel, bridging these academic texts with practical, classroom-ready applications.
+              Technique demonstrations are curated from the repo&apos;s video index and multiple creators and channels, including @DangRenBo, to bridge these academic texts with practical, classroom-ready applications.
             </p>
             <a 
               href="https://www.youtube.com/@DangRenBo" 

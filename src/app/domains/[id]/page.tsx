@@ -56,7 +56,7 @@ export default async function DomainPage({ params }: { params: Promise<{ id: str
         </div>
         <div className="text-left lg:text-right">
           <p className="text-4xl font-semibold text-hdkwa-gold mb-1">Domain {id}</p>
-          <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Instructional Focus</p>
+          <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Framework Focus</p>
         </div>
       </div>
 

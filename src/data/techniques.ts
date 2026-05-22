@@ -3,14 +3,14 @@ import { Technique } from '../types';
 export const techniques: Technique[] = [
   // --- DOMAIN 1: PLANNING & PREPARATION ---
   
-  // 1a: Knowledge of Content and Pedagogy
+  // 1a: Applying Knowledge of Content and Pedagogy
   {
     id: 'exemplar-planning',
     title: 'Exemplar Planning',
     subdomain: '1a',
     domain: 1,
     source: 'TLAC 3.0',
-    alignment: '1a: Knowledge of Content and Pedagogy',
+    alignment: '1a: Applying Knowledge of Content and Pedagogy',
     description: 'Create an ideal student response (an "exemplar") before the lesson to define the exact standard of excellence.',
     actionSteps: [
       'Draft: Write the perfect answer you want students to produce.',
@@ -27,7 +27,7 @@ export const techniques: Technique[] = [
     subdomain: '1a',
     domain: 1,
     source: 'TLAC 3.0',
-    alignment: '1a: Knowledge of Content and Pedagogy',
+    alignment: '1a: Applying Knowledge of Content and Pedagogy',
     description: 'Synthesize the essential knowledge of a unit into a single-page document to ensure pedagogical clarity.',
     actionSteps: [
       'Distill: Identify the "must-know" facts and concepts.',
@@ -44,7 +44,7 @@ export const techniques: Technique[] = [
     subdomain: '1a',
     domain: 1,
     source: 'Visible Learning',
-    alignment: '1a: Knowledge of Content and Pedagogy',
+    alignment: '1a: Applying Knowledge of Content and Pedagogy',
     description: 'Use visual diagrams to show the relationships between different concepts within a unit.',
     actionSteps: [
       'Link: Draw lines between related topics.',
@@ -55,14 +55,14 @@ export const techniques: Technique[] = [
     videos: { demo: 'qNuz8s66N1E' }
   },
 
-  // 1b: Knowledge of Students
+  // 1b: Knowing and Valuing Students
   {
     id: 'student-centered-research',
     title: 'The Student Perspective',
     subdomain: '1b',
     domain: 1,
     source: 'Visible Learning',
-    alignment: '1b: Knowledge of Students',
+    alignment: '1b: Knowing and Valuing Students',
     description: 'Incorporate student voice and background knowledge into lesson design.',
     actionSteps: [
       'Survey: Gather data on student interests and prior knowledge.',
@@ -79,7 +79,7 @@ export const techniques: Technique[] = [
     subdomain: '1b',
     domain: 1,
     source: 'Marzano',
-    alignment: '1b: Knowledge of Students',
+    alignment: '1b: Knowing and Valuing Students',
     description: 'Design multiple pathways for students to achieve the same instructional goal based on their current levels.',
     actionSteps: [
       'Assess: Use pre-assessments to identify student starting points.',
@@ -95,7 +95,7 @@ export const techniques: Technique[] = [
     subdomain: '1b',
     domain: 1,
     source: 'Edutopia',
-    alignment: '1b: Knowledge of Students',
+    alignment: '1b: Knowing and Valuing Students',
     description: 'Select instructional materials and examples that reflect the diverse backgrounds of the students in your classroom.',
     actionSteps: [
       'Audit: Review your curriculum for diverse representation.',
@@ -157,14 +157,14 @@ export const techniques: Technique[] = [
     videos: { demo: 'CygTwWsoXfE' }
   },
 
-  // 1d: Knowledge of Resources
+  // 1d: Using Resources Effectively
   {
     id: 'resource-curation',
     title: 'Curating Digital Resources',
     subdomain: '1d',
     domain: 1,
     source: 'DangRenBo',
-    alignment: '1d: Knowledge of Resources',
+    alignment: '1d: Using Resources Effectively',
     description: 'Utilize specialized digital tools and professional literature to enhance lesson depth.',
     actionSteps: [
       'Explore: Identify high-quality digital repositories.',
@@ -180,7 +180,7 @@ export const techniques: Technique[] = [
     subdomain: '1d',
     domain: 1,
     source: 'DangRenBo',
-    alignment: '1d: Knowledge of Resources',
+    alignment: '1d: Using Resources Effectively',
     description: 'Use real-world case studies and artifacts to deepen understanding.',
     actionSteps: [
       'Select: Choose a case study that mirrors the unit objective.',
@@ -196,7 +196,7 @@ export const techniques: Technique[] = [
     subdomain: '1d',
     domain: 1,
     source: 'Edutopia',
-    alignment: '1d: Knowledge of Resources',
+    alignment: '1d: Using Resources Effectively',
     description: 'Leverage professional associations, local experts, and online communities to bring "outside" expertise into the classroom.',
     actionSteps: [
       'Connect: Identify an expert or organization related to your unit.',
@@ -207,14 +207,14 @@ export const techniques: Technique[] = [
     videos: { demo: 'gjIQVhiMWdA' }
   },
 
-  // 1e: Designing Coherent Instruction
+  // 1e: Planning Coherent Instruction
   {
     id: 'double-plan',
     title: 'The Double Plan',
     subdomain: '1e',
     domain: 1,
     source: 'TLAC 3.0',
-    alignment: '1e: Designing Coherent Instruction',
+    alignment: '1e: Planning Coherent Instruction',
     description: 'Plan what students will be doing at every stage of the lesson.',
     actionSteps: [
       'T-Chart: Create a two-column plan (Teacher Do / Student Do).',
@@ -231,7 +231,7 @@ export const techniques: Technique[] = [
     subdomain: '1e',
     domain: 1,
     source: 'TLAC 3.0',
-    alignment: '1e: Designing Coherent Instruction',
+    alignment: '1e: Planning Coherent Instruction',
     description: 'Design lessons with varied activity types to maintain energy.',
     actionSteps: [
       'Alternate: Switch between "Heavy" and "Light" tasks.',
@@ -247,7 +247,7 @@ export const techniques: Technique[] = [
     subdomain: '1e',
     domain: 1,
     source: 'Edutopia',
-    alignment: '1e: Designing Coherent Instruction',
+    alignment: '1e: Planning Coherent Instruction',
     description: 'Break complex learning tasks into smaller, manageable steps with clear "on-ramps" for all students.',
     actionSteps: [
       'Chunk: Divide the lesson into 10-15 minute focused segments.',
@@ -258,14 +258,14 @@ export const techniques: Technique[] = [
     videos: { demo: '5O0dJjNlrNs' }
   },
 
-  // 1f: Designing Student Assessments
+  // 1f: Designing and Analyzing Assessments
   {
     id: 'affirmative-checking',
     title: 'Affirmative Checking',
     subdomain: '1f',
     domain: 1,
     source: 'TLAC 3.0',
-    alignment: '1f: Designing Student Assessments',
+    alignment: '1f: Designing and Analyzing Assessments',
     description: 'Insert "checkpoints" into your lesson where students must show mastery before moving on.',
     actionSteps: [
       'Identify: Choose a checkpoint.',
@@ -282,7 +282,7 @@ export const techniques: Technique[] = [
     subdomain: '1f',
     domain: 1,
     source: 'TLAC 3.0',
-    alignment: '1f: Designing Student Assessments',
+    alignment: '1f: Designing and Analyzing Assessments',
     description: 'Design student materials so that work is easy for the teacher to scan instantly.',
     actionSteps: [
       'Aligned Workspaces: Answers in the same place.',
@@ -298,7 +298,7 @@ export const techniques: Technique[] = [
     subdomain: '1f',
     domain: 1,
     source: 'TLAC 3.0',
-    alignment: '1f: Designing Student Assessments',
+    alignment: '1f: Designing and Analyzing Assessments',
     description: 'A 2-3 minute daily assessment at the end of class to measure student mastery of the day\'s objective.',
     actionSteps: [
       'Design: Create one or two questions that directly test the core objective.',
@@ -309,16 +309,16 @@ export const techniques: Technique[] = [
     videos: { demo: '0hX0H5K0_0U' }
   },
 
-  // --- DOMAIN 2: CLASSROOM ENVIRONMENT ---
+  // --- DOMAIN 2: LEARNING ENVIRONMENTS ---
 
-  // 2a: Respect and Rapport
+  // 2a: Cultivating Respectful and Affirming Environments
   {
     id: 'positive-framing',
     title: 'Positive Framing',
     subdomain: '2a',
     domain: 2,
     source: 'TLAC 3.0',
-    alignment: '2a: Respect and Rapport',
+    alignment: '2a: Cultivating Respectful and Affirming Environments',
     description: 'Guide students toward behavior expectations using positive language.',
     actionSteps: [
       'Narrate: Highlight those meeting expectations.',
@@ -335,7 +335,7 @@ export const techniques: Technique[] = [
     subdomain: '2a',
     domain: 2,
     source: 'TLAC 3.0',
-    alignment: '2a: Respect and Rapport',
+    alignment: '2a: Cultivating Respectful and Affirming Environments',
     description: 'Specific and timely feedback on actions.',
     actionSteps: [
       'Be Specific: Identify the exact action.',
@@ -351,7 +351,7 @@ export const techniques: Technique[] = [
     subdomain: '2a',
     domain: 2,
     source: 'TLAC 3.0',
-    alignment: '2a: Respect and Rapport',
+    alignment: '2a: Cultivating Respectful and Affirming Environments',
     description: 'Celebrate learning through shared routines and humor.',
     actionSteps: [
       'Shared Rhymes: Use chants to mark success.',
@@ -362,14 +362,14 @@ export const techniques: Technique[] = [
     videos: { demo: '5GuZNgZNEzI' }
   },
 
-  // 2b: Establishing a Culture for Learning
+  // 2b: Fostering a Culture for Learning
   {
     id: 'culture-of-error',
     title: 'Culture of Error',
     subdomain: '2b',
     domain: 2,
     source: 'Uncommon Schools',
-    alignment: '2b: Establishing a Culture for Learning',
+    alignment: '2b: Fostering a Culture for Learning',
     description: 'Mistakes are tools for learning.',
     actionSteps: [
       'Normalize: "I\'m glad you made that mistake."',
@@ -386,7 +386,7 @@ export const techniques: Technique[] = [
     subdomain: '2b',
     domain: 2,
     source: 'TLAC 3.0',
-    alignment: '2b: Establishing a Culture for Learning',
+    alignment: '2b: Fostering a Culture for Learning',
     description: 'Belief that every student can reach high standards.',
     actionSteps: [
       'No Opt Out: Never leave a student confused.',
@@ -402,7 +402,7 @@ export const techniques: Technique[] = [
     subdomain: '2b',
     domain: 2,
     source: 'Edutopia',
-    alignment: '2b: Establishing a Culture for Learning',
+    alignment: '2b: Fostering a Culture for Learning',
     description: 'Display high-quality student work publicly to signal what constitutes excellence in your classroom.',
     actionSteps: [
       'Select: Choose work that shows growth or high achievement.',
@@ -413,14 +413,14 @@ export const techniques: Technique[] = [
     videos: { demo: 'MO4T_pQBVQc' }
   },
 
-  // 2c: Managing Classroom Procedures
+  // 2c: Maintaining Purposeful Environments
   {
     id: 'strong-voice',
     title: 'Strong Voice',
     subdomain: '2c',
     domain: 2,
     source: 'TLAC 3.0',
-    alignment: '2c: Managing Classroom Procedures',
+    alignment: '2c: Maintaining Purposeful Environments',
     highReward: true,
     description: 'Professional authority through calm communication.',
     actionSteps: [
@@ -437,7 +437,7 @@ export const techniques: Technique[] = [
     subdomain: '2c',
     domain: 2,
     source: 'TLAC 3.0',
-    alignment: '2c: Managing Classroom Procedures',
+    alignment: '2c: Maintaining Purposeful Environments',
     highReward: true,
     description: 'Redo procedures until correct.',
     actionSteps: [
@@ -454,7 +454,7 @@ export const techniques: Technique[] = [
     subdomain: '2c',
     domain: 2,
     source: 'TLAC 3.0',
-    alignment: '2c: Managing Classroom Procedures',
+    alignment: '2c: Maintaining Purposeful Environments',
     description: 'Explicitly teach and time the transition between activities to minimize instructional time loss.',
     actionSteps: [
       'The Countdown: Give a clear 10-second limit for a transition.',
@@ -470,7 +470,7 @@ export const techniques: Technique[] = [
     subdomain: '2c',
     domain: 2,
     source: 'Wong / TLAC',
-    alignment: '2c: Managing Classroom Procedures',
+    alignment: '2c: Maintaining Purposeful Environments',
     description: 'Meet students at the door to set the tone.',
     actionSteps: [
       'Greeting: Handshake or eye contact.',
@@ -481,14 +481,14 @@ export const techniques: Technique[] = [
     videos: { demo: 'Sc6qt1comUE' }
   },
 
-  // 2d: Managing Student Behavior
+  // 2d: Supporting Positive Student Behavior
   {
     id: 'be-seen-looking',
     title: 'Be Seen Looking',
     subdomain: '2d',
     domain: 2,
     source: 'TLAC 3.0',
-    alignment: '2d: Managing Student Behavior',
+    alignment: '2d: Supporting Positive Student Behavior',
     highReward: true,
     description: 'Visibly scan the room.',
     actionSteps: [
@@ -505,7 +505,7 @@ export const techniques: Technique[] = [
     subdomain: '2d',
     domain: 2,
     source: 'TLAC 3.0',
-    alignment: '2d: Managing Student Behavior',
+    alignment: '2d: Supporting Positive Student Behavior',
     highReward: true,
     description: 'Address behavior without stopping instruction.',
     actionSteps: [
@@ -522,7 +522,7 @@ export const techniques: Technique[] = [
     subdomain: '2d',
     domain: 2,
     source: 'TLAC 3.0',
-    alignment: '2d: Managing Student Behavior',
+    alignment: '2d: Supporting Positive Student Behavior',
     description: 'Deliver consequences in a way that is consistent and respectful.',
     actionSteps: [
       'Immediate: Address the issue while fresh.',
@@ -533,14 +533,14 @@ export const techniques: Technique[] = [
     videos: { demo: 'ElUhlsRuPHE' }
   },
 
-  // 2e: Organizing Physical Space
+  // 2e: Organizing Spaces for Learning
   {
     id: 'invisible-columns-space',
     title: 'The Grid',
     subdomain: '2e',
     domain: 2,
     source: 'TLAC 3.0',
-    alignment: '2e: Organizing Physical Space',
+    alignment: '2e: Organizing Spaces for Learning',
     description: 'Arrange for maximum visibility.',
     actionSteps: [
       'Clear Paths: No obstructions for movement.',
@@ -556,7 +556,7 @@ export const techniques: Technique[] = [
     subdomain: '2e',
     domain: 2,
     source: 'DangRenBo',
-    alignment: '2e: Organizing Physical Space',
+    alignment: '2e: Organizing Spaces for Learning',
     description: 'Space for targeted small group instruction.',
     actionSteps: [
       'Layout: Small group gathering.',
@@ -572,7 +572,7 @@ export const techniques: Technique[] = [
     subdomain: '2e',
     domain: 2,
     source: 'Edutopia',
-    alignment: '2e: Organizing Physical Space',
+    alignment: '2e: Organizing Spaces for Learning',
     description: 'Design the physical walls of the classroom to be functional "learning supports."',
     actionSteps: [
       'Strategize: Only post charts related to the current unit.',
@@ -585,14 +585,14 @@ export const techniques: Technique[] = [
 
   // --- DOMAIN 3: INSTRUCTION ---
 
-  // 3a: Communicating With Students
+  // 3a: Communicating About Purpose and Content
   {
     id: 'format-matters',
     title: 'Format Matters',
     subdomain: '3a',
     domain: 3,
     source: 'TLAC 3.0',
-    alignment: '3a: Communicating With Students',
+    alignment: '3a: Communicating About Purpose and Content',
     description: 'Require complete sentences and academic language.',
     actionSteps: [
       'Sentence Starters: Provide leads.',
@@ -608,7 +608,7 @@ export const techniques: Technique[] = [
     subdomain: '3a',
     domain: 3,
     source: 'TLAC 3.0',
-    alignment: '3a: Communicating With Students',
+    alignment: '3a: Communicating About Purpose and Content',
     description: 'Choral response for key facts.',
     actionSteps: [
       'Cue: Standard countdown.',
@@ -624,7 +624,7 @@ export const techniques: Technique[] = [
     subdomain: '3a',
     domain: 3,
     source: 'Uncommon Schools',
-    alignment: '3a: Communicating With Students',
+    alignment: '3a: Communicating About Purpose and Content',
     description: 'Pair new academic vocabulary with a specific physical movement or gesture.',
     actionSteps: [
       'Define: Explain the word clearly.',
@@ -635,14 +635,14 @@ export const techniques: Technique[] = [
     videos: { demo: '38JeYKqOZ_g' }
   },
 
-  // 3b: Questioning and Discussion
+  // 3b: Using Questioning and Discussion Techniques
   {
     id: 'cold-call',
     title: 'Cold Call',
     subdomain: '3b',
     domain: 3,
     source: 'Uncommon Schools',
-    alignment: '3b: Questioning and Discussion',
+    alignment: '3b: Using Questioning and Discussion Techniques',
     highReward: true,
     description: 'Call on students regardless of raised hands.',
     actionSteps: [
@@ -659,7 +659,7 @@ export const techniques: Technique[] = [
     subdomain: '3b',
     domain: 3,
     source: 'TLAC 3.0',
-    alignment: '3b: Questioning and Discussion',
+    alignment: '3b: Using Questioning and Discussion Techniques',
     highReward: true,
     description: 'Deliberate pause to allow processing.',
     actionSteps: [
@@ -676,7 +676,7 @@ export const techniques: Technique[] = [
     subdomain: '3b',
     domain: 3,
     source: 'TLAC 3.0',
-    alignment: '3b: Questioning and Discussion',
+    alignment: '3b: Using Questioning and Discussion Techniques',
     highReward: true,
     description: 'Repeat correct answer after initial confusion.',
     actionSteps: [
@@ -693,7 +693,7 @@ export const techniques: Technique[] = [
     subdomain: '3b',
     domain: 3,
     source: 'TLAC 3.0',
-    alignment: '3b: Questioning and Discussion',
+    alignment: '3b: Using Questioning and Discussion Techniques',
     description: 'Push students to higher levels after a correct answer.',
     actionSteps: [
       'Ask "How": Explain logic.',
@@ -756,14 +756,14 @@ export const techniques: Technique[] = [
     videos: { demo: 'MFhNM-9UAwo' }
   },
 
-  // 3d: Using Assessment in Instruction
+  // 3d: Using Assessment for Learning
   {
     id: 'retrieval-practice-routine',
     title: 'Blast From the Past',
     subdomain: '3d',
     domain: 3,
     source: 'Uncommon Schools',
-    alignment: '3d: Using Assessment in Instruction',
+    alignment: '3d: Using Assessment for Learning',
     description: 'Daily warm-up on previous material.',
     actionSteps: [
       'Routine: Daily 5-minute recall.',
@@ -779,7 +779,7 @@ export const techniques: Technique[] = [
     subdomain: '3d',
     domain: 3,
     source: 'TLAC 3.0',
-    alignment: '3d: Using Assessment in Instruction',
+    alignment: '3d: Using Assessment for Learning',
     description: 'Simultaneous signals for 100% data.',
     actionSteps: [
       'Wait: Solve time.',
@@ -795,7 +795,7 @@ export const techniques: Technique[] = [
     subdomain: '3d',
     domain: 3,
     source: 'Marzano',
-    alignment: '3d: Using Assessment in Instruction',
+    alignment: '3d: Using Assessment for Learning',
     description: 'Have students rate their own understanding of a specific learning goal on a 1-4 scale.',
     actionSteps: [
       'Prompt: "On your fingers, show me your level of confidence with X."',
@@ -806,14 +806,14 @@ export const techniques: Technique[] = [
     videos: { demo: 'ydMDAGKHW7Q' }
   },
 
-  // 3e: Demonstrating Flexibility and Responsiveness
+  // 3e: Responding Flexibly to Student Needs
   {
     id: 'plan-for-error-flex',
     title: 'Plan for Error',
     subdomain: '3e',
     domain: 3,
     source: 'TLAC 3.0',
-    alignment: '3e: Demonstrating Flexibility and Responsiveness',
+    alignment: '3e: Responding Flexibly to Student Needs',
     description: 'Anticipate mistakes and prepare pivots.',
     actionSteps: [
       'Predict: Identify hard parts.',
@@ -829,7 +829,7 @@ export const techniques: Technique[] = [
     subdomain: '3e',
     domain: 3,
     source: 'Visible Learning',
-    alignment: '3e: Demonstrating Flexibility and Responsiveness',
+    alignment: '3e: Responding Flexibly to Student Needs',
     description: 'Diagnostic deciding whether to move on.',
     actionSteps: [
       'Design: High-quality distractor MCQs.',
@@ -845,7 +845,7 @@ export const techniques: Technique[] = [
     subdomain: '3e',
     domain: 3,
     source: 'Teaching Channel',
-    alignment: '3e: Demonstrating Flexibility and Responsiveness',
+    alignment: '3e: Responding Flexibly to Student Needs',
     description: 'Use colored cups or cards to allow students to signal their need for help in real-time.',
     actionSteps: [
       'Implement: Every desk gets a red, yellow, and green card.',
@@ -856,16 +856,16 @@ export const techniques: Technique[] = [
     videos: { demo: 'smUSKbcSSJQ' } // Wait time video shows general responsive moves
   },
 
-  // --- DOMAIN 4: PROFESSIONAL RESPONSIBILITIES ---
+  // --- DOMAIN 4: PRINCIPLED TEACHING ---
 
-  // 4a: Reflecting on Teaching
+  // 4a: Engaging in Reflective Practice
   {
     id: 'reflection-logs-4a',
     title: 'Before/After Reflection',
     subdomain: '4a',
     domain: 4,
     source: 'HDKWA PD Portal',
-    alignment: '4a: Reflecting on Teaching',
+    alignment: '4a: Engaging in Reflective Practice',
     description: 'Record successes to inform practice.',
     actionSteps: [
       'Record: Use the PD Report.',
@@ -881,7 +881,7 @@ export const techniques: Technique[] = [
     subdomain: '4a',
     domain: 4,
     source: 'Teaching Channel',
-    alignment: '4a: Reflecting on Teaching',
+    alignment: '4a: Engaging in Reflective Practice',
     description: 'Record yourself teaching a 10-minute segment and analyze your own "teacher moves."',
     actionSteps: [
       'Record: Focus on a specific technique (e.g. Wait Time).',
@@ -892,14 +892,14 @@ export const techniques: Technique[] = [
     videos: { demo: '0uIU8ZrG7yc' }
   },
 
-  // 4b: Maintaining Accurate Records
+  // 4b: Documenting Student Progress
   {
     id: 'smart-ledgers-4b',
     title: 'Smart Ledgers',
     subdomain: '4b',
     domain: 4,
     source: 'DangRenBo',
-    alignment: '4b: Maintaining Accurate Records',
+    alignment: '4b: Documenting Student Progress',
     description: 'Efficient tracking systems.',
     actionSteps: [
       'Digitize: Use trackers.',
@@ -915,7 +915,7 @@ export const techniques: Technique[] = [
     subdomain: '4b',
     domain: 4,
     source: 'Edutopia',
-    alignment: '4b: Maintaining Accurate Records',
+    alignment: '4b: Documenting Student Progress',
     description: 'Give students and families real-time access to progress and mastery data.',
     actionSteps: [
       'Sync: Ensure your digital gradebook is updated within 24 hours.',
@@ -926,14 +926,14 @@ export const techniques: Technique[] = [
     videos: { demo: 'vsyQfmx_ej4' }
   },
 
-  // 4c: Communicating with Families
+  // 4c: Engaging Families and Communities
   {
     id: 'home-contributions-4c',
     title: 'Engaging the Home',
     subdomain: '4c',
     domain: 4,
     source: 'Visible Learning',
-    alignment: '4c: Communicating with Families',
+    alignment: '4c: Engaging Families and Communities',
     description: 'Positive communication with parents.',
     actionSteps: [
       'Positive Calls: Not just for issues.',
@@ -949,7 +949,7 @@ export const techniques: Technique[] = [
     subdomain: '4c',
     domain: 4,
     source: 'Edutopia',
-    alignment: '4c: Communicating with Families',
+    alignment: '4c: Engaging Families and Communities',
     description: 'Send regular, high-signal updates to families about the unit\'s learning goals and student successes.',
     actionSteps: [
       'Content: Highlight the "Exemplar" for the week.',
@@ -960,14 +960,14 @@ export const techniques: Technique[] = [
     videos: { demo: 'JeMVNDWSVL4' }
   },
 
-  // 4d: Participating in a Professional Community
+  // 4d: Contributing to School Community and Culture
   {
     id: 'professional-community-4d',
     title: 'Contributing to School',
     subdomain: '4d',
     domain: 4,
     source: 'Visible Learning',
-    alignment: '4d: Participating in a Professional Community',
+    alignment: '4d: Contributing to School Community and Culture',
     description: 'Collaborate school-wide.',
     actionSteps: [
       'Peer Obs: Invite colleagues.',
@@ -983,7 +983,7 @@ export const techniques: Technique[] = [
     subdomain: '4d',
     domain: 4,
     source: 'Marzano',
-    alignment: '4d: Participating in a Professional Community',
+    alignment: '4d: Contributing to School Community and Culture',
     description: 'Join or lead a Professional Learning Community focused on a specific instructional problem.',
     actionSteps: [
       'Focus: Choose one goal (e.g. Literacy in Science).',
@@ -1028,14 +1028,14 @@ export const techniques: Technique[] = [
     videos: { demo: '8fCTfmSfjMY' }
   },
 
-  // 4f: Showing Professionalism
+  // 4f: Acting in Service of Students
   {
     id: 'firm-calm-finesse-4f',
     title: 'Firm Calm Finesse',
     subdomain: '4f',
     domain: 4,
     source: 'TLAC 3.0',
-    alignment: '4f: Showing Professionalism',
+    alignment: '4f: Acting in Service of Students',
     description: 'Integrity through calm interactions.',
     actionSteps: [
       'Neutral Tone: Emotional separation.',
@@ -1051,7 +1051,7 @@ export const techniques: Technique[] = [
     subdomain: '4f',
     domain: 4,
     source: 'Edutopia',
-    alignment: '4f: Showing Professionalism',
+    alignment: '4f: Acting in Service of Students',
     description: 'Go beyond the classroom to advocate for student needs at the school and community level.',
     actionSteps: [
       'Identify: Notice an systemic barrier to student success.',

@@ -19,7 +19,7 @@ import { techniques } from '@/data/techniques';
 
 const navItems = [
   { name: 'Home', href: '/', icon: Home },
-  { name: 'Instructional Hub', href: '/domains', icon: LayoutDashboard },
+  { name: 'Framework Hub', href: '/domains', icon: LayoutDashboard },
   { name: 'My PD Report', href: '/report', icon: FileText },
   { name: 'References', href: '/references', icon: BookOpen },
 ];
