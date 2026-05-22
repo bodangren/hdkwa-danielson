@@ -22,7 +22,7 @@ export default function ReflectionModule({ technique }: ReflectionModuleProps) {
         </h3>
         
         <div className="mb-8">
-          <p className="text-sm font-semibold mb-3">To what extent do you already use this technique in class?</p>
+          <p className="text-sm font-semibold mb-3">To what extent do you already use this technique in your practice?</p>
           <div className="flex gap-3">
             {[1, 2, 3, 4, 5].map((num) => (
               <button
@@ -63,7 +63,7 @@ export default function ReflectionModule({ technique }: ReflectionModuleProps) {
         </h3>
         
         <div className="mb-8">
-          <p className="text-sm font-semibold mb-3">Observed Impact on Student Engagement:</p>
+          <p className="text-sm font-semibold mb-3">Observed Impact on Student Response:</p>
           <div className="flex gap-3">
             {[1, 2, 3, 4, 5].map((num) => (
               <button

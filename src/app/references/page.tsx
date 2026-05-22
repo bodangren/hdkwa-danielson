@@ -4,8 +4,8 @@ const BOOKS = [
   {
     title: "Teach Like A Champion 3.0",
     author: "Doug Lemov",
-    description: "63 techniques that put students on the path to college. Focuses heavily on high-ratio engagement and classroom behavioral control.",
-    contribution: "Mapped to Domain 3 (Learning Experiences) and Domain 2 (Learning Environments). Provides the core 'Action Steps' for classroom-ready habits.",
+    description: "63 techniques that put students on the path to college. Focuses heavily on high-ratio engagement and purposeful routines.",
+    contribution: "Mapped to Domain 3 (Learning Experiences) and Domain 2 (Learning Environments). Provides the core action steps for practical instructional routines.",
     color: "bg-hdkwa-navy text-white"
   },
   {
@@ -72,7 +72,7 @@ export default function ReferencesPage() {
          <div className="relative z-10">
             <h2 className="text-3xl font-bold mb-4">Professional Expertise</h2>
             <p className="text-gray-300 max-w-xl leading-relaxed">
-              Technique demonstrations are curated from the repo&apos;s video index and multiple creators and channels, including @DangRenBo, to bridge these academic texts with practical, classroom-ready applications.
+              Technique demonstrations are curated from the repo&apos;s video index and multiple creators and channels, including @DangRenBo, to bridge these academic texts with practical instructional applications.
             </p>
             <a 
               href="https://www.youtube.com/@DangRenBo" 

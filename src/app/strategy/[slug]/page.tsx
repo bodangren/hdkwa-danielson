@@ -1,10 +1,8 @@
 import { techniques } from '@/data/techniques';
-import { AlertTriangle, BookOpen, ChevronRight, ClipboardCheck, Eye, Lightbulb } from 'lucide-react';
+import { BookOpen, ChevronRight, Lightbulb } from 'lucide-react';
 import Link from 'next/link';
-import Image from 'next/image';
 import ReflectionModule from '@/components/ReflectionModule';
 import { notFound } from 'next/navigation';
-import { getTechniqueCoaching } from '@/lib/techniqueCoaching';
 
 export function generateStaticParams() {
   return techniques.map((tech) => ({
@@ -20,7 +18,23 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  const coaching = getTechniqueCoaching(technique);
+  const usageHeading =
+    technique.domain === 1
+      ? 'Planning Notes'
+      : technique.domain === 4
+        ? 'Professional Practice'
+        : technique.domain === 2
+          ? 'Classroom Use'
+          : 'Lesson Use';
+
+  const usageCopy =
+    technique.domain === 1
+      ? 'Use this while planning so the task, the sequence, and the assessment support one another before the lesson starts.'
+      : technique.domain === 4
+        ? 'Use this as part of your professional routine: reflection, documentation, family communication, collaboration, or advocacy.'
+        : technique.domain === 2
+          ? 'Use this while the class is running so routines, expectations, and responses stay clear and consistent.'
+          : 'Use this during instruction so the teacher move and the student response stay aligned in real time.';
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
@@ -46,12 +60,6 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
           </div>
 
           <div className="space-y-12 mb-20">
-            {technique.quote && (
-              <p className="text-lg text-gray-600 leading-relaxed italic border-l-4 border-hdkwa-gold pl-6">
-                &ldquo;{technique.quote}&rdquo;
-              </p>
-            )}
-
             <section>
               <h3 className="mb-6 text-sm font-bold uppercase tracking-widest text-gray-400">Action Steps</h3>
               <ul className="mb-10 space-y-6">
@@ -64,10 +72,10 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
                   </li>
                 ))}
               </ul>
-              
+
               {technique.detailedSummary && (
                 <div className="bg-white border border-gray-100 p-8 rounded-[24px] shadow-sm">
-                  <h4 className="text-xs font-bold uppercase text-hdkwa-navy mb-4 tracking-widest">Technique Overview</h4>
+                  <h4 className="text-xs font-bold uppercase text-hdkwa-navy mb-4 tracking-widest">Why this works</h4>
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {technique.detailedSummary}
                   </p>
@@ -77,64 +85,17 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
 
             <section className="rounded-[28px] border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
               <h3 className="mb-5 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-hdkwa-navy">
-                <Lightbulb className="h-4 w-4 text-hdkwa-gold" /> Implementation Guide
+                <Lightbulb className="h-4 w-4 text-hdkwa-gold" /> {usageHeading}
               </h3>
-              <Image
-                src={coaching.image.src}
-                alt={coaching.image.alt}
-                width={1200}
-                height={760}
-                className="mb-6 aspect-[1200/760] w-full rounded-2xl border border-gray-100 object-cover"
-                loading="lazy"
-              />
               <div className="space-y-4 text-sm leading-7 text-gray-600">
-                {coaching.implementationGuide.split('\n\n').map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
+                <p>{usageCopy}</p>
+                <p>
+                  Keep the sequence tight: name the expectation, carry out the step, and watch for the student response the technique is designed to produce.
+                </p>
+                <p>
+                  If the lesson has a literature source, use that as the rationale; if it has a video, treat the video as a model for pacing, language, and timing.
+                </p>
               </div>
-            </section>
-
-            <section className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <div className="rounded-[24px] border border-gray-100 bg-apple-tile p-6">
-                <h3 className="mb-5 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-hdkwa-navy">
-                  <ClipboardCheck className="h-4 w-4 text-hdkwa-gold" /> For Teachers
-                </h3>
-                <ul className="space-y-4">
-                  {coaching.teacherActions.map((action) => (
-                    <li key={action} className="flex gap-3 text-sm leading-relaxed text-gray-700">
-                      <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-hdkwa-gold"></span>
-                      <span>{action}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="rounded-[24px] border border-hdkwa-navy/10 bg-hdkwa-navy p-6 text-white">
-                <h3 className="mb-5 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-hdkwa-gold">
-                  <Eye className="h-4 w-4" /> For Leaders
-                </h3>
-                <ul className="space-y-4">
-                  {coaching.leaderLookFors.map((lookFor) => (
-                    <li key={lookFor} className="flex gap-3 text-sm leading-relaxed text-gray-200">
-                      <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-hdkwa-gold"></span>
-                      <span>{lookFor}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </section>
-
-            <section className="rounded-[24px] border border-hdkwa-gold/20 bg-hdkwa-gold/5 p-6">
-              <h3 className="mb-4 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-hdkwa-gold">
-                <AlertTriangle className="h-4 w-4" /> Common Mistakes
-              </h3>
-              <ul className="grid grid-cols-1 gap-3 md:grid-cols-3">
-                {coaching.commonMistakes.map((mistake) => (
-                  <li key={mistake} className="rounded-2xl bg-white p-4 text-xs leading-relaxed text-gray-600">
-                    {mistake}
-                  </li>
-                ))}
-              </ul>
             </section>
 
             <ReflectionModule technique={technique} />
@@ -173,12 +134,7 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
                     </div>
                  </div>
                )}
-               <p className="text-[11px] text-center text-gray-400 italic">Video source and link details are maintained in the repo&apos;s video index; sources vary by technique.</p>
-            </div>
-
-            <div className="rounded-[28px] border border-gray-100 bg-white p-6 shadow-sm">
-              <h4 className="mb-4 text-[10px] font-bold uppercase tracking-widest text-hdkwa-navy">In This Video</h4>
-              <p className="text-sm leading-7 text-gray-600">{coaching.videoSummary}</p>
+               <p className="text-[11px] text-center text-gray-400 italic">Use the video to study the technique&apos;s timing, student response, and teacher language.</p>
             </div>
 
             {/* LITERATURE SECTION */}
@@ -200,14 +156,6 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
                 </div>
               </div>
             )}
-            
-            {/* COACH NOTE PLACEHOLDER */}
-            <div className="p-6 bg-hdkwa-gold/5 rounded-2xl border border-hdkwa-gold/10">
-               <h4 className="text-[10px] font-bold uppercase mb-3 text-hdkwa-gold tracking-widest">Coach&apos;s Nuance</h4>
-               <p className="text-xs text-gray-600 leading-relaxed italic">
-                 &ldquo;Watch for the &apos;Warm/Strict&apos; balance. The goal is accountability, not a &apos;gotcha&apos; moment. Keep your tone neutral and your posture open.&rdquo;
-               </p>
-            </div>
           </div>
         </div>
       </div>

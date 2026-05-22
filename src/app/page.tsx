@@ -7,13 +7,13 @@ export default function Home() {
       <header className="mb-14 lg:mb-20">
         <h1 className="heading-display mb-6 text-4xl text-hdkwa-navy sm:text-6xl">Master Your Craft.</h1>
         <p className="max-w-2xl text-xl leading-relaxed text-gray-500 sm:text-2xl">
-          A specialized portal for HDKWA teachers to bridge Danielson Framework theory with classroom-ready techniques.
+          A specialized portal for HDKWA teachers to bridge Danielson Framework theory with practical instructional routines.
         </p>
       </header>
 
       <section className="mb-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:mb-20 lg:gap-12">
         <div className="rounded-[24px] border border-gray-100 bg-apple-tile p-6 sm:p-8 lg:rounded-display">
-          <h3 className="text-sm font-bold uppercase tracking-widest text-hdkwa-navy mb-4">For Teachers</h3>
+          <h3 className="text-sm font-bold uppercase tracking-widest text-hdkwa-navy mb-4">Teacher Workflow</h3>
           <ul className="space-y-3 text-sm text-gray-600">
             <li className="flex gap-3">
               <span className="font-bold text-hdkwa-gold">1.</span>
@@ -21,16 +21,20 @@ export default function Home() {
             </li>
             <li className="flex gap-3">
               <span className="font-bold text-hdkwa-gold">2.</span>
-              <span>Select a technique and record your **Pre-Implementation** goal.</span>
+              <span>
+                Select a technique and record your <strong>Pre-Implementation</strong> goal.
+              </span>
             </li>
             <li className="flex gap-3">
               <span className="font-bold text-hdkwa-gold">3.</span>
-              <span>Trial the technique in class and record your **Reflection**.</span>
+              <span>
+                Trial the technique in your setting and record your <strong>Reflection</strong>.
+              </span>
             </li>
           </ul>
         </div>
         <div className="rounded-[24px] bg-hdkwa-navy p-6 text-white shadow-xl sm:p-8 lg:rounded-display">
-          <h3 className="text-sm font-bold uppercase tracking-widest text-hdkwa-gold mb-4">For SLT & Coaches</h3>
+          <h3 className="text-sm font-bold uppercase tracking-widest text-hdkwa-gold mb-4">Coach Workflow</h3>
           <ul className="space-y-3 text-sm text-gray-300">
             <li className="flex gap-3">
               <span className="font-bold text-hdkwa-gold">1.</span>
@@ -42,7 +46,7 @@ export default function Home() {
             </li>
             <li className="flex gap-3">
               <span className="font-bold text-hdkwa-gold">3.</span>
-              <span>Review the **PD Implementation Report** during check-ins.</span>
+              <span>Review the PD Implementation Report during check-ins.</span>
             </li>
           </ul>
         </div>
