@@ -1,5 +1,7 @@
 import { techniques } from '@/data/techniques';
-import { BookOpen, ChevronRight, Lightbulb } from 'lucide-react';
+import { implementationGuides } from '@/data/implementationGuides';
+import { BookOpen, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import ReflectionModule from '@/components/ReflectionModule';
 import { notFound } from 'next/navigation';
@@ -18,23 +20,8 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  const usageHeading =
-    technique.domain === 1
-      ? 'Planning Notes'
-      : technique.domain === 4
-        ? 'Professional Practice'
-        : technique.domain === 2
-          ? 'Classroom Use'
-          : 'Lesson Use';
-
-  const usageCopy =
-    technique.domain === 1
-      ? 'Use this while planning so the task, the sequence, and the assessment support one another before the lesson starts.'
-      : technique.domain === 4
-        ? 'Use this as part of your professional routine: reflection, documentation, family communication, collaboration, or advocacy.'
-        : technique.domain === 2
-          ? 'Use this while the class is running so routines, expectations, and responses stay clear and consistent.'
-          : 'Use this during instruction so the teacher move and the student response stay aligned in real time.';
+  const implementationGuide = implementationGuides[technique.id] ?? technique.detailedSummary;
+  const techniqueImage = `/technique-images/${technique.id}.png`;
 
   return (
     <div className="animate-in fade-in slide-in-from-bottom-2 duration-500">
@@ -60,6 +47,16 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
           </div>
 
           <div className="space-y-12 mb-20">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-[28px] border border-gray-100 bg-apple-tile shadow-sm">
+              <Image
+                src={techniqueImage}
+                alt={`${technique.title} implementation illustration`}
+                fill
+                sizes="(max-width: 1280px) 100vw, 58vw"
+                className="object-cover"
+              />
+            </div>
+
             <section>
               <h3 className="mb-6 text-sm font-bold uppercase tracking-widest text-gray-400">Action Steps</h3>
               <ul className="mb-10 space-y-6">
@@ -73,29 +70,14 @@ export default async function StrategyPage({ params }: { params: Promise<{ slug:
                 ))}
               </ul>
 
-              {technique.detailedSummary && (
+              {implementationGuide && (
                 <div className="bg-white border border-gray-100 p-8 rounded-[24px] shadow-sm">
-                  <h4 className="text-xs font-bold uppercase text-hdkwa-navy mb-4 tracking-widest">Why this works</h4>
+                  <h4 className="text-xs font-bold uppercase text-hdkwa-navy mb-4 tracking-widest">Implementation Guide</h4>
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    {technique.detailedSummary}
+                    {implementationGuide}
                   </p>
                 </div>
               )}
-            </section>
-
-            <section className="rounded-[28px] border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
-              <h3 className="mb-5 flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-hdkwa-navy">
-                <Lightbulb className="h-4 w-4 text-hdkwa-gold" /> {usageHeading}
-              </h3>
-              <div className="space-y-4 text-sm leading-7 text-gray-600">
-                <p>{usageCopy}</p>
-                <p>
-                  Keep the sequence tight: name the expectation, carry out the step, and watch for the student response the technique is designed to produce.
-                </p>
-                <p>
-                  If the lesson has a literature source, use that as the rationale; if it has a video, treat the video as a model for pacing, language, and timing.
-                </p>
-              </div>
             </section>
 
             <ReflectionModule technique={technique} />
