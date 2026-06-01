@@ -1,0 +1,16 @@
+Task: Repair 'radar-be-seen-looking' technique module so it can be imported by the existing per-file test harness (techniques.test.ts) and the build pipeline.
+
+Why: The file used a '~/types' import path that is not declared in tsconfig.json (which only defines '@/*'). Next.js 16's tsc step during 'next build' therefore failed with TS2307, blocking every other change from being verified by the production build. The file also had a non-YouTube-ID placeholder ('https://www.youtube.com/watch?v=example') in videos.demo, which the strategy page would have mangled into a broken iframe embed.
+
+Files changed:
+  - src/data/techniques/radar-be-seen-looking.ts
+
+How:
+  - Import path: '~/types' -> '../../types' (matches the convention used by exemplar-planning.ts, knowledge-organizers.ts, and the other 60 technique files).
+  - videos.demo: placeholder URL -> 'e4xB3Ha2SKI' (a real YouTube ID; the related 'be-seen-looking' technique in the same subdomain 2d reuses the same source video, which is appropriate since the two techniques are conceptually overlapping demonstrations of TLAC's scanning-and-circulating pattern).
+
+Verification:
+  - CI=true npm test -> 62/62 pre-existing tests pass (the file is now importable).
+  - npm run build -> green; static export now generates all 4 /domains/[id] pages and 62 /strategy/[slug] pages.
+  - npm run lint -> clean.
+  - npx tsc --noEmit -> clean.
