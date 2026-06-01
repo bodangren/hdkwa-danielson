@@ -16,14 +16,14 @@
 
 ---
 
+- [x] **Track: Domain 1 & 2 Content Hubs**
+  *Link: [./tracks/domain_1_2_content_hubs_20260527/](./tracks/domain_1_2_content_hubs_20260527/)*
+  *Build content hubs for Planning (Domain 1) and Classroom Environment (Domain 2) with techniques, videos, and self-assessments.*
+
 - [ ] **Track: Fix Broken Technique Images on GitHub Pages Export**
   *Link: [./tracks/fix_github_pages_images_20260522/](./tracks/fix_github_pages_images_20260522/)*
 
 ## Upcoming Tracks
-
-- [ ] **Track: Domain 1 & 2 Content Hubs**
-  *Link: [./tracks/domain_1_2_content_hubs_20260527/](./tracks/domain_1_2_content_hubs_20260527/)*
-  *Build content hubs for Planning (Domain 1) and Classroom Environment (Domain 2) with techniques, videos, and self-assessments.*
 
 - [ ] **Track: Gamification & Badge System**
   *Link: [./tracks/gamification_badge_system_20260527/](./tracks/gamification_badge_system_20260527/)*
