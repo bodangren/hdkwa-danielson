@@ -17,7 +17,7 @@
 ---
 
 - [x] **Track: Domain 1 & 2 Content Hubs**
-  *Link: [./tracks/domain_1_2_content_hubs_20260527/](./tracks/domain_1_2_content_hubs_20260527/)*
+  *Link: [./archive/domain_1_2_content_hubs_20260527/](./archive/domain_1_2_content_hubs_20260527/)*
   *Build content hubs for Planning (Domain 1) and Classroom Environment (Domain 2) with techniques, videos, and self-assessments.*
 
 - [ ] **Track: Fix Broken Technique Images on GitHub Pages Export**
