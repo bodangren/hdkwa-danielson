@@ -1,6 +1,6 @@
 # Generated Routes
 
-> Auto-generated from `src/app/` on 2026-05-22T07:37:26Z
+> Auto-generated from `src/app/` on $(date -u +%Y-%m-%dT%H:%M:%SZ)
 
 ## App Router Structure
 
@@ -18,8 +18,11 @@
 
 | File | Description |
 |------|-------------|
+| articleSections.ts | Data model / constants |
 | danielson.ts | Data model / constants |
+| domain12.test.ts | Data model / constants |
 | implementationGuides.ts | Data model / constants |
+| techniques.test.ts | Data model / constants |
 | techniques.ts | Data model / constants |
 
 ## Component Registry
