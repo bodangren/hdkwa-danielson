@@ -9,7 +9,7 @@
 > introducing a parallel nested one. Tasks below reflect the work
 > actually performed.
 
-## Phase 1: Schema, Data & Build Repair [checkpoint: d28e8db]
+## Phase 1: Schema, Data & Build Repair [checkpoint: 67da33b]
 
 - [x] Task: Audit the existing `src/data/techniques.ts` and `src/data/techniques/` directories
   - [x] Confirmed `techniques.ts` registers 18 Domain 1 techniques and 16 Domain 2 techniques (62 total)
@@ -27,7 +27,7 @@
   - [x] Asserts id uniqueness within and across D1 and D2
 - [x] Task: Regenerate architecture and routes facts (`./measure/generate.sh`)
 
-## Phase 2: Routes & Pages [checkpoint: d28e8db]
+## Phase 2: Routes & Pages [checkpoint: 67da33b]
 
 - [x] Task: Verify `/domains/1` renders D1 techniques grouped by subdomain
   - [x] `app/domains/[id]/page.tsx` already filters by `t.domain === domainId` and groups by `t.subdomain`
@@ -38,7 +38,7 @@
   - [x] `generateStaticParams` derives from `techniques.map(t => ({ slug: t.id }))`
   - [x] All 34 D1/D2 routes confirmed in `next build` static output
 
-## Phase 3: Self-Assessment [checkpoint: d28e8db]
+## Phase 3: Self-Assessment [checkpoint: 67da33b]
 
 - [x] Task: Confirm `ReflectionModule` works for D1 & D2 techniques
   - [x] The component takes a `Technique` prop; behaviour is data-driven, not domain-specific
@@ -48,7 +48,7 @@
   - [x] `completed_techniques` aggregate is updated identically regardless of domain
   - [x] The 211-test acceptance suite locks the `Technique` shape, which is the upstream contract for the reflection data
 
-## Phase 4: Navigation, Polish & Verification [checkpoint: d28e8db]
+## Phase 4: Navigation, Polish & Verification [checkpoint: 67da33b]
 
 - [x] Task: Confirm navigation surfaces Domains 1 & 2
   - [x] `Sidebar.tsx` already links to `/domains` (hub), which renders all 4 domains
