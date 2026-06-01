@@ -60,4 +60,4 @@
   - [x] `npm run lint` — clean
   - [x] `npx tsc --noEmit` — clean
   - [x] `./measure/doctor.sh` — clean (lint, typecheck, generated docs fresh)
-- [x] Task: User manual verification of D1 and D2 content hubs (Protocol in workflow.md)
+- [~] Task: User manual verification of D1 and D2 content hubs (Protocol in workflow.md)
