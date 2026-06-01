@@ -1,0 +1,14 @@
+Task: Refresh measure/generated/ facts after adding src/data/domain12.test.ts.
+
+Why: workflow.md step 7 requires that any change to the source tree be followed by regenerating and committing the generated facts. measure/doctor.sh enforces this with 'git diff --exit-code measure/generated/' and was failing because the new test file appears in the data layer and the architecture JSON enumerates the contents of src/data/.
+
+Files changed:
+  - measure/generated/architecture.json
+  - measure/generated/routes.md
+
+What changed:
+  - architecture.json: added 'articleSections.ts' (was missing), 'domain12.test.ts' (new), 'techniques.test.ts' (was missing) to the data layer entry; bumped generated_at timestamp.
+  - routes.md: same three files now appear in the data layer table; the 'Auto-generated on' header is regenerated.
+
+Verification:
+  - ./measure/doctor.sh: pass on lint, typecheck, and 'Generated docs are fresh'.
