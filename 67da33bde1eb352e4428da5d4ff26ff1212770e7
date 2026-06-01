@@ -1,0 +1,126 @@
+PHASE COMPLETION VERIFICATION REPORT
+======================================
+Track: domain_1_2_content_hubs_20260527
+Checkpoint SHA: 67da33b
+Date: 2026-06-01
+Verifier: opencode (claude code agent)
+Mode: flatten-and-complete (per user direction, deviated from the original nested-architecture plan)
+
+ARCHITECTURE DECISION
+---------------------
+The original plan specified a nested route structure
+(app/domain/1/[subdomain]/[technique]/page.tsx) for the new content
+hubs. The existing codebase already uses a flat structure
+(app/domains/[id]/page.tsx + app/strategy/[slug]/page.tsx) that
+dynamically renders all 4 domains. The user was asked and chose
+'Flatten & complete' to avoid introducing a second URL/code convention
+on the site. The work below was executed against the existing flat
+architecture; the plan.md was rewritten after-the-fact to honestly
+reflect what was performed.
+
+SCOPE PERFORMED
+---------------
+  Phase 1: Schema, Data & Build Repair
+    - Audited techniques.ts: 18 D1 techniques + 16 D2 techniques registered.
+    - Confirmed every D1 subdomain (1a-1f) and D2 subdomain (2a-2e) has
+      >= 3 techniques.
+    - Confirmed all 34 D1/D2 technique images exist in
+      public/technique-images/.
+    - Fixed the build-blocking TypeScript error in
+      src/data/techniques/radar-be-seen-looking.ts (commit d28e8db).
+    - Wrote src/data/domain12.test.ts: 211 TDD assertions covering
+      subdomain coverage, required fields, YouTube ID shape, action
+      step counts, subdomain/alignment prefix consistency, framework
+      membership, and id uniqueness (commit 9052af8).
+    - Regenerated measure/generated/ facts (commit cc65843).
+
+  Phase 2: Routes & Pages
+    - Verified the existing /domains/[id] route renders D1 and D2 via
+      the generic t.domain filter.
+    - Verified /strategy/[slug] renders all 34 D1/D2 techniques; the
+      build's static-page list confirms every route.
+
+  Phase 3: Self-Assessment
+    - Verified ReflectionModule + useReflection are domain-agnostic
+      (data-driven by Technique id).
+    - Verified the localStorage schema (reflection_ +
+      completed_techniques) is the same for all 4 domains.
+
+  Phase 4: Navigation, Polish & Verification
+    - Verified Sidebar (links to /domains), Home (cards for all 4
+      domains), and the Domains hub (DANIELSON_FRAMEWORK.map) all
+      surface D1 and D2.
+
+AUTOMATED TEST RESULTS
+----------------------
+  Command: CI=true npm test
+  Result:  273/273 pass
+    - 62 pre-existing word-count tests in techniques.test.ts
+    - 211 new D1/D2 acceptance assertions in domain12.test.ts
+  Duration: ~390ms
+
+  Command: npm run build
+  Result:  green
+    - 73 static pages generated, including:
+      /domains/1, /domains/2, /domains/3, /domains/4
+      All 62 /strategy/[slug] pages (34 of which are D1/D2)
+
+  Command: npm run lint
+  Result:  clean
+
+  Command: npx tsc --noEmit
+  Result:  clean
+
+  Command: ./measure/doctor.sh
+  Result:  clean
+    - ESLint: pass
+    - TypeScript type check: pass
+    - Generated docs freshness: pass (committed in cc65843)
+
+ATOMIC COMMITS
+--------------
+  d28e8db  fix(techniques): Use relative path import in radar-be-seen-looking
+  9052af8  test(domain1-2): Add TDD acceptance suite for D1 & D2 content hubs
+  cc65843  chore(generated): Refresh architecture and routes facts
+  4785ae6  measure(plan): Record flatten-and-complete track outcome
+  67da33b  measure(checkpoint): Checkpoint end of Phase 4 (this commit)
+  3b00229  measure(plan): Stamp phase checkpoint SHA into all 4 phase headers
+
+Each code commit has a detailed task summary attached as a git note.
+
+USER MANUAL VERIFICATION (PENDING)
+-----------------------------------
+Per workflow.md, the user must confirm the live dev server renders
+Domain 1 and Domain 2 with full technique coverage, working videos,
+working self-assessment, and consistent navigation. Suggested steps:
+
+  1. Start the dev server:           npm run dev
+  2. Open in browser:                http://localhost:3000
+  3. Confirm: Home page shows 4 domain cards (D1, D2, D3, D4)
+  4. Click 'Domain 1: Planning and Preparation'
+  5. Confirm: hub shows 6 subdomains (1a-1f) with >= 3 techniques each
+  6. Click any D1 technique (e.g. 'Exemplar Planning')
+  7. Confirm: technique detail page renders with video embed,
+     action steps, and a working pre/post reflection form
+  8. Submit a reflection; check /report shows the entry
+  9. Repeat 4-8 for Domain 2
+ 10. Run npm run dev a second time if a stale build exists
+
+Once the user confirms, the next steps are:
+  - Flip measure/tracks.md registry entry for this track to [x].
+  - Move the track folder to measure/archive/ (per the pattern
+    established in commit 64edce7).
+  - Add a 'Lessons Learned' entry to measure/lessons-learned.md
+    capturing the architecture-decision gotcha (plan-vs-actual
+    structure mismatch).
+
+OUT OF SCOPE (deferred to later tracks)
+---------------------------------------
+  - Domain 4 Content Hub (separate track: domain_4_content_hub_20260527)
+  - Gamification & Badge System (separate track)
+  - Implementation Report Export (separate track)
+  - Touching the pre-existing uncommitted files in the working tree
+    (src/data/techniques/, vitest.config.mts, package.json,
+    package-lock.json, measure/Docs/) — these are not part of this
+    track's scope and should be committed separately by the user
+    or a follow-up housekeeping pass.
