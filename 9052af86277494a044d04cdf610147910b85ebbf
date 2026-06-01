@@ -1,0 +1,20 @@
+Task: Add TDD acceptance suite for the Domain 1 & 2 Content Hubs track, locking the spec's acceptance criteria into executable contracts.
+
+Why: The existing techniques.test.ts only enforces a detailedSummary word count. It would not catch a missing subdomain, a placeholder YouTube URL, an empty actionSteps array, or a subdomain/alignment mismatch. The spec for this track requires 'at least 3 techniques per subdomain' and 'same structure as Domain 3' — both need explicit, automated enforcement at the unit-test layer so the next person who edits techniques.ts cannot silently regress them.
+
+Files changed:
+  - src/data/domain12.test.ts (new, 125 lines, 211 assertions)
+
+What the suite asserts (mirrors spec.md acceptance criteria):
+  1. Data presence: >= 3 techniques per D1 subdomain (1a-1f) and per D2 subdomain (2a-2e); at least one technique per component declared in danielson.ts.
+  2. Required fields per technique (D1 + D2): non-empty title, description, alignment, source; videos.demo shaped as a YouTube ID (rejects URLs like 'https://www.youtube.com/watch?v=example' which the strategy page would mangle into a broken iframe); actionSteps with >= 3 non-empty steps; subdomain field's numeric prefix matches the alignment prefix (e.g. subdomain '1a' must yield an alignment starting with '1a:'); the technique's subdomain must be declared in DANIELSON_FRAMEWORK for its domain.
+  3. Uniqueness: no duplicate ids within D1, within D2, and no collisions between the two domains.
+
+TDD observation:
+  All 211 assertions pass on first run because the existing data in techniques.ts (authored in earlier tracks) already meets the acceptance criteria. This is the 'green' state: the suite documents and locks the existing contract, ready to catch future regressions. No 'red' phase was needed because the data was already in the desired shape — the spec's 'fix the gaps' framing assumed a different (nested) architecture that does not match the current flat /domains/[id] + /strategy/[slug] structure (see commit on plan.md for the architectural decision).
+
+Verification:
+  - CI=true npm test -> 273/273 pass (62 pre-existing word-count tests + 211 new D1/D2 acceptance assertions).
+  - npm run build -> green.
+  - npm run lint -> clean.
+  - npx tsc --noEmit -> clean.
