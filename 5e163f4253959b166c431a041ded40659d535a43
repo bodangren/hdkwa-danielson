@@ -1,0 +1,44 @@
+Task: User manual verification of D1 and D2 content hubs (Phase 4, final gate)
+
+Summary:
+  Confirmed via dev-server walkthrough that the live application
+  satisfies the track's acceptance criteria:
+    - /domains lists all 4 domain cards (D1-D4)
+    - /domains/1 renders all 6 D1 subdomains (1a-1f) with ≥3 techniques each
+    - /domains/2 renders all 5 D2 subdomains (2a-2e) with ≥3 techniques each
+    - /strategy/[slug] renders the technique detail + ReflectionModule
+    - Self-assessment round-trip persists across reloads
+    - localStorage schema (reflection_<id>, completed_techniques) is
+      consistent across all 4 domains
+
+Files supporting this verification (created/modified during the track):
+  - src/data/techniques/*.ts              60 new per-technique modules
+  - src/data/techniques.test.ts           62 word-count acceptance tests
+  - src/data/techniques.ts                1064-line registry (pre-existing)
+  - src/data/domain12.test.ts             211 D1/D2 schema/coverage tests
+  - src/data/danielson.ts                 framework reference (pre-existing)
+  - src/app/domains/page.tsx              hub page (pre-existing, reused)
+  - src/app/domains/[id]/page.tsx         domain detail (pre-existing, reused)
+  - src/app/strategy/[slug]/page.tsx      technique detail (pre-existing, reused)
+  - src/components/ReflectionModule.tsx   self-assessment UI (pre-existing)
+  - src/hooks/useReflection.ts            localStorage hook (pre-existing)
+  - src/components/Sidebar.tsx            navigation (pre-existing, reused)
+  - vitest.config.mts                     vitest runner config
+  - package.json, package-lock.json       vitest dev dependency
+
+Why:
+  This was the final acceptance gate of the D1/D2 track. The 11
+  preceding implementation tasks built the data + tests + routes; this
+  task confirmed the running app behaves correctly end-to-end with a
+  live dev server. With the user's confirmation the track is complete
+  and ready to be archived.
+
+Quality gates (all green):
+  - CI=true npx vitest run          273/273 pass
+  - npm run lint                    clean
+  - npx tsc --noEmit                clean
+  - NODE_ENV=production npm run build   73 static pages
+  - ./measure/doctor.sh             clean (lint, typecheck, generated docs)
+  - ./measure/generate.sh           regenerated (architecture.json fresh)
+
+Track: domain_1_2_content_hubs_20260527
