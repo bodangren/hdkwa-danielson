@@ -60,4 +60,7 @@
   - [x] `npm run lint` — clean
   - [x] `npx tsc --noEmit` — clean
   - [x] `./measure/doctor.sh` — clean (lint, typecheck, generated docs fresh)
-- [~] Task: User manual verification of D1 and D2 content hubs (Protocol in workflow.md)
+- [x] Task: User manual verification of D1 and D2 content hubs (Protocol in workflow.md) [5e163f4]
+  - [x] User confirmed live dev server renders `/domains`, `/domains/1`, `/domains/2`, and all 34 D1/D2 strategy pages correctly
+  - [x] User confirmed self-assessment round-trip persists across reloads
+  - [x] User confirmed localStorage schema (`reflection_<id>`, `completed_techniques`) is consistent across all 4 domains
