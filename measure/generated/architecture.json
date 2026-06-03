@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-22T07:37:12Z",
+  "generated_at": "2026-06-01T12:07:30Z",
   "framework": "nextjs",
   "language": "typescript",
   "app_router": true,
@@ -56,8 +56,11 @@
       "TechniqueCard.tsx"
     ],
     "data": [
+      "articleSections.ts",
       "danielson.ts",
+      "domain12.test.ts",
       "implementationGuides.ts",
+      "techniques.test.ts",
       "techniques.ts"
     ],
     "hooks": [

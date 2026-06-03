@@ -1,0 +1,11 @@
+{
+  "id": "domain_1_2_content_hubs_20260527",
+  "title": "Domain 1 & 2 Content Hubs",
+  "status": "completed",
+  "created": "2026-05-27",
+  "updated_at": "2026-06-01",
+  "type": "feature",
+  "estimated_tasks": 11,
+  "actual_tasks": 11,
+  "deviation_notes": "Spec assumed a nested route tree (app/domain/[subdomain]/[technique]/page.tsx), but the existing codebase already used a flat structure (app/domains/[id]/page.tsx + app/strategy/[slug]/page.tsx) that dynamically renders all 4 domains. Per user direction, the implementation reused the existing flat architecture rather than introducing a parallel nested one. The plan was rewritten in place to reflect the actual work (see the architecture note at the top of plan.md). The D1 & D2 data was added by splitting the inline techniques.ts array into per-technique modules under src/data/techniques/ (60 new modules) and adding two test files that lock schema, coverage, and detailedSummary word count."
+}
