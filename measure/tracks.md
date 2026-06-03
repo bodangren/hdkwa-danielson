@@ -16,8 +16,8 @@
 
 ---
 
-- [ ] **Track: Fix Broken Technique Images on GitHub Pages Export**
-  *Link: [./tracks/fix_github_pages_images_20260522/](./tracks/fix_github_pages_images_20260522/)*
+- [x] **Track: Fix Broken Technique Images on GitHub Pages Export**
+  *Link: [./archive/fix_github_pages_images_20260522/](./archive/fix_github_pages_images_20260522/)*
 
 ## Upcoming Tracks
 
