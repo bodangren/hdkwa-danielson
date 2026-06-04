@@ -36,3 +36,7 @@
 - [ ] **Track: Implementation Report Export**
   *Link: [./tracks/implementation_report_export_20260527/](./tracks/implementation_report_export_20260527/)*
   *Printable PDF/HTML report aggregating before/after ratings and reflections for administrators.*
+
+- [ ] **Track: Search & Discovery Engine**
+  *Link: [./tracks/search_discovery_engine_20260605/](./tracks/search_discovery_engine_20260605/)*
+  *Client-side search and filtering across all techniques to help teachers discover strategies by keyword, domain, or classroom need.*
