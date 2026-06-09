@@ -5,7 +5,7 @@ const cultureOfError: Technique = {
   title: "Culture of Error",
   subdomain: "2b",
   domain: 2,
-  source: "Uncommon Schools",
+  source: "TLAC 3.0",
   alignment: "2b: Establishing a Culture for Learning",
   description:
     "Building and maintaining a classroom environment where errors are expected, celebrated, and analyzed so that both teachers and students increase their learning through mistake-making.",
@@ -25,7 +25,7 @@ const cultureOfError: Technique = {
   },
   literature: {
     book: "Teach Like a Champion 3.0",
-    pages: "Chapter 3",
+    pages: "111-119",
   },
   highReward: true,
 };
