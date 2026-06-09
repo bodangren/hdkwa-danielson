@@ -22,6 +22,7 @@ import doNow from './techniques/do-now';
 import takeTheSteps from './techniques/take-the-steps';
 import boardPaper from './techniques/board-paper';
 import accountableIndependentReading from './techniques/accountable-independent-reading';
+import faseReading from './techniques/fase-reading';
 import circulate from './techniques/circulate';
 import exitTicket from './techniques/exit-ticket';
 import changeThePace from './techniques/change-the-pace';
@@ -86,6 +87,7 @@ const techniques = [
   takeTheSteps,
   boardPaper,
   accountableIndependentReading,
+  faseReading,
   circulate,
   exitTicket,
   changeThePace,

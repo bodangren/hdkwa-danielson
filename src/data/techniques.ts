@@ -737,7 +737,30 @@ export const techniques: Technique[] = [
       'Use the writing as the evidence base for the next discussion or cold call.'
     ],
     detailedSummary: 'Everybody Writes improves the quality of discussion because students have something concrete to say. It also helps quieter students enter the conversation with a thought already formed.',
-    videos: { demo: 'D-KayMWv0pI' }
+    videos: { demo: 'D-KayMWv0pI' },
+    literature: { book: 'TLAC 3.0', pages: 'Technique 38' }
+  },
+  {
+    id: 'fase-reading',
+    title: 'FASE Reading',
+    subdomain: '3c',
+    domain: 3,
+    source: 'TLAC 3.0',
+    alignment: '3c: Engaging Students in Learning',
+    highReward: true,
+    description: 'A system for student read-alouds that keeps every student reading, listening, and accountable by using short, unpredictable, frequently switched turns.',
+    actionSteps: [
+      'Ask a student to start reading without specifying how long they will read, so the rest of the class cannot tune out until the turn ends.',
+      'Keep turns short — often two to four sentences — so every student invests energy in expressive reading.',
+      'Select the next reader unpredictably, naming students who have not volunteered as often as those who have, so participation stays universal and leverage stays high.',
+      'Transition between readers with a short, consistent phrase such as "pick up, please" to keep the narrative thread unbroken and protect reading time.',
+      'Use bridging by reading a short segment yourself between student readers, modeling expressive reading or resuscitating momentum.',
+      'Use spot-check or oral cloze by leaving a key word out and signaling with a tone shift so students fill in the blank, revealing whether they are following along.',
+      'Use a placeholder such as "hold your place; track me" to keep students anchored in the text across brief discussions.'
+    ],
+    detailedSummary: 'FASE Reading is a system for student read-alouds that maximizes the value and viability of this crucial classroom activity, building students\' fluency in and enjoyment of reading. The acronym FASE reminds teachers of four things to reinforce when students read aloud: Fluency, Accountability, Social, and Expressive. The name also evokes a phase, because the technique is meant to happen in recurring short cycles that yield to other activities and return later. FASE Reading addresses two recurring objections: leverage concerns, the worry that one reader leaves the rest of the class passive, and self-esteem concerns, the worry that struggling readers will be embarrassed. Leverage is built by making reader identity and turn length unpredictable. Short durations and quick, consistent transitions reduce transaction costs, keep energy high, and let the teacher cut a struggling reader off cleanly without implicit judgment. Because everyone reads but no one knows who or for how long, the system protects the weakest readers while also creating a shared experience that builds belonging.',
+    videos: { demo: 'fase-reading-placeholder' },
+    literature: { book: 'TLAC 3.0', pages: '209-222' }
   },
   {
     id: 'ratio-thinking',
