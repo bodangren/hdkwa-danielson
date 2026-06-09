@@ -175,9 +175,33 @@ Plus the new FASE Reading entry already has `209-222` (verified from PDF).
 ## Summary
 
 - **Total techniques in array (after FASE):** 63
-- **Total TLAC techniques with PDF audit:** 24
+- **Total TLAC techniques with PDF audit:** 24 (the 24 array entries that map to a TLAC technique)
+- **TLAC techniques not in array (skipped — not auto-added):** 39
+- **Non-TLAC techniques (skipped — no PDF audit):** 25
 - **OK (no fix needed):** 22
-- **Fixed (factual correction):** 21 (page ranges) + 1 (culture-of-error source attribution)
-- **Open questions:** 2 (exemplar-planning subdomain, fase-reading video IDs)
-- **Skipped (no array entry):** 39
-- **Skipped (non-TLAC source):** 25 (Marzano, Visible Learning, Edutopia, Uncommon Schools, Teaching Channel, HDKWA PD Portal, Wong)
+- **Fixed (factual correction):** 21 (page ranges) + 1 (culture-of-error source attribution: `'Uncommon Schools'` → `'TLAC 3.0'`)
+- **Open questions:** 2 (exemplar-planning subdomain 1a vs 1e, fase-reading video IDs are placeholders)
+- **Tech debt flagged:** Per-file `src/data/techniques/*.ts` modules have stale page ranges that disagree with the runtime array. Recommend regenerating them from the runtime array as a follow-up chore.
+
+## Phase 4: Final Verification
+
+- `npm run lint` — clean on all `src/` and `measure/` files (existing errors are in `outputs/`, not in scope)
+- `npx tsc --noEmit` — clean
+- `CI=true npm test` — 274/274 tests pass
+- `./measure/doctor.sh` — no new errors introduced
+- `./measure/generate.sh` — `measure/generated/architecture.json` regenerated (timestamp only) and committed
+
+## Files Changed in This Track
+
+- `src/data/techniques.ts` — added FASE Reading entry, fixed 20 page ranges, fixed culture-of-error source
+- `src/data/techniques/fase-reading.ts` — NEW per-file module
+- `src/data/techniques/culture-of-error.ts` — source and page range fix mirrored
+- `src/data/techniques.test.ts` — added FASE Reading to test imports and array
+- `measure/tracks/technique_audit_20260609/` — spec, plan, metadata, index, audit findings
+- `measure/tracks.md` — track registered
+
+## Known Follow-up Work
+
+- **Per-file module regeneration:** `src/data/techniques/*.ts` has 62 modules with stale `literature.pages` values that disagree with the runtime array. Recommend a follow-up chore to regenerate these from the runtime array (or remove the per-file modules entirely if they're truly only test fixtures).
+- **FASE Reading video IDs:** The 5 referenced videos in the PDF (Gabby Woolf: Keystone, Eric Snider: The Wind, Maggie Johnson: Grew Serious, Jill Murray: Quartering Act, Jessica Bracey: Circle of Gold) need real YouTube IDs. Currently uses a placeholder.
+- **exemplar-planning subdomain:** Flagged as 1a in the array but the PDF places it in the Lesson Preparation chapter. May be intentional (content knowledge angle) or a misalignment with Danielson's 1e "Planning Coherent Instruction."

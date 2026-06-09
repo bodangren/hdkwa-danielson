@@ -79,7 +79,7 @@ The audit is large. It will be split into three batches (≈21 techniques each).
 
 ## Phase 4: Verification & Documentation
 
-- [ ] Task: Run the full quality gate
+- [~] Task: Run the full quality gate
   - [ ] `npm run lint`
   - [ ] `npx tsc --noEmit`
   - [ ] `CI=true npm test`
