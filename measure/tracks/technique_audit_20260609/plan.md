@@ -38,31 +38,31 @@ The audit is large. It will be split into three batches (≈21 techniques each).
 
 ### Phase 3a: Audit TLAC techniques #1–22
 
-- [ ] Task: Audit entries for TLAC #1 through #22
-  - [ ] For each: read the corresponding PDF, compare fields, record result in `audit-findings.md`
-  - [ ] Identify discrepancies; defer fixes to Phase 3d
-- [ ] Task: Checkpoint the audit findings (no code changes yet)
-  - [ ] Commit the partial findings report
+- [x] Task: Audit entries for TLAC #1 through #22
+  - [x] For each: read the corresponding PDF, compare fields, record result in `audit-findings.md`
+  - [x] Identify discrepancies; defer fixes to Phase 3d
+- [x] Task: Checkpoint the audit findings (no code changes yet)
+  - [x] Commit the partial findings report
 
 ### Phase 3b: Audit TLAC techniques #23–44
 
-- [ ] Task: Audit entries for TLAC #23 through #44
-  - [ ] For each: read the corresponding PDF, compare fields, record result in `audit-findings.md`
-  - [ ] Identify discrepancies; defer fixes to Phase 3d
-- [ ] Task: Checkpoint the audit findings
-  - [ ] Commit the updated findings report
+- [x] Task: Audit entries for TLAC #23 through #44
+  - [x] For each: read the corresponding PDF, compare fields, record result in `audit-findings.md`
+  - [x] Identify discrepancies; defer fixes to Phase 3d
+- [x] Task: Checkpoint the audit findings
+  - [x] Commit the updated findings report
 
 ### Phase 3c: Audit TLAC techniques #45–63
 
-- [ ] Task: Audit entries for TLAC #45 through #63
-  - [ ] For each: read the corresponding PDF, compare fields, record result in `audit-findings.md`
-  - [ ] Identify discrepancies; defer fixes to Phase 3d
-- [ ] Task: Checkpoint the audit findings
-  - [ ] Commit the complete (pre-fix) findings report
+- [x] Task: Audit entries for TLAC #45 through #63
+  - [x] For each: read the corresponding PDF, compare fields, record result in `audit-findings.md`
+  - [x] Identify discrepancies; defer fixes to Phase 3d
+- [x] Task: Checkpoint the audit findings
+  - [x] Commit the complete (pre-fix) findings report
 
 ### Phase 3d: Apply fixes for all discrepancies
 
-- [ ] Task: Apply factual fixes to `src/data/techniques.ts`
+- [~] Task: Apply factual fixes to `src/data/techniques.ts`
   - [ ] For each `Fixed` row in the findings report, update the array entry
   - [ ] Group by subdomain for readability
 - [ ] Task: Mirror factual fixes to per-file `techniques/*.ts` modules

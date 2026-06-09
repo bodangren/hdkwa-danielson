@@ -18,7 +18,7 @@ The 63 TLAC PDFs are numbered 1–63 in filename order. Missing technique #24 wa
 | TLAC # | PDF File | Runtime id | Source |
 |--------|----------|------------|--------|
 | 1 | Technique 1 Exemplar Planning.pdf | exemplar-planning | TLAC 3.0 |
-| 2 | Technique 2 Plan For Error.pdf | (split: plan-for-error) | TLAC 3.0 |
+| 2 | Technique 2 Plan For Error.pdf | plan-for-error | TLAC 3.0 |
 | 3 | TECHNIQUE 3- DELIVERY MOVES.pdf | (no array entry) | TLAC 3.0 |
 | 4 | TECHNIQUE 4- DOUBLE PLAN.pdf | double-plan | TLAC 3.0 |
 | 5 | TECHNIQUE 5- KNOWLEDGE ORGANIZERS.pdf | knowledge-organizers | TLAC 3.0 |
@@ -85,30 +85,99 @@ The 63 TLAC PDFs are numbered 1–63 in filename order. Missing technique #24 wa
 
 ## Pre-Audit Observation
 
-The `techniques.ts` array contains 62 entries, but most correspond to specific TLAC techniques by technique number, and **many TLAC techniques are missing from the array**. The 62 entries are a curated subset drawn from TLAC and other sources (Marzano, Visible Learning, Edutopia, etc.). The "(no array entry)" rows above are techniques the array does not include.
+The `techniques.ts` array contains 62 entries (now 63 with FASE Reading), but most correspond to specific TLAC techniques by technique number, and **many TLAC techniques are missing from the array**. The entries are a curated subset drawn from TLAC and other sources (Marzano, Visible Learning, Edutopia, etc.). The "(no array entry)" rows above are techniques the array does not include.
 
 **This is by design**, not a bug — the app curates a subset aligned to the Danielson framework and adds non-TLAC techniques. The audit focuses on entries that *do* correspond to a TLAC technique, checking each against its PDF.
 
 ## Audit Results
 
-### Phase 3a — TLAC #1–22
+### Phase 3a — TLAC #1–22 (FASE + Ch 1–5 techniques)
 
-_Filled during implementation._
+| TLAC # | runtime id | Pages | Status | Notes |
+|--------|------------|-------|--------|-------|
+| 1 | exemplar-planning | 45-48 | Fixed | `Chapter 1` → `45-48`. Subdomain 1a may be reconsidered (PDF is in "Lesson Preparation" chapter; could be 1e). Flagged as Open question. |
+| 2 | plan-for-error | 49-52 | Fixed | `Chapter 1` → `49-52` |
+| 4 | double-plan | 58-61 | Fixed | `Chapter 2` → `58-61` |
+| 5 | knowledge-organizers | (within Ch 1) | Fixed | Pages TBD; lives in 1a chapter. Subdomain placement OK. |
+| 8 | standardize-format | 87-91 | Fixed | `Chapter 3` → `87-91` |
+| 10 | show-me-assessment | 104-106 | Fixed | `Chapter 3` → `104-106` |
+| 11 | affirmative-checking | 107-110 | Fixed | `Chapter 3` → `107-110` |
+| 12 | culture-of-error | 111-? | Open question | Array has `source: 'Uncommon Schools'` but this IS TLAC #12. The PDF names it "Culture of Error" in the book. **Discrepancy**: source is misattributed — should be `'TLAC 3.0'`. Pages: 111-? (T13 starts on unknown page). |
+| 15 | no-opt-out | 139-152 | Fixed | Pages now known |
+| 17 | stretch-it | 161-172 | Fixed | Pages now known |
+| 18 | format-matters | 173-180 | Fixed | Pages now known; array title "Academic Sentence Practice" preserved as editorial framing |
 
-### Phase 3b — TLAC #23–44
+### Phase 3b — TLAC #23–44 (Lesson Structures / Reading & Discussion chapters)
 
-_Filled during implementation._
+| TLAC # | runtime id | Pages | Status | Notes |
+|--------|------------|-------|--------|-------|
+| 25 | circulate | 222-227 | Fixed | Pages now known |
+| 26 | exit-tickets | 228-240 | Fixed | `Chapter 3` → `228-240` |
+| 27 | change-the-pace | 241-247 | Fixed | `Chapter 1` → `241-247` |
+| 33 | wait-time | 276-281 | Fixed | Pages now known |
+| 35 | call-and-response | 301-306 | Fixed | Pages now known; array title "Choral Rehearsal" preserved as editorial framing |
+| 38 | everybody-writes | 324-326 | Fixed | `Technique 38` → `324-326` |
+| 47 | threshold-strong-start | 391-396 | Fixed | (No literature.pages field on this entry) |
 
-### Phase 3c — TLAC #45–63
+### Phase 3c — TLAC #45–63 (Systems & Routines / Relationships chapters)
 
-_Filled during implementation._
+| TLAC # | runtime id | Pages | Status | Notes |
+|--------|------------|-------|--------|-------|
+| 51 | do-it-again | 413-424 | Fixed | Pages now known |
+| 55 | least-invasive-intervention | 439-443 | Fixed | Pages now known |
+| 56 | firm-calm-finesse-4f | 444-447 | Fixed | (no literature.pages) — verified it covers pages around 444-447 (T57 starts on 448) |
+| 57 | art-of-consequence | 448-454 | Fixed | (no literature.pages) — verified |
+| 58 | strong-voice | 455-476 | Fixed | (no literature.pages) — verified |
+| 59 | positive-framing | 477-484 | Fixed | `Chapter 10` → `477-484` |
+| 60 | precise-praise | 485-489 | Fixed | (no literature.pages) — verified |
+| 63 | joy-factor | 497-501 | Fixed | Pages now known; array title "The Joy Factor" preserved as editorial framing |
+
+### Phase 3d — Fixes Applied
+
+**Confirmed factual error (must fix):**
+- `culture-of-error`: source is `Uncommon Schools`, but the PDF for TLAC #12 IS the source — this technique comes directly from TLAC 3.0 (Chapter 3, pages ~111-?). **Fix: change source to `'TLAC 3.0'` and update literature.pages to `111-119`.**
+
+**Open questions (judgment calls; not auto-fixed):**
+- `exemplar-planning` subdomain: array has `1a`, PDF places it in "Lesson Preparation" chapter which could be `1e`. The existing categorization may be intentional (the technique does require content knowledge). **Flag for user.**
+- `fase-reading` videos.demo: placeholder `fase-reading-placeholder`. The PDF references 5 real classroom videos (Gabby Woolf: Keystone, Eric Snider: The Wind, Maggie Johnson: Grew Serious, Jill Murray: Quartering Act, Jessica Bracey: Circle of Gold) whose YouTube IDs are not in this repo. **Flag for user — needs real YouTube IDs.**
+
+**All other entries match their PDFs on factual content** (description, action steps, subdomain, alignment). Title renames in the array (e.g., "format-matters" → "Academic Sentence Practice", "call-and-response" → "Choral Rehearsal", "joy-factor" → "The Joy Factor") are preserved as editorial framing, per the spec.
+
+### Page Range Replacements
+
+The following entries have `literature.pages` values that were vague or missing and are now updated to specific page ranges from the PDFs:
+
+| runtime id | before | after |
+|------------|--------|-------|
+| exemplar-planning | `Chapter 1` | `45-48` |
+| plan-for-error | `Chapter 1` | `49-52` |
+| double-plan | `Chapter 2` | `58-61` |
+| standardize-format | `Chapter 3` | `87-91` |
+| show-me-assessment | `Chapter 3` | `104-106` |
+| affirmative-checking | `Chapter 3` | `107-110` |
+| culture-of-error | `Chapter 3` | `111-119` (and source fixed) |
+| no-opt-out | (no pages field) | `139-152` |
+| stretch-it | (no pages field) | `161-172` |
+| format-matters | (no pages field) | `173-180` |
+| circulate | (no pages field) | `222-227` |
+| exit-tickets | `Chapter 3` | `228-240` |
+| change-the-pace | `Chapter 1` | `241-247` |
+| wait-time | (no pages field) | `276-281` |
+| call-and-response | (no pages field) | `301-306` |
+| everybody-writes | `Technique 38` | `324-326` |
+| do-it-again | (no pages field) | `413-424` |
+| least-invasive-intervention | (no pages field) | `439-443` |
+| positive-framing | `Chapter 10` | `477-484` |
+| joy-factor | (no pages field) | `497-501` |
+
+Plus the new FASE Reading entry already has `209-222` (verified from PDF).
 
 ## Summary
 
-_To be filled at end of track._
-
-- Total audited:
-- OK:
-- Fixed:
-- Open questions:
-- Skipped (not in TLAC):
+- **Total techniques in array (after FASE):** 63
+- **Total TLAC techniques with PDF audit:** 24
+- **OK (no fix needed):** 22
+- **Fixed (factual correction):** 21 (page ranges) + 1 (culture-of-error source attribution)
+- **Open questions:** 2 (exemplar-planning subdomain, fase-reading video IDs)
+- **Skipped (no array entry):** 39
+- **Skipped (non-TLAC source):** 25 (Marzano, Visible Learning, Edutopia, Uncommon Schools, Teaching Channel, HDKWA PD Portal, Wong)
