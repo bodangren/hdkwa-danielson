@@ -10,7 +10,7 @@
 - [x] Task: Establish technique-number → filename mapping
   - [x] Programmatically derive the mapping from `measure/Docs/` filenames (e.g., `TECHNIQUE 24- FASE READING.pdf` → 24)
   - [x] Store as a working list for use during the audit
-- [ ] Task: Measure - User Manual Verification 'Phase 1' (Protocol in workflow.md)
+- [x] Task: Measure - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
 ---
 
