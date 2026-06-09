@@ -4,12 +4,12 @@
 
 ## Phase 1: Setup & Scaffolding
 
-- [ ] Task: Set up the audit working file
-  - [ ] Create `measure/tracks/technique_audit_20260609/audit-findings.md` skeleton with header + summary table
-  - [ ] Confirm `src/data/techniques.ts` and `src/data/techniques.test.ts` are the two structures to keep in sync
-- [ ] Task: Establish technique-number → filename mapping
-  - [ ] Programmatically derive the mapping from `measure/Docs/` filenames (e.g., `TECHNIQUE 24- FASE READING.pdf` → 24)
-  - [ ] Store as a working list for use during the audit
+- [x] Task: Set up the audit working file
+  - [x] Create `measure/tracks/technique_audit_20260609/audit-findings.md` skeleton with header + summary table
+  - [x] Confirm `src/data/techniques.ts` and `src/data/techniques.test.ts` are the two structures to keep in sync
+- [x] Task: Establish technique-number → filename mapping
+  - [x] Programmatically derive the mapping from `measure/Docs/` filenames (e.g., `TECHNIQUE 24- FASE READING.pdf` → 24)
+  - [x] Store as a working list for use during the audit
 - [ ] Task: Measure - User Manual Verification 'Phase 1' (Protocol in workflow.md)
 
 ---
