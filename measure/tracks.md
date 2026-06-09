@@ -40,3 +40,9 @@
 - [ ] **Track: Search & Discovery Engine**
   *Link: [./tracks/search_discovery_engine_20260605/](./tracks/search_discovery_engine_20260605/)*
   *Client-side search and filtering across all techniques to help teachers discover strategies by keyword, domain, or classroom need.*
+
+---
+
+- [ ] **Track: TLAC Technique Audit & FASE Reading #24**
+  *Link: [./tracks/technique_audit_20260609/](./tracks/technique_audit_20260609/)*
+  *Audit existing TLAC technique data against source PDFs and add the missing FASE Reading entry.*
