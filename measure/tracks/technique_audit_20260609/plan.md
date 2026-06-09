@@ -16,19 +16,19 @@
 
 ## Phase 2: Create FASE Reading (#24) Entry
 
-- [ ] Task: Write the FASE Reading per-file module
-  - [ ] Create `src/data/techniques/fase-reading.ts` modeled on a sibling module (use `no-opt-out.ts` as template)
-  - [ ] Fill fields by reading `measure/Docs/Teach Like a Champion 3.0 TECHNIQUE 24- FASE READING.pdf`
-- [ ] Task: Add FASE Reading to the runtime registry
-  - [ ] Append the entry to `src/data/techniques.ts` array at the appropriate position (alphabetical by id within its subdomain, mirroring the existing pattern)
-  - [ ] Determine the correct subdomain/domain by reading the PDF (FASE Reading belongs to a Reading Interventions subdomain)
-- [ ] Task: Update the test imports
-  - [ ] Add `import faseReading from './techniques/fase-reading';` to `src/data/techniques.test.ts`
-  - [ ] Add `faseReading,` to the techniques array assertion in the test
-- [ ] Task: Write failing test for the new technique (Red phase)
-  - [ ] Add an assertion to `src/data/techniques.test.ts` that `faseReading` has all required Technique fields
-  - [ ] Run `CI=true npm test` and confirm the test passes (since the module now exists)
-- [ ] Task: Measure - User Manual Verification 'Phase 2' (Protocol in workflow.md)
+- [x] Task: Write the FASE Reading per-file module
+  - [x] Create `src/data/techniques/fase-reading.ts` modeled on a sibling module (use `no-opt-out.ts` as template)
+  - [x] Fill fields by reading `measure/Docs/Teach Like a Champion 3.0 TECHNIQUE 24- FASE READING.pdf`
+- [x] Task: Add FASE Reading to the runtime registry
+  - [x] Append the entry to `src/data/techniques.ts` array at the appropriate position (alphabetical by id within its subdomain, mirroring the existing pattern)
+  - [x] Determine the correct subdomain/domain by reading the PDF (FASE Reading belongs to a Reading Interventions subdomain)
+- [x] Task: Update the test imports
+  - [x] Add `import faseReading from './techniques/fase-reading';` to `src/data/techniques.test.ts`
+  - [x] Add `faseReading,` to the techniques array assertion in the test
+- [x] Task: Write failing test for the new technique (Red phase)
+  - [x] Add an assertion to `src/data/techniques.test.ts` that `faseReading` has all required Technique fields
+  - [x] Run `CI=true npm test` and confirm the test passes (since the module now exists)
+- [x] Task: Measure - User Manual Verification 'Phase 2' (Protocol in workflow.md)
 
 ---
 
