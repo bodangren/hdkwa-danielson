@@ -43,6 +43,6 @@
 
 ---
 
-- [ ] **Track: TLAC Technique Audit & FASE Reading #24**
-  *Link: [./tracks/technique_audit_20260609/](./tracks/technique_audit_20260609/)*
+- [x] **Track: TLAC Technique Audit & FASE Reading #24**
+  *Link: [./archive/technique_audit_20260609/](./archive/technique_audit_20260609/)*
   *Audit existing TLAC technique data against source PDFs and add the missing FASE Reading entry.*

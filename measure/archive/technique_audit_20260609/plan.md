@@ -93,4 +93,4 @@ The audit is large. It will be split into three batches (≈21 techniques each).
 - [x] Task: Append a Lessons Learned entry
   - [x] Add a Patterns That Worked Well or Recurring Gotchas entry based on what the audit surfaced
   - [x] Commit `lessons-learned.md`
-- [ ] Task: Measure - User Manual Verification 'Phase 4' (Protocol in workflow.md)
+- [x] Task: Measure - User Manual Verification 'Phase 4' (Protocol in workflow.md)
