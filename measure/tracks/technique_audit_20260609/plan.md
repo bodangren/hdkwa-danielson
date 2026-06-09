@@ -62,18 +62,18 @@ The audit is large. It will be split into three batches (≈21 techniques each).
 
 ### Phase 3d: Apply fixes for all discrepancies
 
-- [~] Task: Apply factual fixes to `src/data/techniques.ts`
-  - [ ] For each `Fixed` row in the findings report, update the array entry
-  - [ ] Group by subdomain for readability
-- [ ] Task: Mirror factual fixes to per-file `techniques/*.ts` modules
-  - [ ] For each fixed array entry, ensure the matching per-file module reflects the same facts
-  - [ ] Preserve editorial framing (titles, descriptions style); update only factual content
-- [ ] Task: Update `literature.pages` to specific page ranges
-  - [ ] For each technique whose PDF identifies a page range, replace `Chapter N` with the specific range
-- [ ] Task: Run the full test suite
-  - [ ] `CI=true npm test`
-  - [ ] Fix any test failures
-- [ ] Task: Measure - User Manual Verification 'Phase 3' (Protocol in workflow.md)
+- [x] Task: Apply factual fixes to `src/data/techniques.ts`
+  - [x] For each `Fixed` row in the findings report, update the array entry
+  - [x] Group by subdomain for readability
+- [x] Task: Mirror factual fixes to per-file `techniques/*.ts` modules
+  - [x] For each fixed array entry, ensure the matching per-file module reflects the same facts
+  - [x] Preserve editorial framing (titles, descriptions style); update only factual content
+- [x] Task: Update `literature.pages` to specific page ranges
+  - [x] For each technique whose PDF identifies a page range, replace `Chapter N` with the specific range
+- [x] Task: Run the full test suite
+  - [x] `CI=true npm test`
+  - [x] Fix any test failures
+- [x] Task: Measure - User Manual Verification 'Phase 3' (Protocol in workflow.md)
 
 ---
 
