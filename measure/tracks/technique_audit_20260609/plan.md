@@ -79,18 +79,18 @@ The audit is large. It will be split into three batches (≈21 techniques each).
 
 ## Phase 4: Verification & Documentation
 
-- [~] Task: Run the full quality gate
-  - [ ] `npm run lint`
-  - [ ] `npx tsc --noEmit`
-  - [ ] `CI=true npm test`
-  - [ ] `./measure/doctor.sh`
-  - [ ] `./measure/generate.sh`
-  - [ ] Stage and commit any changes to `measure/generated/`
-- [ ] Task: Finalize `audit-findings.md`
-  - [ ] Verify all 62 pre-existing techniques + 1 new technique are accounted for
-  - [ ] Add the summary section with counts
-  - [ ] Commit the final report
-- [ ] Task: Append a Lessons Learned entry
-  - [ ] Add a Patterns That Worked Well or Recurring Gotchas entry based on what the audit surfaced
-  - [ ] Commit `lessons-learned.md`
+- [x] Task: Run the full quality gate
+  - [x] `npm run lint`
+  - [x] `npx tsc --noEmit`
+  - [x] `CI=true npm test`
+  - [x] `./measure/doctor.sh`
+  - [x] `./measure/generate.sh`
+  - [x] Stage and commit any changes to `measure/generated/`
+- [x] Task: Finalize `audit-findings.md`
+  - [x] Verify all 62 pre-existing techniques + 1 new technique are accounted for
+  - [x] Add the summary section with counts
+  - [x] Commit the final report
+- [x] Task: Append a Lessons Learned entry
+  - [x] Add a Patterns That Worked Well or Recurring Gotchas entry based on what the audit surfaced
+  - [x] Commit `lessons-learned.md`
 - [ ] Task: Measure - User Manual Verification 'Phase 4' (Protocol in workflow.md)
