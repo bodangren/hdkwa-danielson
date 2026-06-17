@@ -19,7 +19,7 @@ export const techniques: Technique[] = [
     ],
     detailedSummary: 'Exemplar Planning is the discipline of solving your own lesson tasks before the students do. By creating a high-quality model response, you clarify the "finish line" for the lesson. This process helps you anticipate common misconceptions, identify essential vocabulary, and set a precise standard for what constitutes "proficient" work. It transforms your monitoring from "looking for work" to "looking for quality."',
     videos: { demo: 'LXEY7vr-Yvs' },
-    literature: { book: 'TLAC 3.0', pages: 'Chapter 1' }
+    literature: { book: 'TLAC 3.0', pages: '45-48' }
   },
   {
     id: 'knowledge-organizers',
@@ -223,7 +223,7 @@ export const techniques: Technique[] = [
     ],
     detailedSummary: 'The Double Plan keeps the lesson from becoming a sequence of teacher moves with students waiting around. When the student action is planned as deliberately as the teacher action, the lesson stays coherent and every phase has a clear purpose.',
     videos: { demo: 'hSj4uCkfz5k' },
-    literature: { book: 'TLAC 3.0', pages: 'Chapter 2' }
+    literature: { book: 'TLAC 3.0', pages: '58-61' }
   },
   {
     id: 'change-the-pace',
@@ -274,7 +274,7 @@ export const techniques: Technique[] = [
     ],
     detailedSummary: 'Affirmative Checking makes the assessment visible inside the lesson instead of waiting for the end. Students know what counts as success, and the teacher gets a clear signal before the class moves into the next phase.',
     videos: { demo: 'YBWhU11MqpU' },
-    literature: { book: 'TLAC 3.0', pages: 'Chapter 3' }
+    literature: { book: 'TLAC 3.0', pages: '107-110' }
   },
   {
     id: 'standardize-format',
@@ -290,7 +290,8 @@ export const techniques: Technique[] = [
       'Design the format so you can scan for mistakes, patterns, or misconceptions in seconds.'
     ],
     detailedSummary: 'Standardizing the format reduces the time between student work and teacher response. When the layout is predictable, the teacher can scan faster, give more feedback, and catch errors before they spread.',
-    videos: { demo: 'HEFxSiGse3U' }
+    videos: { demo: 'HEFxSiGse3U' },
+    literature: { book: 'TLAC 3.0', pages: '87-91' }
   },
   {
     id: 'exit-tickets',
@@ -306,7 +307,8 @@ export const techniques: Technique[] = [
       'Analyze: Sort into "Got it," "Almost," and "Don\'t have it" to plan tomorrow\'s lesson.'
     ],
     detailedSummary: 'The Exit Ticket is the ultimate tool for designing assessment. It provides the teacher with 100% data on student learning every single day. A proficient teacher uses this data to immediately adjust the next day\'s lesson, ensuring that no student is left behind.',
-    videos: { demo: '0hX0H5K0_0U' }
+    videos: { demo: '0hX0H5K0_0U' },
+    literature: { book: 'TLAC 3.0', pages: '228-240' }
   },
 
   // --- DOMAIN 2: LEARNING ENVIRONMENTS ---
@@ -327,7 +329,7 @@ export const techniques: Technique[] = [
     ],
     detailedSummary: 'Positive framing keeps the teacher focused on the desired behavior, not on public correction. It preserves student dignity while still making the expectation unmistakable.',
     videos: { demo: 'KT4ET0PAWVI' },
-    literature: { book: 'TLAC 3.0', pages: 'Chapter 10' }
+    literature: { book: 'TLAC 3.0', pages: '477-484' }
   },
   {
     id: 'precise-praise',
@@ -343,7 +345,8 @@ export const techniques: Technique[] = [
       'Deliver it quickly and in a way that keeps the focus on learning, not on performance.'
     ],
     detailedSummary: 'Precise praise works because students can repeat what the teacher actually named. It reinforces the standard, shows that effort is noticed, and helps the rest of the class see what success looks like.',
-    videos: { demo: 'pz3ACmHPfqs' }
+    videos: { demo: 'pz3ACmHPfqs' },
+    literature: { book: 'TLAC 3.0', pages: '485-489' }
   },
   {
     id: 'joy-factor',
@@ -359,7 +362,8 @@ export const techniques: Technique[] = [
       'Celebrate class progress in ways that make the room feel safe and connected.'
     ],
     detailedSummary: 'The Joy Factor is about classroom climate that helps students stay willing to take risks. The point is not entertainment; it is making the room feel human, predictable, and worth participating in.',
-    videos: { demo: '5GuZNgZNEzI' }
+    videos: { demo: '5GuZNgZNEzI' },
+    literature: { book: 'TLAC 3.0', pages: '497-501' }
   },
 
   // 2b: Fostering a Culture for Learning
@@ -368,7 +372,7 @@ export const techniques: Technique[] = [
     title: 'Culture of Error',
     subdomain: '2b',
     domain: 2,
-    source: 'Uncommon Schools',
+    source: 'TLAC 3.0',
     alignment: '2b: Fostering a Culture for Learning',
     description: 'Treat errors as evidence about what students understand and what still needs instruction.',
     actionSteps: [
@@ -378,7 +382,7 @@ export const techniques: Technique[] = [
     ],
     detailedSummary: 'A culture of error matters because students are more likely to think out loud when mistakes are treated as information. That openness gives the teacher better evidence and gives students more room to learn.',
     videos: { demo: 'UDJsoamKtNQ' },
-    literature: { book: 'TLAC 3.0', pages: 'Chapter 3' }
+    literature: { book: 'TLAC 3.0', pages: '111-119' }
   },
   {
     id: 'high-expectations',
@@ -429,7 +433,8 @@ export const techniques: Technique[] = [
       'Keep tone neutral so the authority comes from clarity, not volume.'
     ],
     detailedSummary: 'Strong Voice is about the teacher controlling the room through precision and composure. The move works because students hear one clear direction, understand the expectation, and have a chance to comply immediately.',
-    videos: { demo: '9bJdrxHg8fQ' }
+    videos: { demo: '9bJdrxHg8fQ' },
+    literature: { book: 'TLAC 3.0', pages: '455-476' }
   },
   {
     id: 'do-it-again',
@@ -446,7 +451,8 @@ export const techniques: Technique[] = [
       'Acknowledge the successful version so students know what to repeat next time.'
     ],
     detailedSummary: 'Do It Again creates practice instead of debate. Students learn that routines matter, the teacher will insist on the standard, and the right version is worth repeating until it sticks.',
-    videos: { demo: 'jOvXM-_6z5M' }
+    videos: { demo: 'jOvXM-_6z5M' },
+    literature: { book: 'TLAC 3.0', pages: '413-424' }
   },
   {
     id: 'tight-transitions',
@@ -514,7 +520,8 @@ export const techniques: Technique[] = [
       'Escalate only if the first move does not work.'
     ],
     detailedSummary: 'Least Invasive Intervention protects learning time because the correction happens without turning the entire room toward the misbehavior. The student gets the message, and the lesson keeps moving.',
-    videos: { demo: 'j88sZpGefeU' }
+    videos: { demo: 'j88sZpGefeU' },
+    literature: { book: 'TLAC 3.0', pages: '439-443' }
   },
   {
     id: 'art-of-consequence',
@@ -530,7 +537,8 @@ export const techniques: Technique[] = [
       'Keep the language about the action, not the student’s character.'
     ],
     detailedSummary: 'The consequence matters most when it is predictable, respectful, and tied to the standard the student already knows. That keeps the teacher fair and keeps the room focused on learning.',
-    videos: { demo: 'ElUhlsRuPHE' }
+    videos: { demo: 'ElUhlsRuPHE' },
+    literature: { book: 'TLAC 3.0', pages: '448-454' }
   },
 
   // 2e: Organizing Spaces for Learning
@@ -600,7 +608,8 @@ export const techniques: Technique[] = [
       'Ask students to restate key ideas with the academic terms before the class moves on.'
     ],
     detailedSummary: 'Academic sentence practice helps students rehearse the language of the lesson instead of defaulting to fragments or casual talk. The teacher uses the cue to press for precision, complete thought, and the vocabulary students will need in writing and discussion.',
-    videos: { demo: 'RDo5sDSwFkQ' }
+    videos: { demo: 'RDo5sDSwFkQ' },
+    literature: { book: 'TLAC 3.0', pages: '173-180' }
   },
   {
     id: 'call-and-response',
@@ -616,7 +625,8 @@ export const techniques: Technique[] = [
       'Return to the phrase later in the lesson so students hear and use it again.'
     ],
     detailedSummary: 'Choral rehearsal is useful when the class needs a quick, shared practice of essential language. It gives every student a voice, tightens pacing, and creates a common reference point for the rest of the lesson.',
-    videos: { demo: 'BeYZ2uJWDD0' }
+    videos: { demo: 'BeYZ2uJWDD0' },
+    literature: { book: 'TLAC 3.0', pages: '301-306' }
   },
   {
     id: 'vocabulary-movement',
@@ -668,7 +678,8 @@ export const techniques: Technique[] = [
       'Use the pause to scan the room and decide who should speak next.'
     ],
     detailedSummary: 'Wait time improves the quality of student thinking because it gives students room to process, retrieve, and formulate a response. The pause is part of the instruction, not dead air.',
-    videos: { demo: 'PvJw9ge8yFQ' }
+    videos: { demo: 'PvJw9ge8yFQ' },
+    literature: { book: 'TLAC 3.0', pages: '276-281' }
   },
   {
     id: 'no-opt-out',
@@ -685,7 +696,8 @@ export const techniques: Technique[] = [
       'Use the student\'s success to reset the expectation for the whole class.'
     ],
     detailedSummary: 'No Opt Out protects the expectation that every student can answer. The teacher does the support work needed to get there, but the final answer still comes from the original student.',
-    videos: { demo: 'NUL51AmaKfM' }
+    videos: { demo: 'NUL51AmaKfM' },
+    literature: { book: 'TLAC 3.0', pages: '139-152' }
   },
   {
     id: 'stretch-it',
@@ -701,7 +713,8 @@ export const techniques: Technique[] = [
       'Press for precision until the response shows actual understanding, not just recall.'
     ],
     detailedSummary: 'Stretch It turns a correct answer into deeper thinking. The teacher uses the student\'s first response as a starting point, then asks for reasoning, evidence, and transfer.',
-    videos: { demo: 'rdszNzs0N80' }
+    videos: { demo: 'rdszNzs0N80' },
+    literature: { book: 'TLAC 3.0', pages: '161-172' }
   },
 
   // 3c: Engaging Students in Learning
@@ -737,7 +750,30 @@ export const techniques: Technique[] = [
       'Use the writing as the evidence base for the next discussion or cold call.'
     ],
     detailedSummary: 'Everybody Writes improves the quality of discussion because students have something concrete to say. It also helps quieter students enter the conversation with a thought already formed.',
-    videos: { demo: 'D-KayMWv0pI' }
+    videos: { demo: 'D-KayMWv0pI' },
+    literature: { book: 'TLAC 3.0', pages: '324-326' }
+  },
+  {
+    id: 'fase-reading',
+    title: 'FASE Reading',
+    subdomain: '3c',
+    domain: 3,
+    source: 'TLAC 3.0',
+    alignment: '3c: Engaging Students in Learning',
+    highReward: true,
+    description: 'A system for student read-alouds that keeps every student reading, listening, and accountable by using short, unpredictable, frequently switched turns.',
+    actionSteps: [
+      'Ask a student to start reading without specifying how long they will read, so the rest of the class cannot tune out until the turn ends.',
+      'Keep turns short — often two to four sentences — so every student invests energy in expressive reading.',
+      'Select the next reader unpredictably, naming students who have not volunteered as often as those who have, so participation stays universal and leverage stays high.',
+      'Transition between readers with a short, consistent phrase such as "pick up, please" to keep the narrative thread unbroken and protect reading time.',
+      'Use bridging by reading a short segment yourself between student readers, modeling expressive reading or resuscitating momentum.',
+      'Use spot-check or oral cloze by leaving a key word out and signaling with a tone shift so students fill in the blank, revealing whether they are following along.',
+      'Use a placeholder such as "hold your place; track me" to keep students anchored in the text across brief discussions.'
+    ],
+    detailedSummary: 'FASE Reading is a system for student read-alouds that maximizes the value and viability of this crucial classroom activity, building students\' fluency in and enjoyment of reading. The acronym FASE reminds teachers of four things to reinforce when students read aloud: Fluency, Accountability, Social, and Expressive. The name also evokes a phase, because the technique is meant to happen in recurring short cycles that yield to other activities and return later. FASE Reading addresses two recurring objections: leverage concerns, the worry that one reader leaves the rest of the class passive, and self-esteem concerns, the worry that struggling readers will be embarrassed. Leverage is built by making reader identity and turn length unpredictable. Short durations and quick, consistent transitions reduce transaction costs, keep energy high, and let the teacher cut a struggling reader off cleanly without implicit judgment. Because everyone reads but no one knows who or for how long, the system protects the weakest readers while also creating a shared experience that builds belonging.',
+    videos: { demo: 'fase-reading-placeholder' },
+    literature: { book: 'TLAC 3.0', pages: '209-222' }
   },
   {
     id: 'ratio-thinking',
@@ -787,7 +823,8 @@ export const techniques: Technique[] = [
       'Scan quickly for patterns, then decide whether to reteach, correct, or move on.'
     ],
     detailedSummary: 'Show Me turns assessment into a whole-class snapshot. It reduces hiding, speeds up feedback, and gives the teacher a fast read on whether the class is ready for the next step.',
-    videos: { demo: 'pHp5dVqW3CQ' }
+    videos: { demo: 'pHp5dVqW3CQ' },
+    literature: { book: 'TLAC 3.0', pages: '104-106' }
   },
   {
     id: 'self-assessment-checks',
